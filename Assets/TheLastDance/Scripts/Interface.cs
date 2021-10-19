@@ -15,7 +15,7 @@ public class Interface : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public Pistol pistol;
+    public Gun pistol;
     public Gun gun;
     
     // Update is called once per frame
