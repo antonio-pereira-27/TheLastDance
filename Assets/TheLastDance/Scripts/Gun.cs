@@ -16,9 +16,9 @@ public class Gun : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
 
-    private float nextTimeToFire = 0f;
+    public float nextTimeToFire = 0f;
     private float reloadTime = 1f;
-    private bool isReloading = false;
+    public bool isReloading = false;
 
     public Animator animator;
     
@@ -32,32 +32,9 @@ public class Gun : MonoBehaviour
         isReloading = false;
         animator.SetBool("Reloading", false);
     }
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (isReloading)
-            return;
-        
-        if (bulletsNumber <= 0)
-        {
-            StartCoroutine(Reload());
-            return;
-        }
-        
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && bulletsNumber > 0)
-        {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
-        }
-        
-		if(Input.GetButton("Reload") && bulletsNumber < maxBullets)
-        {
-            StartCoroutine(Reload());
-        }
-    }
-
-    IEnumerator Reload()
+    public IEnumerator Reload()
     {
         isReloading = true;
         
@@ -73,7 +50,7 @@ public class Gun : MonoBehaviour
         isReloading = false;
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         muzzleFlash.Play();
 		bulletsNumber--;
