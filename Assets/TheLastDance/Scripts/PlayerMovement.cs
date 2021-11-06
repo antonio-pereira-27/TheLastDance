@@ -8,11 +8,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
 
-    public float speed = 12f;
+    private float speed;
     public float gravity = -9.81f;
     public float jumpHeight = 3f;
     private float health = 100f;
     private float currentHealth;
+    public float walkSpeed = 10f;
+    public float crouchSpeed = 4f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -36,6 +38,17 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if (Input.GetKey(KeyCode.C))
+        {
+            controller.height = 1.8f;
+            speed = crouchSpeed;
+        }
+        else
+        {
+            controller.height = 3.33f;
+            speed = walkSpeed;
+        }
 
         if (isGrounded && velocity.y < 0)
         {
