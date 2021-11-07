@@ -12,7 +12,7 @@ public class Target : MonoBehaviour
    private float _nextAttackTime;
    public float attackRate = 0.5f;
    public float currentHealth;
-   private float _damage = 20f;
+   private float _damage = 10f;
 
    public HealthBar healthBar;
 
@@ -45,7 +45,7 @@ public class Target : MonoBehaviour
    {
       if (_agent.remainingDistance - attackDistance < 0.01f) 
       {
-         if (Time.time > _nextAttackTime && currentHealth < 100)
+         if (Time.time > _nextAttackTime )
          {
             _nextAttackTime = Time.time + attackRate;
 
@@ -66,16 +66,14 @@ public class Target : MonoBehaviour
             _agent.destination = enemyTransform.position;
          
             // olhar sempre para ele
-            transform.LookAt(new Vector3(enemyTransform.transform.position.x, transform.position.y, enemyTransform.position.z));
+            transform.LookAt(new Vector3(enemyTransform.transform.position.x, enemyTransform.position.y, enemyTransform.position.z));
       
             // reduzir a velocidade do npc gradualmente
             _rigidbody.velocity *= 0.99f;
          }
-         else
-            _agent.SetDestination(RandomNavmeshLocation(6f));
       }
-
    }
+   
 
    public void TakeDamage(float amount)
    {
@@ -90,6 +88,7 @@ public class Target : MonoBehaviour
    void Die()
    {
       Destroy(gameObject);
+      spawnSystem.EnemyEliminated();
    }
    
    public Vector3 RandomNavmeshLocation(float radius) {

@@ -213,12 +213,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  attackDistance: 5
+  attackDistance: 20
   health: 100
-  attackRate: 0.2
+  attackRate: 0.5
   currentHealth: 0
   healthBar: {fileID: 7726979876989953330}
   enemyTransform: {fileID: 0}
+  spawnSystem: {fileID: 0}
   muzzleFlash: {fileID: 4943261055495995812}
 --- !u!54 &7726979876277865421
 Rigidbody:
