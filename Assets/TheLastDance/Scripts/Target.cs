@@ -9,22 +9,22 @@ public class Target : MonoBehaviour
    public float speed = 7f;
    public float attackDistance = 7f;
    public float health = 100f;
-   private float nextAttackTime = 0f;
+   private float _nextAttackTime;
    public float attackRate = 0.5f;
    public float currentHealth;
-   private float damage = 20f;
+   private float _damage = 10f;
 
    public HealthBar healthBar;
 
+   [HideInInspector]
    public Transform enemyTransform;
 
-   public Transform firePoint;
+   [HideInInspector] public SpawnSystem spawnSystem;
 
    private NavMeshAgent _agent;
 
    private Rigidbody _rigidbody;
-
-   public PlayerMovement _player;
+   
    public ParticleSystem muzzleFlash;
 
    
@@ -43,37 +43,37 @@ public class Target : MonoBehaviour
 
    void Update()
    {
-      if (_agent.remainingDistance - attackDistance < 5f) 
+      if (_agent.remainingDistance - attackDistance < 0.01f) 
       {
-         if (Time.time > nextAttackTime && currentHealth < 100)
+         if (Time.time > _nextAttackTime )
          {
-            nextAttackTime = Time.time + attackRate;
+            _nextAttackTime = Time.time + attackRate;
 
             // attack
             RaycastHit hit;
 
-            if (Physics.Raycast(firePoint.position, firePoint.forward, out hit, attackDistance))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, attackDistance))
             {
-               muzzleFlash.Play();
-               _player.TakeDamage(damage);
+               if (hit.transform.CompareTag("Player"))
+               {
+                  muzzleFlash.Play();
+                  PlayerMovement player = hit.transform.GetComponent<PlayerMovement>();
+                  player.TakeDamage(_damage);
+               }
             }
-               
-
             
             // mover em direção ao jogador
             _agent.destination = enemyTransform.position;
          
             // olhar sempre para ele
-            transform.LookAt(enemyTransform.transform.position);
+            transform.LookAt(new Vector3(enemyTransform.transform.position.x, enemyTransform.position.y, enemyTransform.position.z));
       
             // reduzir a velocidade do npc gradualmente
             _rigidbody.velocity *= 0.99f;
          }
-         else
-            _agent.SetDestination(RandomNavmeshLocation(10f));
       }
-
    }
+   
 
    public void TakeDamage(float amount)
    {
@@ -88,6 +88,7 @@ public class Target : MonoBehaviour
    void Die()
    {
       Destroy(gameObject);
+      spawnSystem.EnemyEliminated();
    }
    
    public Vector3 RandomNavmeshLocation(float radius) {
