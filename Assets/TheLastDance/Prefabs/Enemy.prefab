@@ -212,11 +212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7cbee5837939264092df2bd6eb814be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  attackDistance: 20
+  speed: 7
   health: 100
-  attackRate: 10
   currentHealth: 0
+  attackDistance: 50
   healthBar: {fileID: 7726979876989953330}
   enemyTransform: {fileID: 0}
   spawnSystem: {fileID: 0}

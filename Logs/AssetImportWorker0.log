@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.20f1 (41c4e627c95f) revision 4310246'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.1237; Version 2009; 64bit' Language: 'pt' Physical Memory: 16315 MB
+OS: 'Windows 10 Home; OS build 19043.1288; Version 2009; 64bit' Language: 'pt' Physical Memory: 16334 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,117 +11,117 @@ C:\Program Files\Unity\Hub\Editor\2020.3.20f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/andre/Documents/GitHub/TheLastDance
+C:/Tudo/Universidade/TheLastDance
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-65416
-Successfully changed project path to: C:/Users/andre/Documents/GitHub/TheLastDance
-C:/Users/andre/Documents/GitHub/TheLastDance
+61427
+Successfully changed project path to: C:/Tudo/Universidade/TheLastDance
+C:/Tudo/Universidade/TheLastDance
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 26.87 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 30.07 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.20f1 (41c4e627c95f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/andre/Documents/GitHub/TheLastDance/Assets
+[Subsystems] Discovering subsystems at path C:/Tudo/Universidade/TheLastDance/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2070 (ID=0x1f02)
+    Renderer: Radeon RX 580 Series (ID=0x67df)
     Vendor:   
-    VRAM:     8031 MB
-    Driver:   27.21.14.6647
+    VRAM:     4075 MB
+    Driver:   30.0.13031.5001
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56868
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001398 seconds.
+Registered in 0.001713 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 27.04 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 29.11 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.790 seconds
+- Completed reload, in  0.906 seconds
 Domain Reload Profiling:
-	ReloadAssembly (790ms)
-		BeginReloadAssembly (39ms)
+	ReloadAssembly (906ms)
+		BeginReloadAssembly (45ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (324ms)
-			LoadAssemblies (38ms)
+		EndReloadAssembly (342ms)
+			LoadAssemblies (43ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (118ms)
+			SetupTypeCache (124ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (127ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (132ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (27ms)
-				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (61ms)
-				ProcessInitializeOnLoadMethodAttributes (22ms)
+				RefreshPlugins (29ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (65ms)
+				ProcessInitializeOnLoadMethodAttributes (23ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002045 seconds.
+Registered in 0.002371 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.802 seconds
+- Completed reload, in  0.861 seconds
 Domain Reload Profiling:
-	ReloadAssembly (802ms)
-		BeginReloadAssembly (114ms)
+	ReloadAssembly (862ms)
+		BeginReloadAssembly (133ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (639ms)
-			LoadAssemblies (65ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (669ms)
+			LoadAssemblies (74ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (213ms)
+			SetupTypeCache (229ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (34ms)
-			SetupLoadedEditorAssemblies (250ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (256ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (172ms)
-				ProcessInitializeOnLoadMethodAttributes (4ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (169ms)
+				ProcessInitializeOnLoadMethodAttributes (5ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1425 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 68.6 MB.
 System memory in use after: 68.7 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1863.
-Total: 2.296600 ms (FindLiveObjects: 0.122000 ms CreateObjectMapping: 0.034800 ms MarkObjects: 2.091200 ms  DeleteObjects: 0.047600 ms)
+Total: 2.780900 ms (FindLiveObjects: 0.178700 ms CreateObjectMapping: 0.034900 ms MarkObjects: 2.503000 ms  DeleteObjects: 0.063400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -135,105 +135,25 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/TheLastDance/Materials/Black.mat
-  artifactKey: Guid(9c7b67b4e9d3e6141a7ddf4242877d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/Black.mat using Guid(9c7b67b4e9d3e6141a7ddf4242877d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3738616a6c6c248d5b3fc9ad1d3f0704') in 0.075774 seconds 
-  Import took 0.077840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000148 seconds.
-  path: Assets/TheLastDance/Materials/external-content.duckduckgo 1.mat
-  artifactKey: Guid(c976d3fb829b2644986c5f42f10117b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/external-content.duckduckgo 1.mat using Guid(c976d3fb829b2644986c5f42f10117b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '911fcaa4cd56594fa20053accbba522b') in 0.007286 seconds 
-  Import took 0.009233 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/TheLastDance/Prefabs/Enemy.prefab
-  artifactKey: Guid(2eb46e30056a7df4aa0268303efec7ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Enemy.prefab using Guid(2eb46e30056a7df4aa0268303efec7ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45e34eaa0e7b2896894ee024cfbffb37') in 0.039670 seconds 
-  Import took 0.041818 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/TheLastDance/Materials/PlayerColor.mat
-  artifactKey: Guid(1440b98f03be60840b593d4b106c23fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/PlayerColor.mat using Guid(1440b98f03be60840b593d4b106c23fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3890740a7ccc908960a4814c71fa57d2') in 0.006213 seconds 
-  Import took 0.008135 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000209 seconds.
-  path: Assets/TheLastDance/Materials/New Material.mat
-  artifactKey: Guid(ca3ecf0872a163d47a1263830c603791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/New Material.mat using Guid(ca3ecf0872a163d47a1263830c603791) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '414dea53c2ba783ac798995648ae9d06') in 0.006683 seconds 
-  Import took 0.008614 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/TheLastDance/Materials/external-content.duckduckgo 2.mat
-  artifactKey: Guid(72fdbf533d8672e4688c709b48c27582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/external-content.duckduckgo 2.mat using Guid(72fdbf533d8672e4688c709b48c27582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da1c3cd61b4e1fa58b83eb51468dda95') in 0.005429 seconds 
-  Import took 0.007273 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/TheLastDance/Materials/Ground.mat
-  artifactKey: Guid(dbec9903d14793a49a92caf06dec275e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/Ground.mat using Guid(dbec9903d14793a49a92caf06dec275e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d7388e332034fe43bedf5fc2d71edb9') in 0.005686 seconds 
-  Import took 0.007514 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000209 seconds.
-  path: Assets/TheLastDance/Materials/white.mat
-  artifactKey: Guid(aa221360c9f765543926cbb1cfe8c623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/white.mat using Guid(aa221360c9f765543926cbb1cfe8c623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12740c65f337cadc4e7fa794e6d52b20') in 0.005632 seconds 
-  Import took 0.007472 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000166 seconds.
-  path: Assets/TheLastDance/Materials/external-content.duckduckgo.mat
-  artifactKey: Guid(6356dd5bba338064982e10ef039775a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/external-content.duckduckgo.mat using Guid(6356dd5bba338064982e10ef039775a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95391ccabdc329dfdce37c9a1c1b905f') in 0.005888 seconds 
-  Import took 0.007772 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/TheLastDance/Materials/EnemyMaterial.mat
-  artifactKey: Guid(d1cf56a62718673458f415b6bc551fb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/EnemyMaterial.mat using Guid(d1cf56a62718673458f415b6bc551fb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3afe532fb0940c1233ad7b44f309a38') in 0.006119 seconds 
-  Import took 0.007953 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000171 seconds.
-  path: Assets/TheLastDance/Prefabs/Shots.prefab
-  artifactKey: Guid(182219fd4d24d804483365bff7db0181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Shots.prefab using Guid(182219fd4d24d804483365bff7db0181) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba871f6fa8c5d4340dbadd222ca40583') in 0.006378 seconds 
-  Import took 0.008275 seconds .
+  path: Assets/TheLastDance/Materials/Ground2.mat
+  artifactKey: Guid(eec175f4c6fed4b4fbf09d740cf7e976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Materials/Ground2.mat using Guid(eec175f4c6fed4b4fbf09d740cf7e976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45a790e12fdd381230dc977a5eb2b72e') in 0.090872 seconds 
+  Import took 0.094613 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000205 seconds.
-  path: Assets/TheLastDance/Materials/Gras.mat
-  artifactKey: Guid(5ca12371a45177946be38f35fa70466b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/Gras.mat using Guid(5ca12371a45177946be38f35fa70466b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0275f3612f165a65b39f4513ca7ace2') in 0.006077 seconds 
-  Import took 0.007947 seconds .
+  path: Assets/TheLastDance/Materials/wood.mat
+  artifactKey: Guid(2980d853d25437348ad4d5da28cbd4b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Materials/wood.mat using Guid(2980d853d25437348ad4d5da28cbd4b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8634bc96018f1fa5e4b02a12e8822ab8') in 0.016358 seconds 
+  Import took 0.019679 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000209 seconds.
-  path: Assets/TheLastDance/Materials/9a1fe282ad6d12391828ae0ed4ed9a86.mat
-  artifactKey: Guid(fab90acb0c1118f448f8dd903454f7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Materials/9a1fe282ad6d12391828ae0ed4ed9a86.mat using Guid(fab90acb0c1118f448f8dd903454f7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e9e3eb104eee7dba5a749acb5bc8e42') in 0.006223 seconds 
-  Import took 0.008093 seconds .
+  Time since last request: 177.589836 seconds.
+  path: Assets/TheLastDance/Scenes/Level_4.unity
+  artifactKey: Guid(82985cc95abacb342a6f95954dfcdffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Scenes/Level_4.unity using Guid(82985cc95abacb342a6f95954dfcdffb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79abcd4c6ca29660e89a6a3fe94268d2') in 0.002899 seconds 
+  Import took 0.005980 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

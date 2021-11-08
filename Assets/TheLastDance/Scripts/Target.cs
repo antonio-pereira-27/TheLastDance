@@ -55,10 +55,10 @@ public class Target : MonoBehaviour
    void Update()
    {
       // condição para verificar se o jogador está no campo de visão do npc ou se este o atacou pelas costas
-      if (!chasing || currentHealth >= health)
+      if (!chasing && currentHealth >= 100f)
       {
          // contador de tempo para mudanças de direção
-         if (timer > 5f)
+         if (timer > 1f)
          {
             RandomDirection(10f);
             timer = 0f;

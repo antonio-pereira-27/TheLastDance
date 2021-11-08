@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
 	public float bulletsNumber;
     public float maxBullets = 30f;
     
+    
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
