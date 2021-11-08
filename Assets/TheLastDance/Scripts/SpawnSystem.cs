@@ -12,21 +12,20 @@ public class SpawnSystem : MonoBehaviour
 
     public Transform[] spawnPoints;
 
-    private float timer = 5f;
+    private float timer = 0f;
 
-    private int enemiesEliminated;
-    private int enemiesSpawned;
+    private int enemiesEliminated = 0;
+    private int enemiesSpawned = 0;
 
     // Update is called once per frame
     void Update()
     {
-        enemiesEliminated = 0;
-        enemiesSpawned = 0;
+        timer -= Time.deltaTime;
 
-        if (Time.time > timer)
+        if (timer < 0)
         {
-            timer += Time.time;
-
+            timer = 20f;
+            
             if (enemiesSpawned < totalEnemies)
             {
                 Transform spawnPoint = spawnPoints[Random.Range(0,spawnPoints.Length)];

@@ -12,14 +12,13 @@ public class Target : MonoBehaviour
    public float attackDistance = 7f;
    public float health = 100f;
    private float _nextAttackTime;
-   public float attackRate = 0.5f;
+   public float attackRate = 5f;
    public float currentHealth;
    private float _damage = 10f;
+   private float timer = 50f;
+   private bool chasing = false;
+   private float attackDuration = 0f;
    
-   public float directionChangeInterval = 1;
-   public float maxHeadingChange = 30;
-   float heading;
-   Vector3 targetRotation;
 
    public HealthBar healthBar;
 
@@ -34,19 +33,11 @@ public class Target : MonoBehaviour
    
    public ParticleSystem muzzleFlash;
 
-   private void Awake()
-   {
-      heading = Random.Range(0, 360);
-      transform.eulerAngles = new Vector3(0, heading, 0);
-      StartCoroutine(NewHeading());
-      
-   }
-
    // função de inicio 
    private void Start()
    {
       _agent = GetComponent<NavMeshAgent>();
-      _agent.stoppingDistance = attackDistance;
+      //_agent.stoppingDistance = attackDistance;
       _agent.speed = speed;
       _rigidbody = GetComponent<Rigidbody>();
       _rigidbody.useGravity = false;
@@ -59,41 +50,67 @@ public class Target : MonoBehaviour
 
    void Update()
    {
-      /*if (_agent.remainingDistance - attackDistance < 0.01f) 
+      if (!chasing)
       {
-         if (Time.time > _nextAttackTime )
+         if (timer > 5f)
          {
-            _nextAttackTime = Time.time + attackRate;
+            RandomDirection(10f);
+            timer = 0f;
+         
+         }
+         else
+         {
+            timer += Time.deltaTime;
+         }
+         
 
-            // attack
-            RaycastHit hit;
-
-            if (Physics.Raycast(transform.position, transform.forward, out hit, attackDistance))
+         RaycastHit hitSearching;
+         Debug.DrawRay(transform.position, transform.forward * 7, Color.magenta, 1f);
+         if (Physics.Raycast(transform.position, transform.forward, out hitSearching, attackDistance))
+         {
+            if (hitSearching.transform.CompareTag("Player"))
             {
-               if (hit.transform.CompareTag("Player"))
-               {
-                  muzzleFlash.Play();
-                  PlayerMovement player = hit.transform.GetComponent<PlayerMovement>();
-                  player.TakeDamage(_damage);
-               }
+               Debug.Log("I found the player");
+               chasing = true;
             }
          }
-      }
-      
-      // mover em direção ao jogador
-      _agent.destination = enemyTransform.position;
          
-      // olhar sempre para ele
-      transform.LookAt(new Vector3(enemyTransform.transform.position.x, enemyTransform.position.y, enemyTransform.position.z));
-      
-      // reduzir a velocidade do npc gradualmente
-      _rigidbody.velocity *= 0.99f;*/
+      }
+      else
+      {
+         
+         transform.LookAt(enemyTransform.transform.position);
+         _agent.destination = enemyTransform.position;
+         
+         if (Time.time > _nextAttackTime)
+         {
+            attackDuration = 0.5f;
+            _nextAttackTime = Time.time + attackRate;
+         }
+         
+         if(attackDuration > 0f)
+         {
+            attackDuration -= Time.deltaTime;
+            RaycastHit hitAttack;
 
-      transform.eulerAngles =
-         Vector3.Slerp(transform.eulerAngles, targetRotation, Time.deltaTime * directionChangeInterval);
-      Vector3 forward = transform.TransformDirection(Vector3.forward);
-      _agent.Move(forward * speed);
-      
+            Debug.DrawRay(transform.position, transform.forward * 7, Color.green, 1f);
+            if (Physics.Raycast(transform.position, transform.forward, out hitAttack, attackDistance))
+            {
+               if (hitAttack.transform.CompareTag("Player"))
+               {
+                  Debug.Log("Ill shoot");
+                  
+                  PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
+                  player.TakeDamage(_damage);
+               
+                  muzzleFlash.Play();
+               }
+            }
+
+
+         }
+         
+      }
       
 
    }
@@ -114,23 +131,24 @@ public class Target : MonoBehaviour
       Destroy(gameObject);
       spawnSystem.EnemyEliminated();
    }
-   
 
-   // calcula repetidamente uma nova direção para se mover! 
-   IEnumerator NewHeading()
+   public void RandomDirection(float radius)
    {
-      while (true)
+      float angle = Random.Range(-Mathf.PI, Mathf.PI);
+      Vector3 randomDirection = new Vector3(Mathf.Sin(angle), 0, Mathf.Cos(angle)) * radius;
+      randomDirection += transform.position;
+      NavMeshHit navMeshHit;
+      Vector3 finalPosition = Vector3.zero;
+      
+
+      if (NavMesh.SamplePosition(randomDirection, out navMeshHit, radius, 1))
       {
-         NewHeadingRoutine();
-         yield return new WaitForSeconds(directionChangeInterval);
+         finalPosition = navMeshHit.position;
+         //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = finalPosition;
+         _agent.SetDestination(finalPosition);
       }
+      
    }
-
-   // calculo da nova direção para mover o npc
-   void NewHeadingRoutine()
-   {
-      var min = transform.eulerAngles.y - maxHeadingChange;
-      var max = transform.eulerAngles.y + maxHeadingChange;
-      targetRotation = new Vector3(0, heading, 0);
-   }
+   
+   
 }
