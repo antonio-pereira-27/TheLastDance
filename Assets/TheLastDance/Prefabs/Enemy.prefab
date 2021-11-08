@@ -215,7 +215,7 @@ MonoBehaviour:
   speed: 4
   attackDistance: 20
   health: 100
-  attackRate: 0.5
+  attackRate: 10
   currentHealth: 0
   healthBar: {fileID: 7726979876989953330}
   enemyTransform: {fileID: 0}
