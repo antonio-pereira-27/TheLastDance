@@ -39,7 +39,7 @@ public class Target : MonoBehaviour
    {
       // inicializar a navmeshagent no script e atribuir valores
       _agent = GetComponent<NavMeshAgent>();
-      _agent.stoppingDistance = attackDistance;
+      _agent.stoppingDistance = 7f;
       _agent.speed = speed;
       // inicializar o rigidbody através de script
       _rigidbody = GetComponent<Rigidbody>();
