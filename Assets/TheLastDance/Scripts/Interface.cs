@@ -5,16 +5,15 @@ using UnityEngine.UI;
 
 public class Interface : MonoBehaviour
 {
-    public Text bullets;
-
-    public Text life;
-
+    //variables
     public string bulletsNumber;
     public string maxBulletsNumber;
     public string lifeText;
 
+    //references
+    public Text bullets;
+    public Text life;
     public HealthBar healthBar;
-
     public Gun pistol;
     public Gun gun;
     

@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float walkSpeed = 10f;
     [SerializeField] private float slowSpeed = 5f;
 
-    private Vector3 moveDirection;
-    private Vector3 velocity;
+    private Vector3 _moveDirection;
+    private Vector3 _velocity;
     
     [SerializeField] private bool isGrounded;
     [SerializeField] private float groundDistance = 0.4f;
@@ -21,16 +17,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
     
     [SerializeField] private float jumpHeight = 3f;
-    private float health = 100f;
-    private float currentHealth;
+    
+    private float _health = 100f;
+    private float _currentHealth;
+
+    private bool _isCrounching = false;
     
     //REFERENCES
-    private CharacterController controller;
+    private CharacterController _controller;
     public Transform groundCheck;
-    
     public HealthBar healthBar;
-    public Gun _weapon1, _weapon2;
-
+    [FormerlySerializedAs("_weapon1")] public Gun weapon1;
+    [FormerlySerializedAs("_weapon2")] public Gun weapon2;
     private Animator _animator;
     
     
@@ -39,73 +37,78 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        _controller = GetComponent<CharacterController>();
         _animator = GetComponentInChildren<Animator>();
-        currentHealth = health;
-        healthBar.SetMaxHealth(health);
+        _currentHealth = _health;
+        healthBar.SetMaxHealth(_health);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // move
         Move();
         
-        // se estiverem a dar reload nao pode disparar
-        if (_weapon1.isReloading || _weapon2.isReloading)
+        // if reloading cant shoot
+        if (weapon1.isReloading || weapon2.isReloading || (weapon1.maxBullets <= 0 && weapon1.isActiveAndEnabled) || (weapon2.maxBullets <= 0 && weapon2.isActiveAndEnabled))
             return;
-        
+        else
+            Shoot();
+    }
+
+    private void Shoot()
+    {
         // código para a arma principal
-        if (_weapon1.isActiveAndEnabled)
+        if (weapon1.isActiveAndEnabled)
         {
-            if (_weapon1.bulletsNumber <= 0)
+            if (weapon1.bulletsNumber <= 0)
             {
-                StartCoroutine(_weapon1.Reload());
+                StartCoroutine(weapon1.Reload());
                 return;
             }
-            if (Input.GetButton("Fire1") && Time.time >= _weapon1.nextTimeToFire && _weapon1.bulletsNumber > 0)
+            if (Input.GetButton("Fire1") && Time.time >= weapon1.nextTimeToFire && weapon1.bulletsNumber > 0)
             {
-                _weapon1.nextTimeToFire = Time.time + 1f / _weapon1.fireRate;
-                _weapon1.Shoot();
+                weapon1.nextTimeToFire = Time.time + 1f / weapon1.fireRate;
+                weapon1.Shoot();
             }
-            if(Input.GetButton("Reload") && _weapon1.bulletsNumber < _weapon1.maxBullets)
+            if(Input.GetButton("Reload") && weapon1.bulletsNumber < weapon1.bulletsPerLoader)
             {
-                StartCoroutine(_weapon1.Reload());
+                StartCoroutine(weapon1.Reload());
                 return;
             }
         }
         
         
         // código para a arma secundaria
-        if (_weapon2.isActiveAndEnabled)
+        if (weapon2.isActiveAndEnabled)
         {
-            if (_weapon2.bulletsNumber <= 0)
+            if (weapon2.bulletsNumber <= 0)
             {
-                StartCoroutine(_weapon2.Reload());
+                StartCoroutine(weapon2.Reload());
                 return;
             }
 
-            if (Input.GetButton("Fire1") && Time.time >= _weapon2.nextTimeToFire && _weapon2.bulletsNumber > 0)
+            if (Input.GetButton("Fire1") && Time.time >= weapon2.nextTimeToFire && weapon2.bulletsNumber > 0)
             {
-                _weapon2.nextTimeToFire = Time.time + 1f / _weapon2.fireRate;
-                _weapon2.Shoot();
+                weapon2.nextTimeToFire = Time.time + 1f / weapon2.fireRate;
+                weapon2.Shoot();
             }
 
-            if(Input.GetButton("Reload") && _weapon2.bulletsNumber < _weapon2.maxBullets)
+            if(Input.GetButton("Reload") && weapon2.bulletsNumber < weapon2.bulletsPerLoader)
             {
-                StartCoroutine(_weapon2.Reload());
+                StartCoroutine(weapon2.Reload());
             }
         }
     }
-
     private void Move()
     {
         // update the variable isGrounded checking if we are grounded
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
         // if we are grounded stop apply gravity
-        if (isGrounded && velocity.y < 0)
+        if (isGrounded && _velocity.y < 0)
         {
-            velocity.y = -5f;
+            _velocity.y = -5f;
         }
         
         // movement 
@@ -113,30 +116,32 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
         
         // calculate the moveDirection with the Inputs
-        moveDirection = transform.right * x + transform.forward * z;
+        _moveDirection = transform.right * x + transform.forward * z;
 
         if (isGrounded)
         {
-            
+            //crouch 
             if (Input.GetKey(KeyCode.C))
             {
+                _isCrounching = true;
                 Crouch();
             }
             else
             {
                 //set the controller height to normal
-                controller.height = 3.33f;
+                _controller.height = 3.33f;
+                _isCrounching = false;
                 
                 // check if we are moving and if the keys are being pressed to update the velocity and the movement of character
-                if (moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift)) // run
+                if (_moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift)) // run
                 {
                     Run();
                 }
-                else if(moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift)) // walk
+                else if(_moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift)) // walk
                 {
                     Walk();
                 }
-                else if (moveDirection == Vector3.zero) // Idle
+                else if (_moveDirection == Vector3.zero) // Idle
                 {
                     Idle();
                 }
@@ -146,21 +151,22 @@ public class PlayerMovement : MonoBehaviour
                     Jump();
                 }
             }
-            moveDirection *= speed;
+            _moveDirection *= speed;
         }
         
         // apply the changes calculated before
-        controller.Move(moveDirection * Time.deltaTime);
+        _controller.Move(_moveDirection * Time.deltaTime);
         //apply gravity
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        _velocity.y += gravity * Time.deltaTime;
+        _controller.Move(_velocity * Time.deltaTime);
 
     }
 
     // crouch movement
     private void Crouch()
     {
-        controller.height = 1.4f;
+        _animator.SetBool("Crouching", _isCrounching);
+        //controller.height = 1.4f;
         speed = slowSpeed;
     }
 
@@ -175,6 +181,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = slowSpeed;
         _animator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+        
     }
 
     // RUn movement
@@ -182,19 +189,21 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = walkSpeed;
         _animator.SetFloat("Speed", 1f, 0.1f, Time.deltaTime);
+        
     }
 
     private void Jump()
     {
-        velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        
     }
 
     //take damage when its called
     public void TakeDamage(float amount)
     {
-        currentHealth -= amount;
-        healthBar.SetHealth(currentHealth);
-        if (currentHealth <= 0f)
+        _currentHealth -= amount;
+        healthBar.SetHealth(_currentHealth);
+        if (_currentHealth <= 0f)
         {
             Debug.Log("You die");
             Time.timeScale = 0;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BillBoard : MonoBehaviour
 {
+    //references
     private Camera mainCamera;
     // Start is called before the first frame update
     void Start()

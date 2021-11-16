@@ -62,10 +62,10 @@
      <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\SpawnSystem.cs" />
+     <Compile Include="Assets\TheLastDance\Scripts\BillBoard.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Target.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\SwitchGuns.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
-     <Compile Include="Assets\TheLastDance\Scripts\BillBoard.cs" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft Scroll.shader" />
      <None Include="Assets\JMO Assets\WarFX\_Effects\MuzzleFlashes\!MuzzleFlash Differences.txt" />

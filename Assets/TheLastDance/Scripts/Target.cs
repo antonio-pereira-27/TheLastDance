@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class Target : MonoBehaviour
 {
+   // variables
    // velociade
    public float speed = 7f;
    // vida
@@ -20,6 +21,7 @@ public class Target : MonoBehaviour
    private bool chasing = false;
    private float timer = 50f;
    
+   // references
    // barra de vida
    public HealthBar healthBar;
    // transform do player

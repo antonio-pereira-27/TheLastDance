@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    //variables
     public float mouseSensivity = 100f;
+    float xRotation = 0f;
 
+    // references
     public Transform playerBody;
 
-    float xRotation = 0f;
+    
 
     // Start is called before the first frame update
     void Start()

@@ -5,27 +5,29 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
+    // Variables
     public float damage = 10f;
     public float range = 100f;
     public float impactForce = 30f;
     public float fireRate = 15f;
 	public float bulletsNumber;
     public float maxBullets = 30f;
+    public float bulletsPerLoader;
     
-    
-    public Camera fpsCamera;
-    public ParticleSystem muzzleFlash;
-    public GameObject impactEffect;
-
     public float nextTimeToFire = 0f;
     private float reloadTime = 1f;
     public bool isReloading = false;
-
+    
+    //references
+    public Camera fpsCamera;
+    public ParticleSystem muzzleFlash;
+    public GameObject impactEffect;
     public Animator animator;
     
     private void Start()
     {
-        bulletsNumber = maxBullets;
+        bulletsPerLoader = Mathf.Clamp(bulletsPerLoader, 0f, 30f);
+        bulletsNumber = bulletsPerLoader;
     }
 
     private void OnEnable()
@@ -38,6 +40,11 @@ public class Gun : MonoBehaviour
     public IEnumerator Reload()
     {
         isReloading = true;
+
+        if (bulletsNumber == 0)
+            maxBullets -= bulletsPerLoader;
+        else
+            maxBullets -= (bulletsPerLoader - bulletsNumber);
         
         animator.SetBool("Reloading", true);
         
@@ -47,7 +54,11 @@ public class Gun : MonoBehaviour
         
         yield return new WaitForSeconds(.25f);
         
-        bulletsNumber = maxBullets;
+        if (maxBullets < bulletsPerLoader)
+            bulletsNumber = maxBullets;
+        else
+            bulletsNumber = bulletsPerLoader;
+        
         isReloading = false;
     }
 

@@ -2,20 +2,17 @@ using UnityEngine;
 
 public class SpawnSystem : MonoBehaviour
 {
-    // variáveis
-    public GameObject enemyPrefab;
-
-    public PlayerMovement player;
-
-    public int totalEnemies;
-
-    public Transform[] spawnPoints;
-
+    // variables
     private float timer = 0f;
-
     private int enemiesEliminated = 0;
     private int enemiesSpawned = 0;
-
+    public int totalEnemies;
+    
+    // references
+    public GameObject enemyPrefab;
+    public PlayerMovement player;
+    public Transform[] spawnPoints;
+    
     // Update is called once per frame
     void Update()
     {
