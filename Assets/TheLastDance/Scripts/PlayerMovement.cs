@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         
         // if reloading cant shoot
-        if (weapon1.isReloading || weapon2.isReloading || (weapon1.maxBullets <= 0 && weapon1.isActiveAndEnabled) || (weapon2.maxBullets <= 0 && weapon2.isActiveAndEnabled))
+        if (weapon1.isReloading || weapon2.isReloading )
             return;
         else
             Shoot();
@@ -58,46 +58,64 @@ public class PlayerMovement : MonoBehaviour
 
     private void Shoot()
     {
-        // código para a arma principal
+        // primary weapon
         if (weapon1.isActiveAndEnabled)
         {
-            if (weapon1.bulletsNumber <= 0)
+            if (weapon1.bulletsNumber == 0 && weapon1.maxBullets == 0)
             {
-                StartCoroutine(weapon1.Reload());
+                Debug.Log("I Cant Shoot");
                 return;
             }
-            if (Input.GetButton("Fire1") && Time.time >= weapon1.nextTimeToFire && weapon1.bulletsNumber > 0)
+            else
             {
-                weapon1.nextTimeToFire = Time.time + 1f / weapon1.fireRate;
-                weapon1.Shoot();
+                if (weapon1.bulletsNumber <= 0)
+                {
+                    StartCoroutine(weapon1.Reload());
+                    return;
+                }
+                if (Input.GetButton("Fire1") && Time.time >= weapon1.nextTimeToFire && weapon1.bulletsNumber > 0)
+                {
+                    weapon1.nextTimeToFire = Time.time + 1f / weapon1.fireRate;
+                    weapon1.Shoot();
+                }
+                if(Input.GetButton("Reload") && weapon1.bulletsNumber < weapon1.bulletsPerLoader)
+                {
+                    StartCoroutine(weapon1.Reload());
+                    return;
+                }
             }
-            if(Input.GetButton("Reload") && weapon1.bulletsNumber < weapon1.bulletsPerLoader)
-            {
-                StartCoroutine(weapon1.Reload());
-                return;
-            }
+            
         }
         
         
-        // código para a arma secundaria
+        // secondary weapon
         if (weapon2.isActiveAndEnabled)
         {
-            if (weapon2.bulletsNumber <= 0)
+            if (weapon2.bulletsNumber == 0 && weapon2.maxBullets == 0)
             {
-                StartCoroutine(weapon2.Reload());
+                Debug.Log("I Cant Shoot");
                 return;
             }
-
-            if (Input.GetButton("Fire1") && Time.time >= weapon2.nextTimeToFire && weapon2.bulletsNumber > 0)
+            else
             {
-                weapon2.nextTimeToFire = Time.time + 1f / weapon2.fireRate;
-                weapon2.Shoot();
-            }
+                if (weapon2.bulletsNumber <= 0)
+                {
+                    StartCoroutine(weapon2.Reload());
+                    return;
+                }
 
-            if(Input.GetButton("Reload") && weapon2.bulletsNumber < weapon2.bulletsPerLoader)
-            {
-                StartCoroutine(weapon2.Reload());
+                if (Input.GetButton("Fire1") && Time.time >= weapon2.nextTimeToFire && weapon2.bulletsNumber > 0)
+                {
+                    weapon2.nextTimeToFire = Time.time + 1f / weapon2.fireRate;
+                    weapon2.Shoot();
+                }
+
+                if(Input.GetButton("Reload") && weapon2.bulletsNumber < weapon2.bulletsPerLoader)
+                {
+                    StartCoroutine(weapon2.Reload());
+                }
             }
+           
         }
     }
     private void Move()
@@ -180,7 +198,7 @@ public class PlayerMovement : MonoBehaviour
     private void Walk()
     {
         speed = slowSpeed;
-        _animator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+        //_animator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
         
     }
 
@@ -188,7 +206,7 @@ public class PlayerMovement : MonoBehaviour
     private void Run()
     {
         speed = walkSpeed;
-        _animator.SetFloat("Speed", 1f, 0.1f, Time.deltaTime);
+        _animator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
         
     }
 

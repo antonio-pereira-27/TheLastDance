@@ -3777,8 +3777,8 @@ MonoBehaviour:
   impactForce: 30
   fireRate: 4
   bulletsNumber: 0
-  maxBullets: 20
-  bulletsPerLoader: 0
+  maxBullets: 60
+  bulletsPerLoader: 20
   nextTimeToFire: 0
   isReloading: 0
   fpsCamera: {fileID: 612057156}
@@ -9507,8 +9507,8 @@ MonoBehaviour:
   impactForce: 30
   fireRate: 15
   bulletsNumber: 30
-  maxBullets: 30
-  bulletsPerLoader: 0
+  maxBullets: 90
+  bulletsPerLoader: 30
   nextTimeToFire: 0
   isReloading: 0
   fpsCamera: {fileID: 612057156}
