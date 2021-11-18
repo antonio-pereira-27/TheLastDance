@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -28,12 +29,9 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public HealthBar healthBar;
     [FormerlySerializedAs("_weapon1")] public Gun weapon1;
-    [FormerlySerializedAs("_weapon2")] public Gun weapon2;
     private Animator _animator;
+    public SpawnSystem spawnSystem;
     
-    
-    
-
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         
         // if reloading cant shoot
-        if (weapon1.isReloading || weapon2.isReloading )
+        if (weapon1.isReloading )
             return;
         else
             Shoot();
@@ -61,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         // primary weapon
         if (weapon1.isActiveAndEnabled)
         {
-            if (weapon1.bulletsNumber == 0 && weapon1.maxBullets == 0)
+            if (weapon1.maxBullets == 0)
             {
                 Debug.Log("I Cant Shoot");
                 return;
@@ -87,36 +85,6 @@ public class PlayerMovement : MonoBehaviour
             
         }
         
-        
-        // secondary weapon
-        if (weapon2.isActiveAndEnabled)
-        {
-            if (weapon2.bulletsNumber == 0 && weapon2.maxBullets == 0)
-            {
-                Debug.Log("I Cant Shoot");
-                return;
-            }
-            else
-            {
-                if (weapon2.bulletsNumber <= 0)
-                {
-                    StartCoroutine(weapon2.Reload());
-                    return;
-                }
-
-                if (Input.GetButton("Fire1") && Time.time >= weapon2.nextTimeToFire && weapon2.bulletsNumber > 0)
-                {
-                    weapon2.nextTimeToFire = Time.time + 1f / weapon2.fireRate;
-                    weapon2.Shoot();
-                }
-
-                if(Input.GetButton("Reload") && weapon2.bulletsNumber < weapon2.bulletsPerLoader)
-                {
-                    StartCoroutine(weapon2.Reload());
-                }
-            }
-           
-        }
     }
     private void Move()
     {
@@ -214,6 +182,23 @@ public class PlayerMovement : MonoBehaviour
     {
         _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         
+    }
+
+    private void OnTriggerEnter(Collider suply)
+    {
+        if (suply.CompareTag("Suply"))
+        {
+            Destroy(suply.gameObject);
+
+            if (spawnSystem.suplys[0])
+                weapon1.maxBullets += 30f;
+            if (spawnSystem.suplys[1])
+            {
+                _currentHealth += 20f;
+                healthBar.SetHealth(_currentHealth);
+            }
+                
+        }
     }
 
     //take damage when its called

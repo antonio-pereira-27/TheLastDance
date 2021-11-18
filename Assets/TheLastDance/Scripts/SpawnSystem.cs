@@ -7,11 +7,12 @@ public class SpawnSystem : MonoBehaviour
     private int enemiesEliminated = 0;
     private int enemiesSpawned = 0;
     public int totalEnemies;
-    
+
     // references
     public GameObject enemyPrefab;
     public PlayerMovement player;
     public Transform[] spawnPoints;
+    public GameObject[] suplys;
     
     // Update is called once per frame
     void Update()
@@ -36,6 +37,7 @@ public class SpawnSystem : MonoBehaviour
                 enemyAi.spawnSystem = this;
                 // contar os inimigos que ja foram instanciados
                 enemiesSpawned++;
+                InstantiateSuply();
             }
         }
     }
@@ -43,8 +45,9 @@ public class SpawnSystem : MonoBehaviour
     // função para quando contar inimigos mortos e quando todos assim estiverem este termina o jogo
     public void EnemyEliminated()
     {
+        // incrementa o numero de inimigos mortos
         enemiesEliminated++;
-
+        
         // verifica se o total de inimigos é o mesmo que os que já morreram
         if (totalEnemies == enemiesEliminated)
         {
@@ -52,5 +55,19 @@ public class SpawnSystem : MonoBehaviour
             Debug.Log("You Win");
             
         }
+    }
+
+    public void InstantiateSuply()
+    {
+        // spawn a suply to help the player
+        GameObject suply = Instantiate(suplys[Random.Range(0, suplys.Length)],
+            new Vector3(spawnPoints[Random.Range(0,spawnPoints.Length)].transform.position.x, 3f, spawnPoints[Random.Range(0,spawnPoints.Length)].transform.position.z),
+            Quaternion.identity);
+        // tag
+        suply.tag = "Suply"; // tag the suply
+
+        // rotate the suply
+        float rotationSpeed = 5f;
+        suply.transform.Rotate(Time.deltaTime * rotationSpeed, 0, 0);
     }
 }

@@ -15,11 +15,13 @@ public class Target : MonoBehaviour
    public float currentHealth;
    // ataque
    private float _damage = 10f;
-   public float attackDistance = 7f;
+   public float attackDistance = 10f;
    private float timerToAttack = 0f;
    // movimentação
    private bool chasing = false;
    private float timer = 50f;
+
+   private bool isMoving = false;
    
    // references
    // barra de vida
@@ -36,12 +38,14 @@ public class Target : MonoBehaviour
    // sistema de particulas para efeito de disparo
    public ParticleSystem muzzleFlash;
 
+   public Animator animator;
+
    // função de inicio 
    private void Start()
    {
       // inicializar a navmeshagent no script e atribuir valores
       _agent = GetComponent<NavMeshAgent>();
-      _agent.stoppingDistance = 7f;
+      //_agent.stoppingDistance = 7f;
       _agent.speed = speed;
       // inicializar o rigidbody através de script
       _rigidbody = GetComponent<Rigidbody>();
@@ -56,39 +60,41 @@ public class Target : MonoBehaviour
    // função update que atualiza a cada frame
    void Update()
    {
+      animator.SetBool("Moving", isMoving);
       // condição para verificar se o jogador está no campo de visão do npc ou se este o atacou pelas costas
       if (!chasing && currentHealth >= 100f)
       {
+         _agent.stoppingDistance = 5f;
          // contador de tempo para mudanças de direção
-         if (timer > 1f)
+         if (timer > 4f)
          {
             RandomDirection(10f);
             timer = 0f;
-         
+            
          }
          else
+         {
             timer += Time.deltaTime; // aumenta o contador
-         
+            isMoving = false;
+         }
+            
          
          // procura pelo jogador através do sistema de raycast do unity
          RaycastHit hitSearching;
-         //Debug.DrawRay(transform.position, transform.forward * 7, Color.magenta, 1f);
-         if (Physics.Raycast(transform.position, transform.forward, out hitSearching, attackDistance))
+         //Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), transform.forward * 7, Color.magenta, 1f);
+         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitSearching, attackDistance))
          {
             // verifica se é o jogador através da tag
             if (hitSearching.transform.CompareTag("Player"))
-            {
-               Debug.Log("I found the player");
                chasing = true; // atualizar a variável de perseguição
-            }
          }
-         
       }
       else
       {
          // olha para o jogador e persegue-o
          transform.LookAt(enemyTransform.transform.position);
          _agent.destination = enemyTransform.position;
+         _agent.stoppingDistance = 20f;
 
          // contador para atacar o jogador
          if (timerToAttack > 1.5f)
@@ -99,12 +105,11 @@ public class Target : MonoBehaviour
             //novamente sistema de raycast do unity para acertar no jogador
             RaycastHit hitAttack;
             //Debug.DrawRay(transform.position, transform.forward * 7, Color.green, 1f);
-            if (Physics.Raycast(transform.position, transform.forward, out hitAttack, attackDistance))
+            if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, attackDistance))
             {
                // verifica se é o jogador através da tag
                if (hitAttack.transform.CompareTag("Player"))
                {
-                  Debug.Log("Ill shoot");
                   // verifica a componente de jogar e tira lhe vida
                   PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
                   player.TakeDamage(_damage);
@@ -115,8 +120,8 @@ public class Target : MonoBehaviour
          }
          else
             timerToAttack += Time.deltaTime; // aumenta o contador
-         
       }
+      
    }
    
    // função para perder vida quando o jogador dispara sobre este
@@ -140,6 +145,7 @@ public class Target : MonoBehaviour
    // função para dar uma direção aleatória ao npc
    public void RandomDirection(float radius)
    {
+      isMoving = true;
       // através de um angulo definido entre -pi e pi
       float angle = Random.Range(-Mathf.PI, Mathf.PI);
       // a direção que o inimigo vai seguir é feita através do seno do angulo para o eixo X e através do cosseno para o eixo Z

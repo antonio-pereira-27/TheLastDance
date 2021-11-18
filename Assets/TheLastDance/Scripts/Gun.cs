@@ -68,19 +68,18 @@ public class Gun : MonoBehaviour
 		bulletsNumber--;
         
         RaycastHit hit;
+        //Debug.DrawRay(fpsCamera.transform.position, fpsCamera.transform.forward * range, Color.green, 1f);
         if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
         {
             Target target = hit.transform.GetComponent<Target>();
 
             if (target != null)
-            {
                 target.TakeDamage(damage);
-            }
+            
 
             if (hit.rigidbody != null)
-            {
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
-            }
+            
 
             GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGO, 2f);

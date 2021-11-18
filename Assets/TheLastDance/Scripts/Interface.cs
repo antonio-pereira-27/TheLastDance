@@ -15,7 +15,7 @@ public class Interface : MonoBehaviour
     public Text life;
     public HealthBar healthBar;
     public Gun pistol;
-    public Gun gun;
+    //public Gun gun;
     
     // Update is called once per frame
     void Update()
@@ -31,13 +31,13 @@ public class Interface : MonoBehaviour
             bullets.text = "Bullets: " + bulletsNumber + "/" + maxBulletsNumber;
         }
 
-        if (gun.isActiveAndEnabled)
+       /* if (gun.isActiveAndEnabled)
         {
             bulletsNumber = gun.bulletsNumber.ToString();
             maxBulletsNumber = gun.maxBullets.ToString();
             
             bullets.text = "Bullets: " + bulletsNumber + "/" + maxBulletsNumber;
-        }
+        }*/
 
     }
 }
