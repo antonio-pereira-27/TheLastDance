@@ -77,10 +77,10 @@ public class Target : MonoBehaviour
             timer += Time.deltaTime; // aumenta o contador
             isMoving = false;
          }
-            
          
          // procura pelo jogador através do sistema de raycast do unity
          RaycastHit hitSearching;
+         
          //Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), transform.forward * 7, Color.magenta, 1f);
          if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitSearching, attackDistance))
          {
@@ -88,6 +88,9 @@ public class Target : MonoBehaviour
             if (hitSearching.transform.CompareTag("Player"))
                chasing = true; // atualizar a variável de perseguição
          }
+
+         if (FindPlayer())
+            chasing = true;
       }
       else
       {
@@ -104,6 +107,7 @@ public class Target : MonoBehaviour
             
             //novamente sistema de raycast do unity para acertar no jogador
             RaycastHit hitAttack;
+            
             //Debug.DrawRay(transform.position, transform.forward * 7, Color.green, 1f);
             if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, attackDistance))
             {
@@ -164,6 +168,19 @@ public class Target : MonoBehaviour
          _agent.SetDestination(finalPosition); // destino do npc
       }
       
+   }
+
+   public bool FindPlayer()
+   {
+      GameObject enemy = GameObject.FindGameObjectWithTag("Player");
+
+      Vector3 distance = enemy.transform.position - transform.position;
+      float currentDistance = distance.magnitude;
+
+      if (currentDistance < attackDistance / 3f)
+         return true;
+      else
+         return false;
    }
    
    

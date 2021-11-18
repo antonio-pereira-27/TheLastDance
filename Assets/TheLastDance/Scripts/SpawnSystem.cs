@@ -1,55 +1,65 @@
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class SpawnSystem : MonoBehaviour
 {
     // variables
-    private float timer = 0f;
-    private int enemiesEliminated = 0;
-    private int enemiesSpawned = 0;
-    public int totalEnemies;
+    //private float timer = 0f;
+    private int _enemiesEliminated = 0;
+    private int _enemiesSpawned = 0;
+    private int totalEnemies;
+
+    private int totalSuplys;
+    private int _suplysSpawned = 0;
 
     // references
     public GameObject enemyPrefab;
     public PlayerMovement player;
     public Transform[] spawnPoints;
     public GameObject[] suplys;
-    
+
+    private void Start()
+    {
+        totalEnemies = spawnPoints.Length;
+        _suplysSpawned = totalEnemies;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        // diminuir o timer
-        timer -= Time.deltaTime;
-
-        if (timer < 0)
+        // verify if all enemies were spawned
+        if (_enemiesSpawned < totalEnemies)
         {
-            // reiniciar o contador de tempo
-            timer = 10f;
-            
-            // verifica se os todos os inimigos ja foram instanciados
-            if (enemiesSpawned < totalEnemies)
+            for (int i = 0; i < spawnPoints.Length; i++)
             {
-                // definir o ponto para instanciar os inimigos
-                Transform spawnPoint = spawnPoints[Random.Range(0,spawnPoints.Length)];
-                GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity); // instanciar o inimigo
-                Target enemyAi = enemy.GetComponent<Target>(); // pegar na componente target
-                // atribuir valores as variáveis da componente
+                // point to spawn an enemy
+                Transform spawnPoint = spawnPoints[i];
+                GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity); // instantiate enemy
+                Target enemyAi = enemy.GetComponent<Target>(); // get the target component
+                
+                // give values to variables on enemy
                 enemyAi.enemyTransform = player.transform;
                 enemyAi.spawnSystem = this;
-                // contar os inimigos que ja foram instanciados
-                enemiesSpawned++;
-                InstantiateSuply();
+                
+                // count the instantiated enemies
+                _enemiesSpawned++;
+
+                
+                InstantiateSuply(spawnPoint.position);
+                
             }
         }
     }
 
-    // função para quando contar inimigos mortos e quando todos assim estiverem este termina o jogo
+    // Function that verify how many enemies were eliminated and if they are all dead finish the game
     public void EnemyEliminated()
     {
-        // incrementa o numero de inimigos mortos
-        enemiesEliminated++;
+        // count the dead enemies
+        _enemiesEliminated++;
         
-        // verifica se o total de inimigos é o mesmo que os que já morreram
-        if (totalEnemies == enemiesEliminated)
+        // verify the amount of enemies
+        if (totalEnemies == _enemiesEliminated)
         {
             Time.timeScale = 0;
             Debug.Log("You Win");
@@ -57,17 +67,19 @@ public class SpawnSystem : MonoBehaviour
         }
     }
 
-    public void InstantiateSuply()
+    private void InstantiateSuply(Vector3 position)
     {
-        // spawn a suply to help the player
+        //count the instantiated supplies 
+        _suplysSpawned++;
+        
+        // spawn a supply to help the player
         GameObject suply = Instantiate(suplys[Random.Range(0, suplys.Length)],
-            new Vector3(spawnPoints[Random.Range(0,spawnPoints.Length)].transform.position.x, 3f, spawnPoints[Random.Range(0,spawnPoints.Length)].transform.position.z),
+            new Vector3(position.x, position.y + 3f, position.z),
             Quaternion.identity);
-        // tag
-        suply.tag = "Suply"; // tag the suply
-
+        
+        
         // rotate the suply
-        float rotationSpeed = 5f;
+        float rotationSpeed = 100f;
         suply.transform.Rotate(Time.deltaTime * rotationSpeed, 0, 0);
     }
 }

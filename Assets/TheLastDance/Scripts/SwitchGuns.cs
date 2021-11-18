@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class SwitchGuns : MonoBehaviour
 {
-    // variáveis das armas
+    // References
     public GameObject pistol;
-
     public GameObject rifle;
     
     // Start is called before the first frame update

@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
     private void Walk()
     {
         speed = slowSpeed;
-        //_animator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+        _animator.SetFloat("Speed", 0.25f, 0.1f, Time.deltaTime);
         
     }
 
@@ -184,20 +184,22 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    
     private void OnTriggerEnter(Collider suply)
     {
+        // if bullet
+        if (suply.CompareTag("Bullet"))
+        {
+            Destroy(suply.gameObject);
+            weapon1.maxBullets += 30f;
+        }
+        
+        // if first aid kit
         if (suply.CompareTag("Suply"))
         {
             Destroy(suply.gameObject);
-
-            if (spawnSystem.suplys[0])
-                weapon1.maxBullets += 30f;
-            if (spawnSystem.suplys[1])
-            {
-                _currentHealth += 20f;
-                healthBar.SetHealth(_currentHealth);
-            }
-                
+            _currentHealth += 20f;
+            healthBar.SetHealth(_currentHealth);
         }
     }
 
