@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         
         // if reloading cant shoot
-        if (weapon1.isReloading )
+        if (weapon1.isReloading || weapon1.maxBullets == 0 )
             return;
         else
             Shoot();
@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         // if we are grounded stop apply gravity
         if (isGrounded && _velocity.y < 0)
         {
-            _velocity.y = -5f;
+            _velocity.y = -2f;
         }
         
         // movement 
@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         
         // calculate the moveDirection with the Inputs
         _moveDirection = transform.right * x + transform.forward * z;
-
+        
         if (isGrounded)
         {
             //crouch 
@@ -131,14 +131,16 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Idle();
                 }
+
                 //Jump
                 if (Input.GetKey(KeyCode.Space))
                 {
                     Jump();
                 }
             }
-            _moveDirection *= speed;
         }
+        
+        _moveDirection *= speed;
         
         // apply the changes calculated before
         _controller.Move(_moveDirection * Time.deltaTime);

@@ -1,13 +1,73 @@
 using System;
 using System.Collections;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
+using RandomSystem = System.Random;
+/*
+abstract class DTNode
+{
+   public string Name { protected set; get; }
+   public abstract void Run();
+}
+
+class DTCondition : DTNode
+{
+   private DTNode _left, _right;
+   private Func<bool> condition;
+
+   public override void Run()
+   {
+      (condition() ? _left : _right).Run();
+   }
+   
+   public DTCondition(string conditionName, Func<bool> function, DTNode left, DTNode right)
+   {
+      Name = conditionName;
+      condition = function;
+      _left = left;
+      _right = right;
+   }
+}
+
+class DTAction : DTNode
+{
+   private Action _action;
+
+   public override void Run()
+   {
+      _action();
+   }
+
+   public DTAction(string actionName, Action action)
+   {
+      Name = actionName;
+      _action = action;
+   }
+}
+
+class DTAttackType : DTCondition
+{
+   public DTAttackType(string name, DTNode left, DTNode right) : 
+      base(name, AttackChoice, left, right)
+   {
+      //empty
+   }
 
 
+   static bool AttackChoice()
+   {
+      RandomSystem random = new RandomSystem();
+      return random.Next(0, 2) >= 1;
+   }
+   
+   private Func<bool> attack = AttackChoice;
+}
+*/
 public class Target : MonoBehaviour
 {
-   // variables
+   // VARIABLES
    // velociade
    public float speed = 7f;
    // vida
@@ -22,6 +82,8 @@ public class Target : MonoBehaviour
    private float timer = 50f;
 
    private bool isMoving = false;
+
+   //private static float d = 10f;
    
    // references
    // barra de vida
@@ -54,12 +116,54 @@ public class Target : MonoBehaviour
       // atualizar a barra de vida do npc
       currentHealth = health;
       healthBar.SetMaxHealth(health);
+
+
+      /*DTNode run = new DTAction("Working", work);
       
+      DTNode closeAttack = new DTAction("Close Attack", attack);
+      DTNode shootAttack = new DTAction("Shoot Attack", shoot);
+      DTNode attacktype = new DTAttackType("Attack Type", closeAttack, shootAttack);
+
+      DTNode tree = new DTCondition("Distance", Distance, run, attacktype);
+      tree.Run();*/
+
    }
+
+   /*
+   static void Working()
+   {
+      Debug.Log("Working...");
+   }
+
+   private Action work = new Action(Working);
+
+   static void CloseAttack()
+   {
+      Debug.Log("Close Attack!!!");
+   }
+
+   private Action attack = new Action(CloseAttack);
+   
+   static void Shooting()
+   {
+      Debug.Log("Shooting Enemy!!!");
+   }
+
+   private Action shoot = new Action(Shooting);
+
+   static bool Distance()
+   {
+      return d < 5f;
+   }
+
+   private Func<bool> distance = Distance;
+
+   */
 
    // função update que atualiza a cada frame
    void Update()
    {
+
       animator.SetBool("Moving", isMoving);
       // condição para verificar se o jogador está no campo de visão do npc ou se este o atacou pelas costas
       if (!chasing && currentHealth >= 100f)
