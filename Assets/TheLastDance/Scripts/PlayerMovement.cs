@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
         // primary weapon
         if (weapon1.isActiveAndEnabled)
         {
-            if (weapon1.maxBullets == 0)
+            if (weapon1.maxBullets <= 0)
             {
                 Debug.Log("I Cant Shoot");
                 return;
@@ -153,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
     // crouch movement
     private void Crouch()
     {
-        _animator.SetBool("Crouching", _isCrounching);
+        _animator.SetBool("Crouch", _isCrounching);
         //controller.height = 1.4f;
         speed = slowSpeed;
     }
@@ -161,14 +161,14 @@ public class PlayerMovement : MonoBehaviour
     // Idle position
     private void Idle()
     {
-        _animator.SetFloat("Speed", 0f, 0.1f, Time.deltaTime);
+        _animator.SetInteger("Speed", 0);
     }
 
     // walk movement
     private void Walk()
     {
         speed = slowSpeed;
-        _animator.SetFloat("Speed", 0.25f, 0.1f, Time.deltaTime);
+        _animator.SetInteger("Speed", 1);
         
     }
 
@@ -176,7 +176,7 @@ public class PlayerMovement : MonoBehaviour
     private void Run()
     {
         speed = walkSpeed;
-        _animator.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
+        _animator.SetInteger("Speed", 1);
         
     }
 

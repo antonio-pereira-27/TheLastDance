@@ -1,114 +1,49 @@
 using System;
-using System.Collections;
-using TreeEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 using RandomSystem = System.Random;
-/*
-abstract class DTNode
-{
-   public string Name { protected set; get; }
-   public abstract void Run();
-}
 
-class DTCondition : DTNode
-{
-   private DTNode _left, _right;
-   private Func<bool> condition;
-
-   public override void Run()
-   {
-      (condition() ? _left : _right).Run();
-   }
-   
-   public DTCondition(string conditionName, Func<bool> function, DTNode left, DTNode right)
-   {
-      Name = conditionName;
-      condition = function;
-      _left = left;
-      _right = right;
-   }
-}
-
-class DTAction : DTNode
-{
-   private Action _action;
-
-   public override void Run()
-   {
-      _action();
-   }
-
-   public DTAction(string actionName, Action action)
-   {
-      Name = actionName;
-      _action = action;
-   }
-}
-
-class DTAttackType : DTCondition
-{
-   public DTAttackType(string name, DTNode left, DTNode right) : 
-      base(name, AttackChoice, left, right)
-   {
-      //empty
-   }
-
-
-   static bool AttackChoice()
-   {
-      RandomSystem random = new RandomSystem();
-      return random.Next(0, 2) >= 1;
-   }
-   
-   private Func<bool> attack = AttackChoice;
-}
-*/
 public class Target : MonoBehaviour
 {
    // VARIABLES
-   // velociade
-   public float speed = 7f;
-   // vida
-   public float health = 100f;
-   public float currentHealth;
-   // ataque
+   private float speed = 5f;
+   private float attackDistance = 50f;
+   private float health = 100f;
+   private float currentHealth;
    private float _damage = 10f;
-   public float attackDistance = 10f;
-   private float timerToAttack = 0f;
-   // movimentação
-   private bool chasing = false;
-   private float timer = 50f;
+   private float _timer = 50f;
+   private float _timerToAttack = 0f;
 
-   private bool isMoving = false;
+   private DTNode _tree;
 
-   //private static float d = 10f;
+   private Action _rangeAttack;
+   private Action _closeAttack;
+   private Action _follow;
+   private Action _work;
    
-   // references
-   // barra de vida
-   public HealthBar healthBar;
-   // transform do player
-   [HideInInspector] public Transform enemyTransform;
-   // sistema de spawn de inimigos
+   private Func<bool> _playerClose;
+   private Func<bool> _distance;
+   private Func<bool> _caught;
+   
+   // REFERENCES
    [HideInInspector] public SpawnSystem spawnSystem;
-
-   // navmeshagent para npc
-   private NavMeshAgent _agent;
-   // rigidbody
-   private Rigidbody _rigidbody;
-   // sistema de particulas para efeito de disparo
+   [HideInInspector] public Transform enemyTransform;
+   
    public ParticleSystem muzzleFlash;
-
    public Animator animator;
+   public HealthBar healthBar;
+   
+   private NavMeshAgent _agent;
+   private Rigidbody _rigidbody;
 
-   // função de inicio 
+
    private void Start()
    {
       // inicializar a navmeshagent no script e atribuir valores
       _agent = GetComponent<NavMeshAgent>();
-      //_agent.stoppingDistance = 7f;
       _agent.speed = speed;
+      
       // inicializar o rigidbody através de script
       _rigidbody = GetComponent<Rigidbody>();
       _rigidbody.useGravity = false;
@@ -117,121 +52,38 @@ public class Target : MonoBehaviour
       currentHealth = health;
       healthBar.SetMaxHealth(health);
 
+      // initialize actions
+       _rangeAttack = RangeAttack;
+       _closeAttack = CloseAttack;
+       _distance = Distance;
+       _follow = Follow;
+       
+       // initialize conditions
+       _playerClose = PlayerClose;
+       _work = Working;
+       _caught = SawEnemy;
 
-      /*DTNode run = new DTAction("Working", work);
+       // create action nodes
+      DTNode work = new DTAction("Working", _work);
+      DTNode follow = new DTAction("Follow", _follow);
+      DTNode attack = new DTAction("Close Attack", this._closeAttack);
+      DTNode shootAttack = new DTAction("Shoot Attack", _rangeAttack);
       
-      DTNode closeAttack = new DTAction("Close Attack", attack);
-      DTNode shootAttack = new DTAction("Shoot Attack", shoot);
-      DTNode attacktype = new DTAttackType("Attack Type", closeAttack, shootAttack);
+      // create condition nodes
+      DTNode attackType = new DTCondition("Attack Type", _distance, attack, shootAttack);
+      DTNode sawEnemy = new DTCondition("Saw Enemy", _caught , follow, work);
 
-      DTNode tree = new DTCondition("Distance", Distance, run, attacktype);
-      tree.Run();*/
-
+      // create condition nodes
+      _tree = new DTCondition("Player Close", _playerClose, attackType, sawEnemy);
+      
    }
-
-   /*
-   static void Working()
-   {
-      Debug.Log("Working...");
-   }
-
-   private Action work = new Action(Working);
-
-   static void CloseAttack()
-   {
-      Debug.Log("Close Attack!!!");
-   }
-
-   private Action attack = new Action(CloseAttack);
    
-   static void Shooting()
-   {
-      Debug.Log("Shooting Enemy!!!");
-   }
-
-   private Action shoot = new Action(Shooting);
-
-   static bool Distance()
-   {
-      return d < 5f;
-   }
-
-   private Func<bool> distance = Distance;
-
-   */
-
    // função update que atualiza a cada frame
    void Update()
    {
-
-      animator.SetBool("Moving", isMoving);
-      // condição para verificar se o jogador está no campo de visão do npc ou se este o atacou pelas costas
-      if (!chasing && currentHealth >= 100f)
-      {
-         _agent.stoppingDistance = 5f;
-         // contador de tempo para mudanças de direção
-         if (timer > 4f)
-         {
-            RandomDirection(10f);
-            timer = 0f;
-            
-         }
-         else
-         {
-            timer += Time.deltaTime; // aumenta o contador
-            isMoving = false;
-         }
-         
-         // procura pelo jogador através do sistema de raycast do unity
-         RaycastHit hitSearching;
-         
-         //Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), transform.forward * 7, Color.magenta, 1f);
-         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitSearching, attackDistance))
-         {
-            // verifica se é o jogador através da tag
-            if (hitSearching.transform.CompareTag("Player"))
-               chasing = true; // atualizar a variável de perseguição
-         }
-
-         if (FindPlayer())
-            chasing = true;
-      }
-      else
-      {
-         // olha para o jogador e persegue-o
-         transform.LookAt(enemyTransform.transform.position);
-         _agent.destination = enemyTransform.position;
-         _agent.stoppingDistance = 20f;
-
-         // contador para atacar o jogador
-         if (timerToAttack > 1.5f)
-         {
-            // reiniciar o contador
-            timerToAttack = 0f;
-            
-            //novamente sistema de raycast do unity para acertar no jogador
-            RaycastHit hitAttack;
-            
-            //Debug.DrawRay(transform.position, transform.forward * 7, Color.green, 1f);
-            if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, attackDistance))
-            {
-               // verifica se é o jogador através da tag
-               if (hitAttack.transform.CompareTag("Player"))
-               {
-                  // verifica a componente de jogar e tira lhe vida
-                  PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
-                  player.TakeDamage(_damage);
-                  // inicia o sistema de particulas
-                  muzzleFlash.Play();
-               }
-            }
-         }
-         else
-            timerToAttack += Time.deltaTime; // aumenta o contador
-      }
-      
+      _tree.Run();
    }
-   
+
    // função para perder vida quando o jogador dispara sobre este
    public void TakeDamage(float amount)
    {
@@ -249,11 +101,59 @@ public class Target : MonoBehaviour
       Destroy(gameObject);
       spawnSystem.EnemyEliminated();
    }
-
-   // função para dar uma direção aleatória ao npc
-   public void RandomDirection(float radius)
+   
+   // CONDITIONS
+   /*
+    * ********** FIND PLAYER **********
+    */
+   private bool PlayerClose()
    {
-      isMoving = true;
+      float warning = 20f;
+      Vector3 distance = enemyTransform.position - transform.position;
+      float currentDistance = distance.magnitude;
+      
+      return currentDistance < warning || currentHealth < health;
+   }
+   
+   
+   /*
+    * ********** DISTANCE **********
+    */
+   bool Distance()
+   {
+      float warning = 10f;
+      Vector3 distance = enemyTransform.position - transform.position;
+      float currentDistance = distance.magnitude;
+      
+      return currentDistance < warning;
+   }
+   
+
+   bool SawEnemy()
+   {
+      bool caught = false;
+      // procura pelo jogador através do sistema de raycast do unity
+      RaycastHit hitSearching;
+         
+      //Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), transform.forward * 7, Color.magenta, 1f);
+      if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitSearching, attackDistance))
+      {
+         // verifica se é o jogador através da tag
+         if (hitSearching.transform.CompareTag("Player"))
+            caught = true;
+      }
+
+      return caught;
+   }
+
+   // ACTIONS
+   /*
+    * ********** WORK **********
+    */
+   
+   // função para dar uma direção aleatória ao npc
+   private void RandomDirection(float radius)
+   {
       // através de um angulo definido entre -pi e pi
       float angle = Random.Range(-Mathf.PI, Mathf.PI);
       // a direção que o inimigo vai seguir é feita através do seno do angulo para o eixo X e através do cosseno para o eixo Z
@@ -273,19 +173,97 @@ public class Target : MonoBehaviour
       }
       
    }
-
-   public bool FindPlayer()
+   void Working()
    {
-      GameObject enemy = GameObject.FindGameObjectWithTag("Player");
-
-      Vector3 distance = enemy.transform.position - transform.position;
-      float currentDistance = distance.magnitude;
-
-      if (currentDistance < attackDistance / 3f)
-         return true;
+      _agent.stoppingDistance = 5f;
+      if (_timer > 4f)
+      {
+         RandomDirection(10f);
+         _timer = 0f;
+      }
       else
-         return false;
+      {
+         _timer += Time.deltaTime; // aumenta o contador
+      }
    }
+
+   /*
+    * ********** FOLLOW **********
+    */
+   void Follow()
+   {
+      transform.LookAt(enemyTransform.transform.position);
+      _agent.destination = enemyTransform.position;
+      _agent.stoppingDistance = 20f;
+   }
+   
+   /*
+    * ********** ATTACKS **********
+    */
+   void CloseAttack()
+   {
+      Follow();
+      // contador para atacar o jogador
+      if (_timerToAttack > 1.5f)
+      {
+         // reiniciar o contador
+         _timerToAttack = 0f;
+            
+         //novamente sistema de raycast do unity para acertar no jogador
+         RaycastHit hitAttack;
+            
+         //Debug.DrawRay(transform.position, transform.forward * 7, Color.green, 1f);
+         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, attackDistance))
+         {
+            // verifica se é o jogador através da tag
+            if (hitAttack.transform.CompareTag("Player"))
+            {
+               // verifica a componente de jogar e tira lhe vida
+               PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
+               player.TakeDamage(_damage);
+               // inicia o sistema de particulas
+               muzzleFlash.Play();
+            }
+         }
+      }
+      else
+         _timerToAttack += Time.deltaTime; // aumenta o contador
+   }
+   
+   void RangeAttack()
+   {
+      Follow();
+      transform.LookAt(enemyTransform.transform.position);
+      // contador para atacar o jogador
+      if (_timerToAttack > 3.0f)
+      {
+         // reiniciar o contador
+         _timerToAttack = 0f;
+            
+         //novamente sistema de raycast do unity para acertar no jogador
+         RaycastHit hitAttack;
+            
+         //Debug.DrawRay(transform.position, transform.forward * 7, Color.green, 1f);
+         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, attackDistance))
+         {
+            // verifica se é o jogador através da tag
+            if (hitAttack.transform.CompareTag("Player"))
+            {
+               // verifica a componente de jogar e tira lhe vida
+               PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
+               player.TakeDamage(_damage);
+               // inicia o sistema de particulas
+               muzzleFlash.Play();
+            }
+         }
+      }
+      else
+         _timerToAttack += Time.deltaTime; // aumenta o contador
+   }
+   
+   
+   
+
    
    
 }

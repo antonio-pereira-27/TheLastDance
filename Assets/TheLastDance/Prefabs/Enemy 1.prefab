@@ -53,11 +53,11 @@ MonoBehaviour:
   health: 100
   currentHealth: 0
   attackDistance: 50
-  healthBar: {fileID: 3933986322803736615}
-  enemyTransform: {fileID: 0}
   spawnSystem: {fileID: 0}
+  enemyTransform: {fileID: 0}
   muzzleFlash: {fileID: 1817784403346662577}
   animator: {fileID: 4726766312767156770}
+  healthBar: {fileID: 3933986322803736615}
 --- !u!195 &9041161841294632694
 NavMeshAgent:
   m_ObjectHideFlags: 0
