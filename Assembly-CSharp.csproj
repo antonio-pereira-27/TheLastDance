@@ -62,6 +62,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\StartMenu.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Gun.cs" />
+     <Compile Include="Assets\TheLastDance\Scripts\PickableItem.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\RoomBehaviour.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -93,6 +94,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\GameManager.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Target.cs" />
+     <Compile Include="Assets\TheLastDance\Scripts\PickUpGun.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\SwitchGuns.cs" />

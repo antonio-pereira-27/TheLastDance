@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,10 +16,20 @@ public class Interface : MonoBehaviour
     public Text life;
     public HealthBar healthBar;
     public Gun pistol;
+    public Gun gun;
     public GameObject glock;
     public GameObject ak;
-    //public Gun gun;
-    
+
+
+    private void Start()
+    {
+        if (gun == null)
+        {
+            Debug.LogWarning("No second game yet");
+            return;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -35,13 +46,16 @@ public class Interface : MonoBehaviour
             bullets.text = bulletsNumber + "/" + maxBulletsNumber;
         }
 
-       /* if (gun.isActiveAndEnabled)
+        if (gun != null)
         {
-            bulletsNumber = gun.bulletsNumber.ToString();
-            maxBulletsNumber = gun.maxBullets.ToString();
+            if (gun.isActiveAndEnabled)
+            {
+                bulletsNumber = gun.bulletsNumber.ToString();
+                maxBulletsNumber = gun.maxBullets.ToString();
             
-            bullets.text = "Bullets: " + bulletsNumber + "/" + maxBulletsNumber;
-        }*/
+                bullets.text = "Bullets: " + bulletsNumber + "/" + maxBulletsNumber;
+            }
+        }
 
     }
 }

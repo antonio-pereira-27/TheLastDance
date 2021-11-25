@@ -36,10 +36,13 @@ public class Target : MonoBehaviour
    
    private NavMeshAgent _agent;
    private Rigidbody _rigidbody;
+   private AudioManager _audioManager;
 
 
    private void Start()
    {
+      _audioManager = FindObjectOfType<AudioManager>();
+      
       // inicializar a navmeshagent no script e atribuir valores
       _agent = GetComponent<NavMeshAgent>();
       _agent.speed = speed;
@@ -221,6 +224,8 @@ public class Target : MonoBehaviour
                // verifica a componente de jogar e tira lhe vida
                PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
                player.TakeDamage(_damage);
+               
+               _audioManager.Play("Bullet");
                // inicia o sistema de particulas
                muzzleFlash.Play();
             }
@@ -252,6 +257,7 @@ public class Target : MonoBehaviour
                // verifica a componente de jogar e tira lhe vida
                PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
                player.TakeDamage(_damage);
+               _audioManager.Play("Bullet");
                // inicia o sistema de particulas
                muzzleFlash.Play();
             }

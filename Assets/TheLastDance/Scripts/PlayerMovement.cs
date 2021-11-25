@@ -28,7 +28,8 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController _controller;
     public Transform groundCheck;
     public HealthBar healthBar;
-    [FormerlySerializedAs("_weapon1")] public Gun weapon1;
+    public Gun weapon1;
+    public Gun weapon2;
     private Animator _animator;
     private AudioManager _audioManager;
 
@@ -40,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
         _audioManager = FindObjectOfType<AudioManager>();
         _currentHealth = _health;
         healthBar.SetMaxHealth(_health);
+        
+        if(weapon2 == null)
+            return;
+        
     }
 
     // Update is called once per frame
@@ -87,6 +92,41 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
             
+        }
+
+        if (weapon2 != null)
+        {
+            // secundary weapon
+            if (weapon2.isActiveAndEnabled)
+            {
+                if (weapon2.maxBullets <= 0)
+                {
+                    Debug.Log("I Cant Shoot");
+                    return;
+                }
+                else
+                {
+                    if (weapon2.bulletsNumber <= 0)
+                    {
+                        _audioManager.Play("Reload");
+                        StartCoroutine(weapon2.Reload());
+                        return;
+                    }
+                    if (Input.GetButton("Fire1") && Time.time >= weapon2.nextTimeToFire && weapon2.bulletsNumber > 0)
+                    {
+                        _audioManager.Play("Bullet");
+                        weapon2.nextTimeToFire = Time.time + 1f / weapon2.fireRate;
+                        weapon2.Shoot();
+                    }
+                    if(Input.GetButton("Reload") && weapon2.bulletsNumber < weapon2.bulletsPerLoader)
+                    {
+                        _audioManager.Play("Reload");
+                        StartCoroutine(weapon2.Reload());
+                        return;
+                    }
+                }
+            
+            }
         }
         
     }
@@ -172,7 +212,7 @@ public class PlayerMovement : MonoBehaviour
     private void Walk()
     {
         speed = slowSpeed;
-        _audioManager.Play("FootSteps");
+       // _audioManager.Play("FootSteps");
         _animator.SetInteger("Speed", 1);
         
     }
@@ -181,7 +221,7 @@ public class PlayerMovement : MonoBehaviour
     private void Run()
     {
         speed = walkSpeed;
-        _audioManager.Play("FootSteps");
+        //_audioManager.Play("FootSteps");
         _animator.SetInteger("Speed", 1);
         
     }

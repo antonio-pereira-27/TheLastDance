@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &639924535730155083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639924535730155081}
+  - component: {fileID: 639924535730155082}
+  m_Layer: 0
+  m_Name: AudioManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &639924535730155081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639924535730155083}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &639924535730155082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639924535730155083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5590294cb83804dbc5474c7f2be683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 0
+  sounds:
+  - name: Button
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 51fa7be53cb081f4eb6c8ecb0f2f5c2a, type: 3}
+    audioSource: {fileID: 0}
+  - name: Background
+    volume: 0.02
+    pitch: 1
+    loop: 1
+    clip: {fileID: 8300000, guid: fdaa25d0515f5b14cad564fbae8a8812, type: 3}
+    audioSource: {fileID: 0}
+  - name: Bullet
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 031c76f5ab8dc1f46a11072b05a2a8d2, type: 3}
+    audioSource: {fileID: 0}
+  - name: Reload
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 0c4bc22cf563ae54ea66cb633cf92238, type: 3}
+    audioSource: {fileID: 0}
+  - name: FootSteps
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: ed76381dfb20fd44191a023ab147a80e, type: 3}
+    audioSource: {fileID: 0}
