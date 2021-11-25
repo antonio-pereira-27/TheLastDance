@@ -15,6 +15,8 @@ public class Interface : MonoBehaviour
     public Text life;
     public HealthBar healthBar;
     public Gun pistol;
+    public GameObject glock;
+    public GameObject ak;
     //public Gun gun;
     
     // Update is called once per frame
@@ -25,10 +27,12 @@ public class Interface : MonoBehaviour
 
         if (pistol.isActiveAndEnabled)
         {
+            glock.SetActive(true);
+            ak.SetActive(false);
             bulletsNumber = pistol.bulletsNumber.ToString();
             maxBulletsNumber = pistol.maxBullets.ToString();
 
-            bullets.text = "Bullets: " + bulletsNumber + "/" + maxBulletsNumber;
+            bullets.text = bulletsNumber + "/" + maxBulletsNumber;
         }
 
        /* if (gun.isActiveAndEnabled)

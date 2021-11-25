@@ -30,13 +30,14 @@ public class PlayerMovement : MonoBehaviour
     public HealthBar healthBar;
     [FormerlySerializedAs("_weapon1")] public Gun weapon1;
     private Animator _animator;
-    public SpawnSystem spawnSystem;
-    
+    private AudioManager _audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
         _controller = GetComponent<CharacterController>();
         _animator = GetComponentInChildren<Animator>();
+        _audioManager = FindObjectOfType<AudioManager>();
         _currentHealth = _health;
         healthBar.SetMaxHealth(_health);
     }
@@ -68,16 +69,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (weapon1.bulletsNumber <= 0)
                 {
+                    _audioManager.Play("Reload");
                     StartCoroutine(weapon1.Reload());
                     return;
                 }
                 if (Input.GetButton("Fire1") && Time.time >= weapon1.nextTimeToFire && weapon1.bulletsNumber > 0)
                 {
+                    _audioManager.Play("Bullet");
                     weapon1.nextTimeToFire = Time.time + 1f / weapon1.fireRate;
                     weapon1.Shoot();
                 }
                 if(Input.GetButton("Reload") && weapon1.bulletsNumber < weapon1.bulletsPerLoader)
                 {
+                    _audioManager.Play("Reload");
                     StartCoroutine(weapon1.Reload());
                     return;
                 }
@@ -168,6 +172,7 @@ public class PlayerMovement : MonoBehaviour
     private void Walk()
     {
         speed = slowSpeed;
+        _audioManager.Play("FootSteps");
         _animator.SetInteger("Speed", 1);
         
     }
@@ -176,6 +181,7 @@ public class PlayerMovement : MonoBehaviour
     private void Run()
     {
         speed = walkSpeed;
+        _audioManager.Play("FootSteps");
         _animator.SetInteger("Speed", 1);
         
     }

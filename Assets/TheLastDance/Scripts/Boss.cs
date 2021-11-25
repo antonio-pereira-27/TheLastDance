@@ -82,7 +82,7 @@ public class Boss : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
-        spawnSystem.BossEliminated();
+        spawnSystem.BossEliminated(true);
     }
 
     

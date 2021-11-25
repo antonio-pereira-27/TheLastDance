@@ -23,7 +23,7 @@ public class Gun : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
     public Animator animator;
-    
+
     private void Start()
     {
         bulletsPerLoader = Mathf.Clamp(bulletsPerLoader, 0f, 30f);

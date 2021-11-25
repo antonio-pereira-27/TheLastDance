@@ -10,8 +10,7 @@ public class SpawnSystem : MonoBehaviour
     private int _enemiesSpawned = 0;
     private int totalEnemies;
     private int totalSuplys;
-
-    private int bossEliminated = 0;
+    
     private int bossCount = 0;
     public bool deadBoss = false;
 
@@ -41,9 +40,6 @@ public class SpawnSystem : MonoBehaviour
         {
             InstantiateBoss();
         }
-
-        if (bossEliminated == 1)
-            deadBoss = true;
         
     }
 
@@ -55,9 +51,9 @@ public class SpawnSystem : MonoBehaviour
         
     }
 
-    public void BossEliminated()
+    public void BossEliminated(bool dead)
     {
-        bossEliminated++;
+        deadBoss = dead;
     }
 
     private void InstantiateBoss()
