@@ -1,66 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47c090f1-c72c-4e43-9260-a78cd1fa3c91" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TheLastDance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TheLastDance/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Audio/AudioManager.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Audio/AudioManager.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Scenes/Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TheLastDance/Scenes/Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Scenes/Level_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TheLastDance/Scenes/Level_2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Scenes/Options_Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TheLastDance/Scenes/Options_Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Scenes/StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TheLastDance/Scenes/StartMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Scripts/Interface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TheLastDance/Scripts/Interface.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TheLastDance/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Scripts/Target.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TheLastDance/Scripts/Target.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Sounds/Shoot.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Sounds/Shoot.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TheLastDance/Sounds/foot steps.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TheLastDance/Sounds/foot steps.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/10/1089f14f01cd1730195ddd11096417b1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/27/277a39635192af49dcf7b65f4d281b46" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/27/27c3b4844c250cc20b3c619cf6dc127d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2e/2e9502fee40ad4139f180caca480d379" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/48/48a0911ceeed9ce49cb8c33b32facd43" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5a/5a6e711c70598c7926a8a85f34624191" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5d/5dbd41f8ceaa9b6f846aa29a2e39269a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6e/6ef556d2abbaca6c11909ed14c63b015" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/70/70f893b4fe56f03c3a8012f254af0f07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/77/77b55c2b577194d933c5a32656c15366" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7a/7a5d73eb4c8a2da28554671f2037c822" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7b/7b2047b5590ac7d74ebc281c2f12b58d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7e/7ec8f3580dad4d63550b76c1b5231154" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/82/826195517a53c946db3a7062da7e6c59" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/83/83088cfb853cd10676349b20584c23bc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/89/8935678ef5b45d7ff02f21300c859854" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9e/9e43002ca53bb10ef774f91a5f513f9b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a3/a34b974129872ed036ef96bd01cbb276" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a6/a62e2c590befc8f81169e01927d82d12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ad/ad27e01f297b9c9752db12ff8bdca425" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/be/be34713ca5c43bf068794ef7f77249bf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c9/c97e9bdb0f6ca7cdf62db6acb3afa9c7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d6/d6dd9a0c2f6b350eda9c71976b1e6586" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/dc/dc2f0847ba114b1cc4e96837a6602106" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ea/ea666540811b050ed0733c766f43bfb2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f0/f052f9ea1ac6a74db0b251ec77b31eeb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f1/f1d593ee5e7b1ddf1d36d091400e7074" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f2/f223de95f5c1ad3a249024e4c2977f0f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f4/f4fc2640ed5c704a93a12ad23865e8d3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fe/fe4f38cfbb1b24dbe4c4f244224ebf5c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
-    </list>
+    <list default="true" id="47c090f1-c72c-4e43-9260-a78cd1fa3c91" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,12 +19,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/PickUpGun.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/PickableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/DTNode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/Sound.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/SpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/PickUpGun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/BillBoard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/SpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/PickableItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/Sound.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/Boss.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20V1cEq4EN8OmWCD4R4d2poHQKM" />
@@ -96,6 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -165,6 +107,8 @@
       <workItem from="1637810811011" duration="1045000" />
       <workItem from="1637855602850" duration="1035000" />
       <workItem from="1637860793001" duration="6284000" />
+      <workItem from="1637885500302" duration="893000" />
+      <workItem from="1637886415946" duration="1872000" />
     </task>
     <servers />
   </component>
