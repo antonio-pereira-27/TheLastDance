@@ -17,7 +17,7 @@ public class OptionsMenu : MonoBehaviour
     public TMP_Dropdown _dropdown;
     public TMP_InputField sensivityInputField;
 
-    private AudioManager _audioManager;
+    public AudioManager _audioManager;
     public Slider volumeSlider;
 
     private int currentResolutionIndex = 0;
@@ -27,7 +27,7 @@ public class OptionsMenu : MonoBehaviour
         sensivityInputField.text = sensivity.ToString();
 
         _audioManager = FindObjectOfType<AudioManager>();
-        volumeSlider.value = _audioManager.volume;
+        //Debug.Log(_audioManager);
 
         _resolutions = Screen.resolutions;
         _dropdown.ClearOptions();
@@ -51,14 +51,23 @@ public class OptionsMenu : MonoBehaviour
 
     public void SetVolume()
     {
-        volume = volumeSlider.value;
-        foreach (Sound s in _audioManager.sounds)
+        try
         {
-            if (s.name == "Background")
+            //volumeSlider.value = _audioManager.volume;
+            volume = volumeSlider.value;
+            foreach (Sound s in _audioManager.sounds)
             {
-                s.audioSource.volume = volume;
+                if (s.name == "Background")
+                {
+                    s.audioSource.volume = volume;
+                }
             }
         }
+        catch (Exception e)
+        {
+            Debug.Log("Error: " + e);
+        }
+        
     }
 
     public void SetQuality(int qualityIndex)
@@ -85,7 +94,7 @@ public class OptionsMenu : MonoBehaviour
     
     public void BackButton()
     {
-        FindObjectOfType<AudioManager>().Play("Button");
+        //FindObjectOfType<AudioManager>().Play("Button");
         SceneManager.LoadScene("StartMenu");
     }
 }

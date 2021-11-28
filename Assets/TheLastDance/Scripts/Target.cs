@@ -225,7 +225,7 @@ public class Target : MonoBehaviour
                PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
                player.TakeDamage(_damage);
                
-               _audioManager.Play("Bullet");
+               //_audioManager.Play("Bullet");
                // inicia o sistema de particulas
                muzzleFlash.Play();
             }
@@ -257,7 +257,7 @@ public class Target : MonoBehaviour
                // verifica a componente de jogar e tira lhe vida
                PlayerMovement player = hitAttack.transform.GetComponent<PlayerMovement>();
                player.TakeDamage(_damage);
-               _audioManager.Play("Bullet");
+               //_audioManager.Play("Bullet");
                // inicia o sistema de particulas
                muzzleFlash.Play();
             }
