@@ -329,9 +329,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: {x: 2, y: 6}
-  startPosition: 0
-  room: {fileID: 5767327295166734235, guid: 0507d26d6123d8c4e9bcf070f4c2ed39, type: 3}
   offset: {x: 54, y: 54}
+  room: {fileID: 5767327295166734235, guid: 0507d26d6123d8c4e9bcf070f4c2ed39, type: 3}
+  tutorialPrefabs:
+  - {fileID: 7890490189324508701, guid: 0872c44e5961fbd43a2519dd38045a17, type: 3}
+  - {fileID: 7414197150938555256, guid: f215d4ae2bc64834c8823d35cf0e1077, type: 3}
 --- !u!4 &1641314256
 Transform:
   m_ObjectHideFlags: 0

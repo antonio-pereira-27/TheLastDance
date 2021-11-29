@@ -6,19 +6,24 @@ using Random = UnityEngine.Random;
 
 public class Generator : MonoBehaviour
 {
+    // VARIABLES
+    public Vector2 size;
+    public Vector2 offset; // distance between each room
+    
+    private int startPosition = 0;
+    private List<Cell> board;
+    
+    // REFERENCES
+    public GameObject room;
+    public GameObject[] tutorialPrefabs;
+    
+    // Cell class
     public class Cell
     {
         public bool visited = false; // visited or not
         public bool[] status = new bool[4]; // up down right left
     }
-
-    public Vector2 size;
-
-    public int startPosition = 0;
-    public GameObject room;
-    public Vector2 offset; // distance between each room
     
-    private List<Cell> board;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,23 +74,19 @@ public class Generator : MonoBehaviour
             board[currentCell].visited = true;
 
             if (currentCell == board.Count - 1)
-            {
                 break;
-            }
+            
             
             //check neighbors
             List<int> neighbors = CheckNeighbors(currentCell);
 
             if (neighbors.Count == 0)
             {
-                if (path.Count == 0)
-                {
+                if (path.Count == 0) 
                     break;
-                }
                 else
-                {
                     currentCell = path.Pop();
-                }
+                
             }
             else
             {
