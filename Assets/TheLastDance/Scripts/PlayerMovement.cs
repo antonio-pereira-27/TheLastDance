@@ -30,15 +30,14 @@ public class PlayerMovement : MonoBehaviour
     public HealthBar healthBar;
     public Gun weapon1;
     public Gun weapon2;
-    private Animator _animator;
+    public Animator _animator;
     //private AudioManager _audioManager;
 
     // Start is called before the first frame update
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        _animator = GetComponentInChildren<Animator>();
-       // _audioManager = FindObjectOfType<AudioManager>();
+        // _audioManager = FindObjectOfType<AudioManager>();
         _currentHealth = _health;
         healthBar.SetMaxHealth(_health);
         
@@ -50,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _animator.SetBool("Crouch", _isCrounching);
         // move
         Move();
         
@@ -192,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
     // crouch movement
     private void Crouch()
     {
-        _animator.SetBool("Crouch", _isCrounching);
+        
         //controller.height = 1.4f;
         speed = slowSpeed;
     }
@@ -200,7 +200,7 @@ public class PlayerMovement : MonoBehaviour
     // Idle position
     private void Idle()
     {
-        _animator.SetInteger("Speed", 0);
+        _animator.SetFloat("Speed", 0);
     }
 
     // walk movement
@@ -208,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = slowSpeed;
        // _audioManager.Play("FootSteps");
-        _animator.SetInteger("Speed", 1);
+       _animator.SetFloat("Speed", 0.5f);
         
     }
 
@@ -217,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = walkSpeed;
         //_audioManager.Play("FootSteps");
-        _animator.SetInteger("Speed", 1);
+        _animator.SetFloat("Speed", 0.5f);
         
     }
 
