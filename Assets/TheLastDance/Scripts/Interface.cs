@@ -19,10 +19,18 @@ public class Interface : MonoBehaviour
     public Gun gun;
     public GameObject glock;
     public GameObject ak;
+    public GameObject pausePanel;
+    public GameObject interfaceGO;
 
 
     private void Start()
     {
+        //Time.timeScale = 1;
+        pausePanel.SetActive(false);
+        interfaceGO.SetActive(true);
+
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
         if (gun == null)
         {
             Debug.LogWarning("No second game yet");
@@ -50,11 +58,20 @@ public class Interface : MonoBehaviour
         {
             if (gun.isActiveAndEnabled)
             {
+                glock.SetActive(false);
+                ak.SetActive(true);
                 bulletsNumber = gun.bulletsNumber.ToString();
                 maxBulletsNumber = gun.maxBullets.ToString();
             
                 bullets.text = "Bullets: " + bulletsNumber + "/" + maxBulletsNumber;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.CapsLock))
+        {
+            Time.timeScale = 0;
+            pausePanel.SetActive(true);
+            interfaceGO.SetActive(false);
         }
 
     }

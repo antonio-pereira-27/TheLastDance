@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     
     // REFERENCES
     public SpawnSystem spawnSystem;
+    public GameObject weaponOlder;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,10 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             spawnSystem.BossEliminated(false);
         }
+
+        if (SceneManager.GetActiveScene().name == "Level_3" || SceneManager.GetActiveScene().name == "Level_4")
+            weaponOlder.GetComponent<SwitchGuns>().enabled = true;
+        
 
     }
 }

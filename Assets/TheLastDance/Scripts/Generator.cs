@@ -67,7 +67,7 @@ public class Generator : MonoBehaviour
 
         int k = 0;
 
-        // 1000 para ter a certeza que sai do ciclo para nao crashar o unity
+        // make sure that go out of cycle
         while (k < 1000)
         {
             k++;
@@ -86,7 +86,6 @@ public class Generator : MonoBehaviour
                     break;
                 else
                     currentCell = path.Pop();
-                
             }
             else
             {

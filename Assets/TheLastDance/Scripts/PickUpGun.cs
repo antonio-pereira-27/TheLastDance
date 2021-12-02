@@ -8,7 +8,7 @@ public class PickUpGun : MonoBehaviour
 {
     // REFERENCES
     [SerializeField] private Camera _camera;
-    [SerializeField] private Transform weaponOlder;
+    [SerializeField] private GameObject weaponOlder;
 
     private PickableItem _pickableItem;
 
@@ -26,23 +26,10 @@ public class PickUpGun : MonoBehaviour
                     var pickable = hit.transform.GetComponent<PickableItem>();
 
                     if (pickable)
-                        PickItem(pickable);
+                        weaponOlder.GetComponent<SwitchGuns>().enabled = true;
                 }
             }
         }
     }
-
-    private void PickItem(PickableItem item)
-    {
-        _pickableItem = item;
-
-        item.Rigidbody.isKinematic = true;
-        item.Rigidbody.velocity = Vector3.zero;
-        item.Rigidbody.angularVelocity = Vector3.zero;
-        
-        item.transform.SetParent(weaponOlder);
-        
-        item.transform.localPosition = Vector3.zero;
-        item.transform.localEulerAngles = Vector3.zero;
-    }
+    
 }

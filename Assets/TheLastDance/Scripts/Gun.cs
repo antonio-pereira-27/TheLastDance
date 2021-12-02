@@ -58,7 +58,7 @@ public class Gun : MonoBehaviour
             bulletsNumber = maxBullets;
         else
             bulletsNumber = bulletsPerLoader;
-        
+       
         isReloading = false;
     }
 

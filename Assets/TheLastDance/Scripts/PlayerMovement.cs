@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         
         // if reloading cant shoot
-        if (weapon1.isReloading || weapon1.maxBullets == 0 )
+        if (weapon1.isReloading || weapon1.maxBullets == 0 || weapon2.isReloading || weapon2.maxBullets == 0)
             return;
         else
             Shoot();
@@ -66,10 +66,7 @@ public class PlayerMovement : MonoBehaviour
         if (weapon1.isActiveAndEnabled)
         {
             if (weapon1.maxBullets <= 0)
-            {
-                Debug.Log("I Cant Shoot");
                 return;
-            }
             else
             {
                 if (weapon1.bulletsNumber <= 0)
@@ -100,10 +97,7 @@ public class PlayerMovement : MonoBehaviour
             if (weapon2.isActiveAndEnabled)
             {
                 if (weapon2.maxBullets <= 0)
-                {
-                    Debug.Log("I Cant Shoot");
                     return;
-                }
                 else
                 {
                     if (weapon2.bulletsNumber <= 0)
@@ -128,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
             
             }
         }
+        
         
     }
     private void Move()
@@ -239,7 +234,12 @@ public class PlayerMovement : MonoBehaviour
         if (suply.CompareTag("Bullet"))
         {
             Destroy(suply.gameObject);
-            weapon1.maxBullets += 30f;
+            
+            if(weapon1.isActiveAndEnabled)
+                weapon1.maxBullets += weapon1.bulletsPerLoader;
+            
+            if (weapon2 != null && weapon2.isActiveAndEnabled)
+                weapon2.maxBullets += weapon2.bulletsPerLoader;
         }
         
         // if first aid kit
