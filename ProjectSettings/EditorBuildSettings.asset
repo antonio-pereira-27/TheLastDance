@@ -24,6 +24,6 @@ EditorBuildSettings:
     path: Assets/TheLastDance/Scenes/Options_Menu.unity
     guid: f91dd6d05bffae3498520bd7c274b862
   - enabled: 1
-    path: Assets/TheLastDance/Scenes/Tutorial_Level.unity
+    path: Assets/TheLastDance/Tutorial/Tutorial_Level.unity
     guid: c19c7b7ed3b1ab643a3d4b38bc2cc42a
   m_configObjects: {}
