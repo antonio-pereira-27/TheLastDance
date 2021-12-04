@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _animator.SetBool("Crouch", _isCrounching);
+       // _animator.SetBool("Crouch", _isCrounching);
         // move
         Move();
         
@@ -148,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
             //crouch 
             if (Input.GetKey(KeyCode.C))
             {
-                _isCrounching = true;
+                _animator.SetBool("Crouch", true);
                 Crouch();
             }
             else
@@ -200,7 +200,9 @@ public class PlayerMovement : MonoBehaviour
     // Idle position
     private void Idle()
     {
-        _animator.SetFloat("Speed", 0);
+        speed = 0;
+        _animator.SetInteger("SpeedInt", 0);
+        _animator.SetBool("Crouch", false);
     }
 
     // walk movement
@@ -208,7 +210,9 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = slowSpeed;
        // _audioManager.Play("FootSteps");
-       _animator.SetFloat("Speed", 0.5f);
+       _animator.SetFloat("Speed", 0f);
+       _animator.SetInteger("SpeedInt", 1);
+       _animator.SetBool("Crouch", false);
         
     }
 
@@ -217,7 +221,9 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = walkSpeed;
         //_audioManager.Play("FootSteps");
-        _animator.SetFloat("Speed", 0.5f);
+        _animator.SetFloat("Speed", 1f);
+        _animator.SetInteger("SpeedInt", 1);
+        _animator.SetBool("Crouch", false);
         
     }
 

@@ -20,9 +20,11 @@ public class Generator : MonoBehaviour
     // REFERENCES
     public GameObject room;
     public GameObject[] tutorialPrefabs;
+    public GameObject[] weaponsPrefabs;
     public GameObject enemy;
     public GameObject boss;
     public GameObject player;
+    public GameObject door;
     
     // Cell class
     public class Cell
@@ -61,8 +63,19 @@ public class Generator : MonoBehaviour
                         playerInstantiate.transform.localScale = new Vector3(25.0f, 25.0f, 25.0f);
 
                     }
+
+                    if (roomCount == 2)
+                    {
+                        var weapon1 = Instantiate(weaponsPrefabs[0],
+                            new Vector3(x * offset.x + 20f, 5f, -y * offset.y + 27f), quaternion.identity);
+                        weapon1.transform.localScale = scale * 2f;
+                        
+                        var weapon2 = Instantiate(weaponsPrefabs[1],
+                            new Vector3(x * offset.x + 29f, 5f, -y * offset.y + 27f), quaternion.identity);
+                        weapon2.transform.localScale = new Vector3(1000f, 1000f, 1000f);
+                    }
                     
-                    if (roomCount == 4)
+                    if (roomCount == 3)
                     {
                         var obj1 = Instantiate(tutorialPrefabs[0], new Vector3(x * offset.x + 24f, 5f, -y * offset.y + 27f), Quaternion.identity);
                         obj1.transform.localScale = scale * 30f;
@@ -72,17 +85,23 @@ public class Generator : MonoBehaviour
                     }
 
 
-                    if (roomCount == 6)
+                    if (roomCount == 4)
                     {
                         var enemyInstantiate = Instantiate(enemy, spawnPosition, quaternion.identity);
                         enemyInstantiate.transform.localScale = scale;
                     }
                         
                     
-                    if (roomCount == 8)
+                    if (roomCount == 5)
                     {
                         var enemyInstantiate = Instantiate(boss, spawnPosition, quaternion.identity);
                         enemyInstantiate.transform.localScale = scale;
+                    }
+
+                    if (roomCount == 6)
+                    {
+                        var doorInstantiate = Instantiate(door, spawnPosition, Quaternion.identity);
+                        doorInstantiate.transform.localScale = scale;
                     }
                         
                     

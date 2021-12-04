@@ -80,7 +80,7 @@
      <Compile Include="Assets\TheLastDance\Scripts\Interface.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
-     <Compile Include="Assets\TheLastDance\Tutorial\Tutorial_Level\Supply.cs" />
+     <Compile Include="Assets\TheLastDance\Tutorial\Supply.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\DTNode.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
@@ -114,6 +114,11 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TheLastDance\Tutorial\Generator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+     <Compile Include="Assets\TheLastDance\Tutorial\TutorialCanvas.cs" />
+     <Compile Include="Assets\TheLastDance\Tutorial\Weapon.cs" />
+     <Compile Include="Assets\TheLastDance\Tutorial\EnemyTutorial.cs" />
+     <Compile Include="Assets\TheLastDance\Tutorial\BossTutorial.cs" />
+     <Compile Include="Assets\TheLastDance\Tutorial\DoorTutorial.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

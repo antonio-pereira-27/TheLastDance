@@ -53,19 +53,26 @@ namespace TheLastDance.Tutorial
 
             if (isGrounded)
             {
+                if (Input.GetKey(KeyCode.C))
+                {
+                    animator.SetBool("Crouch", true);
+                    speed = walkSpeed;
+                }
+                else
+                {
+                    //move
+                    if (direction != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
+                        Run();
+                    else if (direction != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
+                        Walk();
+                    else if (direction == Vector3.zero)
+                        Idle();
 
-                //move
-                if (direction != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
-                    Run();
-                else if (direction != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
-                    Walk();
-                else if (direction == Vector3.zero)
-                    Idle();
-
-                // jump
-                if (Input.GetKey(KeyCode.Space))
-                    Jump();
-
+                    // jump
+                    if (Input.GetKey(KeyCode.Space))
+                        Jump();
+   
+                }
             }
 
             direction *= speed;
@@ -78,21 +85,30 @@ namespace TheLastDance.Tutorial
         private void Jump()
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            //animator.Play("Jumping");
         }
 
         private void Idle()
         {
             speed = 0;
+            animator.SetInteger("SpeedInt", 0);
+            animator.SetBool("Crouch", false);
         }
 
         private void Walk()
         {
             speed = walkSpeed;
+            animator.SetInteger("SpeedInt", 1);
+            animator.SetFloat("Speed", 0f);
+            animator.SetBool("Crouch", false);
         }
 
         private void Run()
         {
             speed = runSpeed;
+            animator.SetInteger("SpeedInt", 1);
+            animator.SetFloat("Speed", 1f);
+            animator.SetBool("Crouch", false);
         }
     }
 }
