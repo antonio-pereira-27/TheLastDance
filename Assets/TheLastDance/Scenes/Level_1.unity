@@ -5968,8 +5968,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadBoss: 0
-  enemyPrefab: {fileID: 3580105445400387981, guid: 3a43655f88ee2724e898e5eb4feb2122, type: 3}
-  bossPrefab: {fileID: 7681959698491840018, guid: 5208110aac834384180b68e5896b9fb4, type: 3}
+  enemyPrefab: {fileID: 214682133204633284, guid: 1bd3581b05c3b8144af693a70e30089b, type: 3}
+  bossPrefab: {fileID: 133559258090835797, guid: dbad3d233ad2c894faa181e52e64656c, type: 3}
   player: {fileID: 235858651}
   spawnPoints:
   - {fileID: 431987430}

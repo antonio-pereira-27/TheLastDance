@@ -935,8 +935,8 @@ MonoBehaviour:
   weaponsPrefabs:
   - {fileID: 8365866314349250760, guid: 7ad75d57c9252ea489ba0657d79aa45d, type: 3}
   - {fileID: 4482795860128577999, guid: 3af8a60e78526134396d059b89a4745e, type: 3}
-  enemy: {fileID: 5142407910220476646, guid: 84d46993f8078e145a012c362cab80bd, type: 3}
-  boss: {fileID: 4216286465967889306, guid: 4e9fda40defa237439e03046ceb7b6eb, type: 3}
+  enemy: {fileID: 4330652228580452714, guid: 7a461baaea36eb845975ba548d0ac908, type: 3}
+  boss: {fileID: 4094554848754907472, guid: 735212c4789b088469f01cedb8b88afd, type: 3}
   player: {fileID: 4666724352795365391, guid: 99d0d77924f80824cb0d2d3745ba9107, type: 3}
   door: {fileID: 2055305954738238216, guid: 9a5d308c62a6f2e4fb904b8ef3182f8d, type: 3}
 --- !u!4 &1641314256

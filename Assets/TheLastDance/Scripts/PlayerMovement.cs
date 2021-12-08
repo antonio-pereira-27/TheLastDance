@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private float _health = 100f;
     private float _currentHealth;
 
-    private bool _isCrounching = false;
+    [HideInInspector] public bool idle;
     
     //REFERENCES
     private CharacterController _controller;
@@ -155,8 +155,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 //set the controller height to normal
                 _controller.height = 3.33f;
-                _isCrounching = false;
-                
+
                 // check if we are moving and if the keys are being pressed to update the velocity and the movement of character
                 if (_moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift)) // run
                 {
@@ -192,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
     // crouch movement
     private void Crouch()
     {
-        
+        idle = false;
         //controller.height = 1.4f;
         speed = slowSpeed;
     }
@@ -200,6 +199,7 @@ public class PlayerMovement : MonoBehaviour
     // Idle position
     private void Idle()
     {
+        idle = true;
         speed = 0;
         _animator.SetInteger("SpeedInt", 0);
         _animator.SetBool("Crouch", false);
@@ -208,6 +208,7 @@ public class PlayerMovement : MonoBehaviour
     // walk movement
     private void Walk()
     {
+        idle = false;
         speed = slowSpeed;
        // _audioManager.Play("FootSteps");
        _animator.SetFloat("Speed", 0f);
@@ -219,6 +220,7 @@ public class PlayerMovement : MonoBehaviour
     // RUn movement
     private void Run()
     {
+        idle = false;
         speed = walkSpeed;
         //_audioManager.Play("FootSteps");
         _animator.SetFloat("Speed", 1f);
@@ -251,9 +253,15 @@ public class PlayerMovement : MonoBehaviour
         // if first aid kit
         if (suply.CompareTag("Suply"))
         {
-            Destroy(suply.gameObject);
-            _currentHealth += 20f;
-            healthBar.SetHealth(_currentHealth);
+            if (_currentHealth == _health)
+                _currentHealth += 0f;
+            else
+            {
+                Destroy(suply.gameObject);
+                _currentHealth += 20f;
+                healthBar.SetHealth(_currentHealth);
+            }
+           
         }
     }
 

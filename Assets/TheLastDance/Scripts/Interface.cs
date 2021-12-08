@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Interface : MonoBehaviour
@@ -14,6 +16,7 @@ public class Interface : MonoBehaviour
     //references
     public Text bullets;
     public Text life;
+    public TMP_Text timerText;
     public HealthBar healthBar;
     public Gun pistol;
     public Gun gun;
@@ -22,9 +25,14 @@ public class Interface : MonoBehaviour
     public GameObject pausePanel;
     public GameObject interfaceGO;
 
+    private GameManager _gameManager;
+
 
     private void Start()
     {
+        // game manager
+        _gameManager = FindObjectOfType<GameManager>();
+        
         //Time.timeScale = 1;
         pausePanel.SetActive(false);
         interfaceGO.SetActive(true);
@@ -41,9 +49,11 @@ public class Interface : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // health bar
         lifeText = healthBar.slider.value.ToString();
         life.text = lifeText;
 
+        // guns
         if (pistol.isActiveAndEnabled)
         {
             glock.SetActive(true);
@@ -67,12 +77,23 @@ public class Interface : MonoBehaviour
             }
         }
 
+        // timer to level 3
+        if (SceneManager.GetActiveScene().name == "Level_3")
+        {
+            timerText.gameObject.SetActive(true);
+            timerText.text = string.Format("Time Left : {0:f}s", _gameManager.timer);
+        }
+        
+
+        // Pause
         if (Input.GetKeyDown(KeyCode.CapsLock))
         {
             Time.timeScale = 0;
             pausePanel.SetActive(true);
             interfaceGO.SetActive(false);
         }
+        
+        
 
     }
 }

@@ -7,13 +7,14 @@ using RandomSystem = System.Random;
 public class Target : MonoBehaviour
 {
    // VARIABLES
-   private float speed = 5f;
-   private float attackDistance = 50f;
-   private float health = 100f;
-   private float currentHealth;
+   private float _speed = 5f;
+   private float _attackDistance = 50f;
+   private float _health = 100f;
+   private float _currentHealth;
    private float _damage = 10f;
    private float _timer = 50f;
    private float _timerToAttack = 0f;
+   private bool _idle;
 
    private DTNode _tree;
 
@@ -45,15 +46,18 @@ public class Target : MonoBehaviour
       
       // inicializar a navmeshagent no script e atribuir valores
       _agent = GetComponent<NavMeshAgent>();
-      _agent.speed = speed;
+      _agent.speed = _speed;
       
       // inicializar o rigidbody através de script
       _rigidbody = GetComponent<Rigidbody>();
       _rigidbody.useGravity = false;
       
       // atualizar a barra de vida do npc
-      currentHealth = health;
-      healthBar.SetMaxHealth(health);
+      _currentHealth = _health;
+      healthBar.SetMaxHealth(_health);
+      
+      // animator
+      animator.GetComponent<Animator>();
 
       // initialize actions
        _rangeAttack = RangeAttack;
@@ -85,14 +89,15 @@ public class Target : MonoBehaviour
    void Update()
    {
       _tree.Run();
+      animator.SetBool("Idle", _idle);
    }
 
    // função para perder vida quando o jogador dispara sobre este
    public void TakeDamage(float amount)
    {
-      currentHealth -= amount;
-      healthBar.SetHealth(currentHealth);
-      if (currentHealth <= 0f) // verifica se morreu
+      _currentHealth -= amount;
+      healthBar.SetHealth(_currentHealth);
+      if (_currentHealth <= 0f) // verifica se morreu
       {
          Die();
       }
@@ -115,7 +120,7 @@ public class Target : MonoBehaviour
       Vector3 distance = enemyTransform.position - transform.position;
       float currentDistance = distance.magnitude;
       
-      return currentDistance < warning || currentHealth < health;
+      return currentDistance < warning || _currentHealth < _health;
    }
    
    
@@ -139,7 +144,7 @@ public class Target : MonoBehaviour
       RaycastHit hitSearching;
          
       //Debug.DrawRay(new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), transform.forward * 7, Color.magenta, 1f);
-      if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitSearching, attackDistance))
+      if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitSearching, _attackDistance))
       {
          // verifica se é o jogador através da tag
          if (hitSearching.transform.CompareTag("Player"))
@@ -178,14 +183,16 @@ public class Target : MonoBehaviour
    }
    void Working()
    {
-      _agent.stoppingDistance = 5f;
+      _agent.stoppingDistance = 7f;
       if (_timer > 4f)
       {
+         _idle = false;
          RandomDirection(10f);
          _timer = 0f;
       }
       else
       {
+         _idle = true;
          _timer += Time.deltaTime; // aumenta o contador
       }
    }
@@ -195,9 +202,16 @@ public class Target : MonoBehaviour
     */
    void Follow()
    {
+      _idle = false;
       transform.LookAt(enemyTransform.transform.position);
       _agent.destination = enemyTransform.position;
       _agent.stoppingDistance = 20f;
+   }
+   
+   void lookAtPlayer()
+   {
+      transform.LookAt(enemyTransform.transform.position);
+      _idle = true;
    }
    
    /*
@@ -205,7 +219,7 @@ public class Target : MonoBehaviour
     */
    void CloseAttack()
    {
-      Follow();
+      lookAtPlayer();
       // contador para atacar o jogador
       if (_timerToAttack > 1.5f)
       {
@@ -216,7 +230,7 @@ public class Target : MonoBehaviour
          RaycastHit hitAttack;
             
          //Debug.DrawRay(transform.position, transform.forward * 7, Color.green, 1f);
-         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, attackDistance))
+         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, _attackDistance))
          {
             // verifica se é o jogador através da tag
             if (hitAttack.transform.CompareTag("Player"))
@@ -237,7 +251,7 @@ public class Target : MonoBehaviour
    
    void RangeAttack()
    {
-      Follow();
+      lookAtPlayer();
       transform.LookAt(enemyTransform.transform.position);
       // contador para atacar o jogador
       if (_timerToAttack > 3.0f)
@@ -249,7 +263,7 @@ public class Target : MonoBehaviour
          RaycastHit hitAttack;
             
          //Debug.DrawRay(transform.position, transform.forward * 7, Color.green, 1f);
-         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, attackDistance))
+         if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), transform.forward, out hitAttack, _attackDistance))
          {
             // verifica se é o jogador através da tag
             if (hitAttack.transform.CompareTag("Player"))

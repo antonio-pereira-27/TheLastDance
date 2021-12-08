@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour
     private float damage = 20f;
     private float timerToAttack = 0f;
     private float attackDistance = 50f;
+    private bool idle;
 
     private DTNode tree;
 
@@ -32,10 +33,13 @@ public class Boss : MonoBehaviour
 
     private NavMeshAgent navMeshAgent;
     private Rigidbody rigidbody;
+    private Animator animator;
     
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
+        
         navMeshAgent = GetComponent<NavMeshAgent>();
         navMeshAgent.speed = speed;
 
@@ -67,6 +71,7 @@ public class Boss : MonoBehaviour
     void Update()
     {
         tree.Run();
+        animator.SetBool("Idle", idle);
     }
 
     public void TakeDamage(float amount)
@@ -83,6 +88,12 @@ public class Boss : MonoBehaviour
     {
         Destroy(gameObject);
         spawnSystem.BossEliminated(true);
+    }
+
+    void lookAtPlayer()
+    {
+        transform.LookAt(enemyTransform.transform.position);
+        idle = true;
     }
 
     
@@ -112,12 +123,13 @@ public class Boss : MonoBehaviour
     {
         navMeshAgent.destination = enemyTransform.position;
         transform.LookAt(enemyTransform.transform.position);
-        navMeshAgent.stoppingDistance = attackDistance / 2f;
+        navMeshAgent.stoppingDistance = 10f;
+        idle = false;
     }
 
     void CloseAttack()
     {
-        Follow();
+        lookAtPlayer();
         if (timerToAttack > 1.0f)
         {
             timerToAttack = 0f;
@@ -141,7 +153,7 @@ public class Boss : MonoBehaviour
     
     void RangeAttack()
     {
-        Follow();
+        lookAtPlayer();
         if (timerToAttack > 2.0f)
         {
             timerToAttack = 0f;
