@@ -25,6 +25,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/SpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/PickableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/Sound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/Normal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/Boss.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="20V1cEq4EN8OmWCD4R4d2poHQKM" />
@@ -125,6 +126,9 @@
       <workItem from="1638889337576" duration="761000" />
       <workItem from="1638896788831" duration="4297000" />
       <workItem from="1638931459723" duration="561000" />
+      <workItem from="1639002918343" duration="1137000" />
+      <workItem from="1639011660717" duration="5311000" />
+      <workItem from="1639067438629" duration="3466000" />
     </task>
     <servers />
   </component>

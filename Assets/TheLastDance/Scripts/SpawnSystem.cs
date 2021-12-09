@@ -98,7 +98,10 @@ public class SpawnSystem : MonoBehaviour
             Quaternion.identity);
         
         // rotate the suply
-        float rotationSpeed = 100f;
-        suply.transform.Rotate(Time.deltaTime * rotationSpeed, 0, 0);
+        float time = 0f;
+        float speed = 50f;
+        time += Time.deltaTime;
+        Quaternion yAxis = Quaternion.Euler(0, time * speed, 0);
+        suply.transform.rotation = yAxis;
     }
 }

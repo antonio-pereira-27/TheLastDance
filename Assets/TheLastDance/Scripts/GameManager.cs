@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     // VARIABLES
     private bool winLevel;
     [HideInInspector]public float timer;
+    private PlayerMovement player;
     
     // REFERENCES
     public SpawnSystem spawnSystem;
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         // timer
         timer = 120f;
+        player = FindObjectOfType<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,12 @@ public class GameManager : MonoBehaviour
         // active switch guns
         if (SceneManager.GetActiveScene().name == "Level_3" || SceneManager.GetActiveScene().name == "Level_4")
             weaponOlder.GetComponent<SwitchGuns>().enabled = true;
+
+        if (SceneManager.GetActiveScene().name == "Level_4")
+            player.GetComponent<PickUpSarah>().enabled = true;
+        else 
+            player.GetComponent<PickUpSarah>().enabled = false;
+        
 
         // level 3 timer
         if (SceneManager.GetActiveScene().name == "Level_3" && timer <= 0f)

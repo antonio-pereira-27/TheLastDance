@@ -73,7 +73,7 @@ public class Interface : MonoBehaviour
                 bulletsNumber = gun.bulletsNumber.ToString();
                 maxBulletsNumber = gun.maxBullets.ToString();
             
-                bullets.text = "Bullets: " + bulletsNumber + "/" + maxBulletsNumber;
+                bullets.text = bulletsNumber + "/" + maxBulletsNumber;
             }
         }
 
