@@ -5980,6 +5980,14 @@ PrefabInstance:
       propertyPath: playerBody
       value: 
       objectReference: {fileID: 358136769}
+    - target: {fileID: 8753692530357207505, guid: f30dfad41739fff43b31ac6f182c34a0, type: 3}
+      propertyPath: recoilUp
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753692530357207505, guid: f30dfad41739fff43b31ac6f182c34a0, type: 3}
+      propertyPath: recoilRight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f30dfad41739fff43b31ac6f182c34a0, type: 3}
 --- !u!4 &1174454216 stripped

@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections;
 using UnityEditor;
@@ -17,8 +18,13 @@ public class Gun : MonoBehaviour
     public float nextTimeToFire = 0f;
     private float reloadTime = 1f;
     public bool isReloading = false;
+
+    public float recoilUp = 5f;
+    public float recoilRight = 2f;
+    
     
     //references
+    private MouseLook mouseLook;
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
@@ -28,6 +34,7 @@ public class Gun : MonoBehaviour
     {
         bulletsPerLoader = Mathf.Clamp(bulletsPerLoader, 0f, 30f);
         bulletsNumber = bulletsPerLoader;
+        mouseLook = fpsCamera.GetComponent<MouseLook>();
     }
 
     private void OnEnable()
@@ -65,6 +72,7 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
         muzzleFlash.Play();
+        mouseLook.GetRecoil(recoilUp / 5f, recoilRight / 5f);
 		bulletsNumber--;
         
         RaycastHit hit;
