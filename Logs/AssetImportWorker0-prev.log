@@ -1,127 +1,127 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.23f1 (c5d91304a876) revision 12966163'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19043.1415; Version 2009; 64bit' Language: 'pt' Physical Memory: 8035 MB
+OS: 'Windows 10 Home; OS build 19043.1415; Version 2009; 64bit' Language: 'pt' Physical Memory: 16332 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.3.23f1\Editor\Unity.exe
+D:\Unity\2020.3.23f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Projeto/TheLastDance
+D:/ProjetoAplicado1/TheLastDance
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54097
-Successfully changed project path to: D:/Projeto/TheLastDance
-D:/Projeto/TheLastDance
+63826
+Successfully changed project path to: D:/ProjetoAplicado1/TheLastDance
+D:/ProjetoAplicado1/TheLastDance
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 77.44 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 83.06 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.23f1 (c5d91304a876)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Projeto/TheLastDance/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/2020.3.23f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/ProjetoAplicado1/TheLastDance/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1050 (ID=0x1c8d)
+    Renderer: Radeon RX 580 Series (ID=0x67df)
     Vendor:   
-    VRAM:     4021 MB
-    Driver:   30.0.14.7247
+    VRAM:     4075 MB
+    Driver:   30.0.14011.3017
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56660
+Mono path[0] = 'D:/Unity/2020.3.23f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56580
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002425 seconds.
+Register platform support module: D:/Unity/2020.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001067 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 81.51 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 68.63 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.761 seconds
+- Completed reload, in  0.569 seconds
 Domain Reload Profiling:
-	ReloadAssembly (761ms)
-		BeginReloadAssembly (65ms)
+	ReloadAssembly (570ms)
+		BeginReloadAssembly (57ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (602ms)
-			LoadAssemblies (62ms)
+		EndReloadAssembly (453ms)
+			LoadAssemblies (57ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (206ms)
+			SetupTypeCache (133ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (239ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (191ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (82ms)
-				BeforeProcessingInitializeOnLoad (18ms)
-				ProcessInitializeOnLoadAttributes (87ms)
-				ProcessInitializeOnLoadMethodAttributes (46ms)
+				RefreshPlugins (69ms)
+				BeforeProcessingInitializeOnLoad (15ms)
+				ProcessInitializeOnLoadAttributes (78ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.042747 seconds.
+Registered in 0.004419 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.90 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  5.240 seconds
+- Completed reload, in  1.481 seconds
 Domain Reload Profiling:
-	ReloadAssembly (5241ms)
-		BeginReloadAssembly (363ms)
+	ReloadAssembly (1482ms)
+		BeginReloadAssembly (163ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (56ms)
-		EndReloadAssembly (4751ms)
-			LoadAssemblies (222ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (1267ms)
+			LoadAssemblies (97ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (748ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (111ms)
-			SetupLoadedEditorAssemblies (3497ms)
+			SetupTypeCache (256ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (797ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (220ms)
-				ProcessInitializeOnLoadAttributes (3230ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
-				AfterProcessingInitializeOnLoad (14ms)
-				EditorAssembliesLoaded (1ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (707ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
-Refreshing native plugins compatible for Editor in 1.16 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2403 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.6 MB.
-System memory in use after: 116.7 MB.
+System memory in use before: 116.8 MB.
+System memory in use after: 116.9 MB.
 
 Unloading 96 unused Assets to reduce memory usage. Loaded Objects now: 2846.
-Total: 5.841600 ms (FindLiveObjects: 0.486700 ms CreateObjectMapping: 0.212500 ms MarkObjects: 4.899000 ms  DeleteObjects: 0.241700 ms)
+Total: 3.706300 ms (FindLiveObjects: 0.251000 ms CreateObjectMapping: 0.112300 ms MarkObjects: 3.170200 ms  DeleteObjects: 0.171800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -135,127 +135,67 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/TheLastDance/Scenes/Level_3.unity
-  artifactKey: Guid(6b09779d9467e8e4f9158c811a211107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Scenes/Level_3.unity using Guid(6b09779d9467e8e4f9158c811a211107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3876ab9ea438ff14bca04f8f17c8dbab') in 0.025492 seconds 
-  Import took 0.058615 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.585505 seconds.
-  path: Assets/TheLastDance/Prefabs/Cade.prefab
-  artifactKey: Guid(f30dfad41739fff43b31ac6f182c34a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Cade.prefab using Guid(f30dfad41739fff43b31ac6f182c34a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecc420fca238fb0bb185e69437cae383') in 0.915641 seconds 
-  Import took 0.962852 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000348 seconds.
-  path: Assets/TheLastDance/Prefabs/FirstPersonPlayer 1 1.prefab
-  artifactKey: Guid(f578bc3f8881b754c8a2ccc370fa0eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/FirstPersonPlayer 1 1.prefab using Guid(f578bc3f8881b754c8a2ccc370fa0eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0c77192e3c75e4d034c6d56e6fc555') in 0.375371 seconds 
-  Import took 0.409101 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.711545 seconds.
-  path: Assets/TheLastDance/Prefabs/Normal Persons
-  artifactKey: Guid(26706942f685e544b88e72e820ae8f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Normal Persons using Guid(26706942f685e544b88e72e820ae8f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26a91225eeeea3c496397ec0f6240d4f') in 0.013996 seconds 
-  Import took 0.127211 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.185162 seconds.
-  path: Assets/TheLastDance/Prefabs/Level2
-  artifactKey: Guid(74096838cb2fa454f973ef9b22ae66ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Level2 using Guid(74096838cb2fa454f973ef9b22ae66ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3cbc726df213547ab5b2bf3225ecc6ca') in 0.008866 seconds 
-  Import took 0.041126 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.139213 seconds.
-  path: Assets/TheLastDance/Animation/Player/Cade.fbx
-  artifactKey: Guid(655ca209f60b9fd49b5a7560fecf50f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/Cade.fbx using Guid(655ca209f60b9fd49b5a7560fecf50f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ed941df56ac63ae8d903570ee17ab32') in 0.649548 seconds 
-  Import took 0.668838 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000321 seconds.
-  path: Assets/TheLastDance/Animation/Player/Idle.fbx
-  artifactKey: Guid(f7bb07752b5be62488482daf0b4fb107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/Idle.fbx using Guid(f7bb07752b5be62488482daf0b4fb107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2dd3e550d89ccc1f669269350b27d85') in 0.058711 seconds 
-  Import took 0.085812 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000291 seconds.
-  path: Assets/TheLastDance/Animation/Player/Cade@Breathing Idle.fbx
-  artifactKey: Guid(7053681df08f6bb4aa684864565139dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/Cade@Breathing Idle.fbx using Guid(7053681df08f6bb4aa684864565139dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3931a8c51bcf07e10d75eb8c8733dce3') in 0.614395 seconds 
-  Import took 0.678974 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000347 seconds.
-  path: Assets/TheLastDance/Animation/Player/xbot@Walking.fbx
-  artifactKey: Guid(664eb8db67517094398649214318b289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/xbot@Walking.fbx using Guid(664eb8db67517094398649214318b289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '938e04e30aae660e6de462b3cdd0943b') in 0.039110 seconds 
-  Import took 0.061531 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000483 seconds.
-  path: Assets/TheLastDance/Animation/Player/Reserva.fbx
-  artifactKey: Guid(ebd1b4b6f7671ba4fa051bb6ed580ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/Reserva.fbx using Guid(ebd1b4b6f7671ba4fa051bb6ed580ea9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8f010b9ecba91c3876afa4b62dba232') in 0.671088 seconds 
-  Import took 0.686387 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000362 seconds.
-  path: Assets/TheLastDance/Animation/Player/Cade@Walking.fbx
-  artifactKey: Guid(7598a42b55e1a00498ee190b6b8a6ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/Cade@Walking.fbx using Guid(7598a42b55e1a00498ee190b6b8a6ad9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb352cf7126634bf820a19d6edabff2f') in 0.547467 seconds 
-  Import took 0.690135 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000318 seconds.
-  path: Assets/TheLastDance/Animation/Player/CrouchIdle.fbx
-  artifactKey: Guid(f20b17de94c580345bf260adf86cafaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/CrouchIdle.fbx using Guid(f20b17de94c580345bf260adf86cafaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '509bc4bed1115b6bfa74f7e3b2719a44') in 0.036423 seconds 
-  Import took 0.073997 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000421 seconds.
-  path: Assets/TheLastDance/Animation/Player/Reserva2.fbx
-  artifactKey: Guid(f63637c47972e104abceaf9f50412315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/Reserva2.fbx using Guid(f63637c47972e104abceaf9f50412315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6517b057c49652cd9c8494b1b500261d') in 0.256040 seconds 
-  Import took 0.281799 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000279 seconds.
-  path: Assets/TheLastDance/Animation/Player/Cade@Jumping.fbx
-  artifactKey: Guid(e131408df2f871d4488f69eead40c107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Animation/Player/Cade@Jumping.fbx using Guid(e131408df2f871d4488f69eead40c107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c675f78cbeb28df96a69bb74307184d3') in 0.585903 seconds 
-  Import took 0.653328 seconds .
+  path: Assets/TheLastDance/Scripts/PauseMenu.cs
+  artifactKey: Guid(c219a496eb779c94fa3a412dfd0e7c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Scripts/PauseMenu.cs using Guid(c219a496eb779c94fa3a412dfd0e7c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58d793003dbf762e10283e92b33fc5bd') in 0.035998 seconds 
+  Import took 0.039723 seconds .
 
 ========================================================================
 Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005343 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.940 seconds
+Domain Reload Profiling:
+	ReloadAssembly (941ms)
+		BeginReloadAssembly (114ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (780ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (237ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (355ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (275ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 3.49 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 85.0 MB.
-System memory in use after: 85.2 MB.
+Unloading 2344 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.9 MB.
+System memory in use after: 112.1 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2891.
-Total: 5.467900 ms (FindLiveObjects: 0.326400 ms CreateObjectMapping: 0.154900 ms MarkObjects: 4.868800 ms  DeleteObjects: 0.116400 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2848.
+Total: 3.681800 ms (FindLiveObjects: 0.241300 ms CreateObjectMapping: 0.052100 ms MarkObjects: 3.305100 ms  DeleteObjects: 0.082100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -270,59 +210,126 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.484270 seconds.
+Registered in 0.004046 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at D:/ProjetoAplicado1/TheLastDance/Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at D:/ProjetoAplicado1/TheLastDance/Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
 System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
 UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
-[D:/ProjetoAplicado1/TheLastDance/Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.292 seconds
+- Completed reload, in  0.936 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1292ms)
-		BeginReloadAssembly (127ms)
+	ReloadAssembly (936ms)
+		BeginReloadAssembly (116ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		EndReloadAssembly (1104ms)
-			LoadAssemblies (91ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (772ms)
+			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (307ms)
+			SetupTypeCache (236ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (561ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (351ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (2ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (133ms)
-				ProcessInitializeOnLoadAttributes (399ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (271ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2344 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 129.6 MB.
-System memory in use after: 129.8 MB.
+System memory in use before: 112.0 MB.
+System memory in use after: 112.1 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2893.
-Total: 4.643400 ms (FindLiveObjects: 0.262700 ms CreateObjectMapping: 0.111700 ms MarkObjects: 4.155100 ms  DeleteObjects: 0.112200 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2850.
+Total: 3.565800 ms (FindLiveObjects: 0.242000 ms CreateObjectMapping: 0.061800 ms MarkObjects: 3.176400 ms  DeleteObjects: 0.084500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003889 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.919 seconds
+Domain Reload Profiling:
+	ReloadAssembly (920ms)
+		BeginReloadAssembly (107ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (766ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (233ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (349ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (270ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2344 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 112.0 MB.
+System memory in use after: 112.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2852.
+Total: 3.669900 ms (FindLiveObjects: 0.239600 ms CreateObjectMapping: 0.062100 ms MarkObjects: 3.288600 ms  DeleteObjects: 0.078300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

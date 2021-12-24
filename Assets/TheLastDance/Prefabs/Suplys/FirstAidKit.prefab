@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &2948508391675806263
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414197150938555256}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.39621007, y: 0.09121445, z: 0.28931373}
-  m_Center: {x: 0.000000022351742, y: 0.000000003725291, z: 0.000000022351747}
 --- !u!1001 &7648779951133089321
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -91,3 +78,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c2818ee0312663e43bb7da5c511ca400, type: 3}
   m_PrefabInstance: {fileID: 7648779951133089321}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2948508391675806263
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414197150938555256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.39621007, y: 0.09121445, z: 0.28931373}
+  m_Center: {x: 0.000000022351742, y: 0.000000003725291, z: 0.000000022351747}
+--- !u!114 &887102522203135040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414197150938555256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ba8d77af8d37c54fb0d6b0c4d449657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -783,6 +783,7 @@ GameObject:
   - component: {fileID: 194421959352317374}
   - component: {fileID: 194421959352317373}
   - component: {fileID: 194421959352317345}
+  - component: {fileID: 2205765487233477366}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -801,8 +802,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4798779756404303907}
   - {fileID: 853254319569601913}
+  - {fileID: 4798779756404303907}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -895,6 +896,21 @@ MonoBehaviour:
   gun: {fileID: 0}
   glock: {fileID: 194421957842695145}
   ak: {fileID: 194421958380426681}
+  pausePanel: {fileID: 5017353362367364556}
+  interfaceGO: {fileID: 7898555784343787588}
+--- !u!114 &2205765487233477366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194421959352317372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c219a496eb779c94fa3a412dfd0e7c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensivityInput: {fileID: 8874213954386934126}
   pausePanel: {fileID: 5017353362367364556}
   interfaceGO: {fileID: 7898555784343787588}
 --- !u!1 &194421959393866732
@@ -1093,7 +1109,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800699302910993734}
+      - m_Target: {fileID: 2205765487233477366}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitButton
         m_Mode: 1
@@ -1608,7 +1624,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800699302910993734}
+      - m_Target: {fileID: 2205765487233477366}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ChangeSensivity
         m_Mode: 1
@@ -1777,7 +1793,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 800699302910993734}
+      - m_Target: {fileID: 2205765487233477366}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: BackButton
         m_Mode: 1
@@ -2522,7 +2538,6 @@ GameObject:
   - component: {fileID: 853254319569601913}
   - component: {fileID: 2426511993506566377}
   - component: {fileID: 8771642883789969593}
-  - component: {fileID: 800699302910993734}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -2549,7 +2564,7 @@ RectTransform:
   - {fileID: 2746995607312479496}
   - {fileID: 1746480338319029200}
   m_Father: {fileID: 194421959352317344}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2594,21 +2609,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &800699302910993734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5017353362367364556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c219a496eb779c94fa3a412dfd0e7c61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensivityInput: {fileID: 8874213954386934126}
-  pausePanel: {fileID: 5017353362367364556}
-  interfaceGO: {fileID: 7898555784343787588}
 --- !u!1 &6637750791548557912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2905,7 +2905,7 @@ RectTransform:
   - {fileID: 194421958380426682}
   - {fileID: 6192674095144009622}
   m_Father: {fileID: 194421959352317344}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

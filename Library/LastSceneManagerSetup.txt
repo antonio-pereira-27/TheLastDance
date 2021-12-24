@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/TheLastDance/Scenes/Level_3.unity
+- path: Assets/TheLastDance/Scenes/Level_1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
