@@ -15,11 +15,11 @@ D:/ProjetoAplicado1/TheLastDance
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50683
+55488
 Successfully changed project path to: D:/ProjetoAplicado1/TheLastDance
 D:/ProjetoAplicado1/TheLastDance
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 62.64 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 67.24 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.23f1 (c5d91304a876)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -37,30 +37,30 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56552
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56136
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001057 seconds.
+Registered in 0.001082 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 61.01 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 60.59 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.510 seconds
+- Completed reload, in  0.507 seconds
 Domain Reload Profiling:
-	ReloadAssembly (510ms)
-		BeginReloadAssembly (54ms)
+	ReloadAssembly (508ms)
+		BeginReloadAssembly (57ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (396ms)
-			LoadAssemblies (54ms)
+		EndReloadAssembly (391ms)
+			LoadAssemblies (57ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (127ms)
+			SetupTypeCache (122ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (27ms)
+			RebuildScriptCaches (26ms)
 			SetupLoadedEditorAssemblies (165ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
@@ -75,34 +75,34 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003903 seconds.
+Registered in 0.003881 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.371 seconds
+- Completed reload, in  1.390 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1372ms)
-		BeginReloadAssembly (130ms)
+	ReloadAssembly (1391ms)
+		BeginReloadAssembly (132ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (1194ms)
-			LoadAssemblies (88ms)
+		EndReloadAssembly (1210ms)
+			LoadAssemblies (89ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (247ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (757ms)
+			SetupLoadedEditorAssemblies (771ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (74ms)
-				ProcessInitializeOnLoadAttributes (669ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (682ms)
 				ProcessInitializeOnLoadMethodAttributes (8ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
@@ -114,14 +114,14 @@ Worker process is ready to serve import requests
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.80 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2403 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 116.8 MB.
-System memory in use after: 116.9 MB.
+Unloading 2404 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 116.9 MB.
+System memory in use after: 117.1 MB.
 
-Unloading 96 unused Assets to reduce memory usage. Loaded Objects now: 2846.
-Total: 3.830000 ms (FindLiveObjects: 0.223900 ms CreateObjectMapping: 0.055000 ms MarkObjects: 3.373300 ms  DeleteObjects: 0.176800 ms)
+Unloading 96 unused Assets to reduce memory usage. Loaded Objects now: 2847.
+Total: 3.735100 ms (FindLiveObjects: 0.265200 ms CreateObjectMapping: 0.061900 ms MarkObjects: 3.224700 ms  DeleteObjects: 0.182300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -135,18 +135,282 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/TheLastDance/Scenes/Level_1.unity
-  artifactKey: Guid(e59eda779874f4845b652b78b34a0d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Scenes/Level_1.unity using Guid(e59eda779874f4845b652b78b34a0d94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0af61e0a137d50f3b4840f6e85782d1c') in 0.010130 seconds 
-  Import took 0.013571 seconds .
+  path: Assets/TheLastDance/Textures/Metalic.png
+  artifactKey: Guid(ae14dbe1d1083e84f88d2481a3919024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Metalic.png using Guid(ae14dbe1d1083e84f88d2481a3919024) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a3014afc9afdf750fb889322e13ac62') in 0.075954 seconds 
+  Import took 0.093170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1003_Glossiness.png
+  artifactKey: Guid(bf06fb252466eb5428b5f57a822b3330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1003_Glossiness.png using Guid(bf06fb252466eb5428b5f57a822b3330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a24f4cb6f3fcae280d917cf8c67ae16c') in 0.023449 seconds 
+  Import took 0.029865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/TheLastDance/Textures/woodenFloor.jpg
+  artifactKey: Guid(2f39887ddf2fa18449641f55ccf68476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/woodenFloor.jpg using Guid(2f39887ddf2fa18449641f55ccf68476) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba5a9564ef8a862ff11aae9e269bade4') in 0.022957 seconds 
+  Import took 0.027431 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/TheLastDance/Textures/Bullet_Metallic.png
+  artifactKey: Guid(27961cd287192c148b0c558ffccd8fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Bullet_Metallic.png using Guid(27961cd287192c148b0c558ffccd8fed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31b13428e481b3ebe4bc594afabbc26f') in 0.021079 seconds 
+  Import took 0.033209 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/TheLastDance/Textures/Bullet_AO.png
+  artifactKey: Guid(dd681689643ad334da4072551ae293fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Bullet_AO.png using Guid(dd681689643ad334da4072551ae293fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cc7806e146ca5c1138ff6e550b74947') in 0.021468 seconds 
+  Import took 0.025520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1001_Diffuse.png
+  artifactKey: Guid(bc2e735b3fb48a84b8717a5dd5ff09fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1001_Diffuse.png using Guid(bc2e735b3fb48a84b8717a5dd5ff09fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46530ac5edd9507c6ec79a7cc2f29b38') in 0.027344 seconds 
+  Import took 0.031652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1002_Specular.png
+  artifactKey: Guid(f69923f203ed28a49b9771f9aaa80fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1002_Specular.png using Guid(f69923f203ed28a49b9771f9aaa80fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '025d905cc2b8d3b8036e68d154054d68') in 0.020983 seconds 
+  Import took 0.025375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1002_Diffuse.png
+  artifactKey: Guid(30db16015c2724b4486667b4649e97b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1002_Diffuse.png using Guid(30db16015c2724b4486667b4649e97b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '597d2941df0ee62ab9ace0d6814b13d8') in 0.021952 seconds 
+  Import took 0.027678 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/TheLastDance/Textures/Ch36_1001_Normal.png
+  artifactKey: Guid(0a498f36d10dfa34ebfda98c7c1cb764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch36_1001_Normal.png using Guid(0a498f36d10dfa34ebfda98c7c1cb764) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c8962e9deb2bcc982826a8eb36c97cc') in 0.055162 seconds 
+  Import took 0.059402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/TheLastDance/Textures/Bullet_Height.png
+  artifactKey: Guid(9771a4884dbec114c97b85e22cbfab25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Bullet_Height.png using Guid(9771a4884dbec114c97b85e22cbfab25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661a2c55239215ae431b3a810964bc93') in 0.022571 seconds 
+  Import took 0.026878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/TheLastDance/Textures/Ch36_1001_Glossiness.png
+  artifactKey: Guid(d6e8ad320458a0248b3675bf22e03494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch36_1001_Glossiness.png using Guid(d6e8ad320458a0248b3675bf22e03494) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec0d185af942bff449a51957b3c71cbe') in 0.021865 seconds 
+  Import took 0.026253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/TheLastDance/Textures/Bullet_Normal.png
+  artifactKey: Guid(b6b58886fb5472847a9010aff98ea276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Bullet_Normal.png using Guid(b6b58886fb5472847a9010aff98ea276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be60a16adc68b221fe8ef02420e83627') in 0.023444 seconds 
+  Import took 0.027255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1003_Normal.png
+  artifactKey: Guid(fd19b36222779194281dd8c7eab0ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1003_Normal.png using Guid(fd19b36222779194281dd8c7eab0ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f5ffc0bf4eca909d4ac67bd43e7cd91') in 0.013359 seconds 
+  Import took 0.017439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1001_Specular.png
+  artifactKey: Guid(cbcf749f1370b2e4fb2377091666ed41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1001_Specular.png using Guid(cbcf749f1370b2e4fb2377091666ed41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd32640e10a6804ea35dba05021a67c62') in 0.021935 seconds 
+  Import took 0.026113 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1003_Diffuse.png
+  artifactKey: Guid(0017bb088894b104da2e39160769f829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1003_Diffuse.png using Guid(0017bb088894b104da2e39160769f829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b6b16328871c014800c070570e1a3ce') in 0.011187 seconds 
+  Import took 0.015105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/TheLastDance/Textures/Ch36_1001_Specular.png
+  artifactKey: Guid(7a210fc43ada4a5458d39278ba24d04c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch36_1001_Specular.png using Guid(7a210fc43ada4a5458d39278ba24d04c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661782ea65aeabe6fc23de914a3e4b13') in 0.021410 seconds 
+  Import took 0.024910 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000149 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1003_Specular.png
+  artifactKey: Guid(37a824e6d61c7544f8575ee245ae74fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1003_Specular.png using Guid(37a824e6d61c7544f8575ee245ae74fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aa6a0ef03b38452ba0f29ff17626e4e') in 0.010970 seconds 
+  Import took 0.014965 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/TheLastDance/Textures/Bullet_Roughness.png
+  artifactKey: Guid(04bea4554efef1442b5d96b53dacfd2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Bullet_Roughness.png using Guid(04bea4554efef1442b5d96b53dacfd2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d11f17df48f2aa856267585458f1ab0') in 0.022820 seconds 
+  Import took 0.026907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1002_Normal.png
+  artifactKey: Guid(f08dcab3b4e6d674c88e80d738b3061b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1002_Normal.png using Guid(f08dcab3b4e6d674c88e80d738b3061b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b31b8c5e8520706c47eb0aa59470830') in 0.012267 seconds 
+  Import took 0.016360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1001_Glossiness.png
+  artifactKey: Guid(97a83b32f0a73b8479b53e4251532d88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1001_Glossiness.png using Guid(97a83b32f0a73b8479b53e4251532d88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a0599ea1ab0970ad1e723192f39810b') in 0.023982 seconds 
+  Import took 0.028096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1001_Normal.png
+  artifactKey: Guid(1b092e24288a14e40b0c2c3a062ab7e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1001_Normal.png using Guid(1b092e24288a14e40b0c2c3a062ab7e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f04ffc3664d31ea26b02b53b7495f735') in 0.013661 seconds 
+  Import took 0.017744 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/TheLastDance/Textures/external-content.duckduckgo 2.png
+  artifactKey: Guid(b79aefcd0ed77fd459290d4bc7447d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/external-content.duckduckgo 2.png using Guid(b79aefcd0ed77fd459290d4bc7447d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc6905a0c22ee0cfa4ed4ee3b071d722') in 0.030144 seconds 
+  Import took 0.034312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/TheLastDance/Textures/FundoOptions.jpg
+  artifactKey: Guid(6cc25538983f3444fb2e4bf85a824378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/FundoOptions.jpg using Guid(6cc25538983f3444fb2e4bf85a824378) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e138fbd6309144f6c8d7c4e5ba5f42d3') in 0.017675 seconds 
+  Import took 0.021361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/TheLastDance/Textures/Ch36_1001_Diffuse.png
+  artifactKey: Guid(3d23f47d71791a44b9c7a8f19c56fe7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch36_1001_Diffuse.png using Guid(3d23f47d71791a44b9c7a8f19c56fe7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89c73a34885b083f685dd745a423f8e0') in 0.010165 seconds 
+  Import took 0.013753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/TheLastDance/Textures/Roughness.png
+  artifactKey: Guid(87358874c5974404d8fb01e762ddf996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Roughness.png using Guid(87358874c5974404d8fb01e762ddf996) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e44e4a3c0163b47e4c5389ff3fe664c7') in 0.022360 seconds 
+  Import took 0.026037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/TheLastDance/Textures/Base_Color.png
+  artifactKey: Guid(2f953c754457eb04382009c3c999e953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Base_Color.png using Guid(2f953c754457eb04382009c3c999e953) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '565fa8d0ad44b5381eab82943eefa27e') in 0.022085 seconds 
+  Import took 0.025474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/TheLastDance/Textures/Normal.png
+  artifactKey: Guid(11c57f6f869d88342a0d656e01fafcf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Normal.png using Guid(11c57f6f869d88342a0d656e01fafcf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a82569a47240d53185eae35f3b81ed6') in 0.027578 seconds 
+  Import took 0.030982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/TheLastDance/Textures/bullets_PNG35538.png
+  artifactKey: Guid(ff9a1975049ae59479d2b259750f218e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/bullets_PNG35538.png using Guid(ff9a1975049ae59479d2b259750f218e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64468c428fbb98912ee3a0e855d1fc31') in 0.019419 seconds 
+  Import took 0.023437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/TheLastDance/Textures/Bullet_BaseColor.png
+  artifactKey: Guid(5bef5cc346d1b98419eac821b9ef8027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Bullet_BaseColor.png using Guid(5bef5cc346d1b98419eac821b9ef8027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34692f265da0bdb0b307a3b8808f7c8c') in 0.021121 seconds 
+  Import took 0.024808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/TheLastDance/Textures/Ch35_1002_Glossiness.png
+  artifactKey: Guid(0544b1f788802d04c9771f09dd0eb963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/Ch35_1002_Glossiness.png using Guid(0544b1f788802d04c9771f09dd0eb963) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d54e01193301c7a99679047c9709b9b') in 0.011155 seconds 
+  Import took 0.014784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/TheLastDance/Textures/external-content.duckduckgo 1.png
+  artifactKey: Guid(a960100755943794d87747a088ec9c19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/external-content.duckduckgo 1.png using Guid(a960100755943794d87747a088ec9c19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48dae114173807b38c33d29add71e995') in 0.021759 seconds 
+  Import took 0.025526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/TheLastDance/Textures/external-content.duckduckgo.png
+  artifactKey: Guid(891b60a4d6eb1c34ea743f5edf904236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/external-content.duckduckgo.png using Guid(891b60a4d6eb1c34ea743f5edf904236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53f7d48f2599690ae2859db17bfcb196') in 0.014676 seconds 
+  Import took 0.018715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.748780 seconds.
+  path: Assets/TheLastDance/Textures/external-content.duckduckgo 3.png
+  artifactKey: Guid(0f6c2feefd280d14fbbc343b6643dc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/external-content.duckduckgo 3.png using Guid(0f6c2feefd280d14fbbc343b6643dc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73b3a9b61c447a70b5f00f6b1a3d95a5') in 0.009169 seconds 
+  Import took 0.013201 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.016866 seconds.
+  path: Assets/TheLastDance/Textures/external-content.duckduckgo 3.png
+  artifactKey: Guid(0f6c2feefd280d14fbbc343b6643dc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Textures/external-content.duckduckgo 3.png using Guid(0f6c2feefd280d14fbbc343b6643dc7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0d25a27aa6b5942fe18dbeece2a349d') in 0.027570 seconds 
+  Import took 0.031668 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004488 seconds.
+Registered in 0.004253 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.82 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -158,44 +422,44 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.984 seconds
+- Completed reload, in  3.390 seconds
 Domain Reload Profiling:
-	ReloadAssembly (985ms)
-		BeginReloadAssembly (117ms)
+	ReloadAssembly (3391ms)
+		BeginReloadAssembly (116ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (31ms)
-		EndReloadAssembly (810ms)
-			LoadAssemblies (94ms)
+		EndReloadAssembly (3221ms)
+			LoadAssemblies (130ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (252ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (35ms)
-			SetupLoadedEditorAssemblies (368ms)
+			SetupTypeCache (443ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (146ms)
+			SetupLoadedEditorAssemblies (2276ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (67ms)
-				ProcessInitializeOnLoadAttributes (286ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (311ms)
+				ProcessInitializeOnLoadAttributes (1896ms)
+				ProcessInitializeOnLoadMethodAttributes (61ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 1.29 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2344 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 111.9 MB.
-System memory in use after: 112.1 MB.
+Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.8 MB.
+System memory in use after: 114.9 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2848.
-Total: 3.776400 ms (FindLiveObjects: 0.233900 ms CreateObjectMapping: 0.063000 ms MarkObjects: 3.393400 ms  DeleteObjects: 0.084900 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2867.
+Total: 9.076500 ms (FindLiveObjects: 3.795800 ms CreateObjectMapping: 0.275600 ms MarkObjects: 4.839700 ms  DeleteObjects: 0.163600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -210,10 +474,10 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004863 seconds.
+Registered in 0.004346 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -225,28 +489,127 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.943 seconds
+- Completed reload, in  0.950 seconds
 Domain Reload Profiling:
-	ReloadAssembly (943ms)
-		BeginReloadAssembly (128ms)
+	ReloadAssembly (950ms)
+		BeginReloadAssembly (108ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (769ms)
-			LoadAssemblies (95ms)
+		EndReloadAssembly (794ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (247ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (359ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (274ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.8 MB.
+System memory in use after: 115.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2869.
+Total: 3.528000 ms (FindLiveObjects: 0.224600 ms CreateObjectMapping: 0.059200 ms MarkObjects: 3.160700 ms  DeleteObjects: 0.082600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1493.915612 seconds.
+  path: Assets/TheLastDance/Sounds/ammo.mp3
+  artifactKey: Guid(8d821a429f4d4bd46b62967962f6258d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/ammo.mp3 using Guid(8d821a429f4d4bd46b62967962f6258d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5909d8b0ecfaba1d9afb07a6c7dd90d') in 0.037374 seconds 
+  Import took 0.041607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/TheLastDance/Sounds/weaponPick.mp3
+  artifactKey: Guid(5e41771df6a498643ac7d5d54111eaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/weaponPick.mp3 using Guid(5e41771df6a498643ac7d5d54111eaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c21ac92b27864d290e1462930eb0206') in 0.009946 seconds 
+  Import took 0.013579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/TheLastDance/Sounds/heal.mp3
+  artifactKey: Guid(89a06dc0df891e543aef6293e081a6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/heal.mp3 using Guid(89a06dc0df891e543aef6293e081a6e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34bac73f9c3c92e9ef11a8f62d165541') in 0.012108 seconds 
+  Import took 0.015385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/TheLastDance/Sounds/hearthbeating.mp3
+  artifactKey: Guid(9dafe020d5f7f584faee4c09753fcd8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/hearthbeating.mp3 using Guid(9dafe020d5f7f584faee4c09753fcd8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d2fd89bdd7f1be6cebb00c7565d3618') in 0.009468 seconds 
+  Import took 0.012722 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004141 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.950 seconds
+Domain Reload Profiling:
+	ReloadAssembly (950ms)
+		BeginReloadAssembly (120ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (782ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (236ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (347ms)
+			SetupLoadedEditorAssemblies (358ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (267ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (275ms)
 				ProcessInitializeOnLoadMethodAttributes (8ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
@@ -257,12 +620,12 @@ Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
 Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2344 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 111.9 MB.
-System memory in use after: 112.1 MB.
+Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.9 MB.
+System memory in use after: 115.0 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2850.
-Total: 3.390400 ms (FindLiveObjects: 0.245200 ms CreateObjectMapping: 0.063300 ms MarkObjects: 3.016500 ms  DeleteObjects: 0.064400 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2877.
+Total: 3.513700 ms (FindLiveObjects: 0.220100 ms CreateObjectMapping: 0.053500 ms MarkObjects: 3.148400 ms  DeleteObjects: 0.091000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -277,7 +640,74 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004324 seconds.
+Registered in 0.004104 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.938 seconds
+Domain Reload Profiling:
+	ReloadAssembly (938ms)
+		BeginReloadAssembly (108ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (783ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (243ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (351ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (270ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.9 MB.
+System memory in use after: 115.1 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2879.
+Total: 3.554100 ms (FindLiveObjects: 0.246200 ms CreateObjectMapping: 0.063800 ms MarkObjects: 3.158700 ms  DeleteObjects: 0.084300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004048 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
@@ -295,215 +725,25 @@ Mono: successfully reloaded assembly
 - Completed reload, in  0.937 seconds
 Domain Reload Profiling:
 	ReloadAssembly (938ms)
-		BeginReloadAssembly (113ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (33ms)
-		EndReloadAssembly (777ms)
-			LoadAssemblies (91ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (237ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (348ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (269ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2344 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 112.0 MB.
-System memory in use after: 112.1 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2852.
-Total: 3.791900 ms (FindLiveObjects: 0.225100 ms CreateObjectMapping: 0.055800 ms MarkObjects: 3.426300 ms  DeleteObjects: 0.083500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 549.090394 seconds.
-  path: Assets/TheLastDance/Prefabs/Suplys/Bullet.prefab
-  artifactKey: Guid(0872c44e5961fbd43a2519dd38045a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Suplys/Bullet.prefab using Guid(0872c44e5961fbd43a2519dd38045a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1f1a2cca2e9fb9708ac93a1b4b372d9') in 0.109208 seconds 
-  Import took 0.113277 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000203 seconds.
-  path: Assets/TheLastDance/Prefabs/Suplys/uploads_files_1029182_Bullet.fbx
-  artifactKey: Guid(33eeb18fb0332fe4a93a73fbb8688d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Suplys/uploads_files_1029182_Bullet.fbx using Guid(33eeb18fb0332fe4a93a73fbb8688d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9589c7addc9c0a8d6a81b0ec8bb3ae23') in 0.049181 seconds 
-  Import took 0.052709 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/TheLastDance/Prefabs/Suplys/FirstAidKit.prefab
-  artifactKey: Guid(f215d4ae2bc64834c8823d35cf0e1077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Suplys/FirstAidKit.prefab using Guid(f215d4ae2bc64834c8823d35cf0e1077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9177574af3473857f1a3dc6c44221455') in 0.012178 seconds 
-  Import took 0.015348 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/TheLastDance/Prefabs/Suplys/uploads_files_2279996_First_Aid_Kit.fbx
-  artifactKey: Guid(c2818ee0312663e43bb7da5c511ca400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Suplys/uploads_files_2279996_First_Aid_Kit.fbx using Guid(c2818ee0312663e43bb7da5c511ca400) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f192057f3e8d0249628800127447e715') in 0.028397 seconds 
-  Import took 0.031448 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003956 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.934 seconds
-Domain Reload Profiling:
-	ReloadAssembly (934ms)
-		BeginReloadAssembly (104ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (783ms)
-			LoadAssemblies (88ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (243ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (351ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (272ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.0 MB.
-System memory in use after: 115.2 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2898.
-Total: 3.792900 ms (FindLiveObjects: 0.243600 ms CreateObjectMapping: 0.063000 ms MarkObjects: 3.401500 ms  DeleteObjects: 0.083800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 15.882613 seconds.
-  path: Assets/TheLastDance/Prefabs/Suplys/Bullet.prefab
-  artifactKey: Guid(0872c44e5961fbd43a2519dd38045a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Suplys/Bullet.prefab using Guid(0872c44e5961fbd43a2519dd38045a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1457f37d8ec38e541f6b285802f7c1a') in 0.038974 seconds 
-  Import took 0.042612 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 34.881313 seconds.
-  path: Assets/Rotate.cs
-  artifactKey: Guid(5ba8d77af8d37c54fb0d6b0c4d449657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Rotate.cs using Guid(5ba8d77af8d37c54fb0d6b0c4d449657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa78a3dc8232618c0ba2792f4ee7fe67') in 0.007983 seconds 
-  Import took 0.011575 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 17.605697 seconds.
-  path: Assets/TheLastDance/Rotate.cs
-  artifactKey: Guid(5ba8d77af8d37c54fb0d6b0c4d449657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Rotate.cs using Guid(5ba8d77af8d37c54fb0d6b0c4d449657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2aaf4b42ce2777987147112499846bd3') in 0.001656 seconds 
-  Import took 0.005504 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004002 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.961 seconds
-Domain Reload Profiling:
-	ReloadAssembly (962ms)
-		BeginReloadAssembly (127ms)
+		BeginReloadAssembly (117ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (786ms)
-			LoadAssemblies (100ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (772ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (237ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (357ms)
+			SetupLoadedEditorAssemblies (347ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (69ms)
-				ProcessInitializeOnLoadAttributes (274ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (267ms)
 				ProcessInitializeOnLoadMethodAttributes (7ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
@@ -512,14 +752,97 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.74 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.8 MB.
+System memory in use after: 115.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2881.
+Total: 3.545500 ms (FindLiveObjects: 0.226200 ms CreateObjectMapping: 0.053700 ms MarkObjects: 3.178700 ms  DeleteObjects: 0.086200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1447.330802 seconds.
+  path: Assets/TheLastDance/Sounds/dead.mp3
+  artifactKey: Guid(730f62ea4feeaea418fff9eae826ace8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/dead.mp3 using Guid(730f62ea4feeaea418fff9eae826ace8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db7d6d95a73de2c6e8b290a8e82bae5d') in 0.030864 seconds 
+  Import took 0.035485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/TheLastDance/Sounds/hit.mp3
+  artifactKey: Guid(0c2a6f6b51dea9243a03ef74987c11b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/hit.mp3 using Guid(0c2a6f6b51dea9243a03ef74987c11b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95fe129dc50baba7a0549d20fec74b11') in 0.010346 seconds 
+  Import took 0.013861 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004170 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.93 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.949 seconds
+Domain Reload Profiling:
+	ReloadAssembly (950ms)
+		BeginReloadAssembly (116ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (785ms)
+			LoadAssemblies (88ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (356ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (267ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 114.9 MB.
 System memory in use after: 115.1 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2901.
-Total: 3.611800 ms (FindLiveObjects: 0.233900 ms CreateObjectMapping: 0.060400 ms MarkObjects: 3.236800 ms  DeleteObjects: 0.079700 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2884.
+Total: 3.585800 ms (FindLiveObjects: 0.233400 ms CreateObjectMapping: 0.062800 ms MarkObjects: 3.204900 ms  DeleteObjects: 0.083900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -534,7 +857,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004055 seconds.
+Registered in 0.004251 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
@@ -549,170 +872,28 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.957 seconds
+- Completed reload, in  0.956 seconds
 Domain Reload Profiling:
-	ReloadAssembly (958ms)
-		BeginReloadAssembly (108ms)
+	ReloadAssembly (956ms)
+		BeginReloadAssembly (116ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (802ms)
-			LoadAssemblies (88ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (246ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (367ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (68ms)
-				ProcessInitializeOnLoadAttributes (285ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.0 MB.
-System memory in use after: 115.2 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2903.
-Total: 3.650500 ms (FindLiveObjects: 0.242200 ms CreateObjectMapping: 0.063600 ms MarkObjects: 3.263500 ms  DeleteObjects: 0.080000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 14.089016 seconds.
-  path: Assets/TheLastDance/Prefabs/Suplys/FirstAidKit.prefab
-  artifactKey: Guid(f215d4ae2bc64834c8823d35cf0e1077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Prefabs/Suplys/FirstAidKit.prefab using Guid(f215d4ae2bc64834c8823d35cf0e1077) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45fb2f857f7b331adbb6dc16596231c6') in 0.038679 seconds 
-  Import took 0.042397 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004137 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.931 seconds
-Domain Reload Profiling:
-	ReloadAssembly (932ms)
-		BeginReloadAssembly (115ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (3ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (770ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (793ms)
 			LoadAssemblies (87ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (235ms)
+			SetupTypeCache (264ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (348ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (65ms)
-				ProcessInitializeOnLoadAttributes (269ms)
-				ProcessInitializeOnLoadMethodAttributes (7ms)
-				AfterProcessingInitializeOnLoad (2ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
-Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.67 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.1 MB.
-System memory in use after: 115.2 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2906.
-Total: 3.697500 ms (FindLiveObjects: 0.238100 ms CreateObjectMapping: 0.070900 ms MarkObjects: 3.302400 ms  DeleteObjects: 0.084900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003949 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Warning: Annotation not found!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
-UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
-
-Mono: successfully reloaded assembly
-- Completed reload, in  0.951 seconds
-Domain Reload Profiling:
-	ReloadAssembly (951ms)
-		BeginReloadAssembly (110ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (35ms)
-		EndReloadAssembly (787ms)
-			LoadAssemblies (87ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (252ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (37ms)
-			SetupLoadedEditorAssemblies (349ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (345ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (66ms)
-				ProcessInitializeOnLoadAttributes (269ms)
+				ProcessInitializeOnLoadAttributes (265ms)
 				ProcessInitializeOnLoadMethodAttributes (7ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
@@ -721,14 +902,14 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
 Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
-Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.1 MB.
-System memory in use after: 115.2 MB.
+System memory in use before: 114.9 MB.
+System memory in use after: 115.1 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2908.
-Total: 3.539000 ms (FindLiveObjects: 0.226200 ms CreateObjectMapping: 0.058500 ms MarkObjects: 3.168500 ms  DeleteObjects: 0.085200 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2886.
+Total: 3.510500 ms (FindLiveObjects: 0.226300 ms CreateObjectMapping: 0.053100 ms MarkObjects: 3.128300 ms  DeleteObjects: 0.102200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -743,10 +924,10 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004105 seconds.
+Registered in 0.004071 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Warning: Annotation not found!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -758,19 +939,19 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.904 seconds
+- Completed reload, in  0.935 seconds
 Domain Reload Profiling:
-	ReloadAssembly (904ms)
-		BeginReloadAssembly (102ms)
+	ReloadAssembly (935ms)
+		BeginReloadAssembly (112ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (29ms)
-		EndReloadAssembly (756ms)
-			LoadAssemblies (85ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (774ms)
+			LoadAssemblies (95ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (228ms)
+			SetupTypeCache (235ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (35ms)
 			SetupLoadedEditorAssemblies (345ms)
@@ -780,7 +961,208 @@ Domain Reload Profiling:
 				RefreshPlugins (1ms)
 				BeforeProcessingInitializeOnLoad (65ms)
 				ProcessInitializeOnLoadAttributes (266ms)
-				ProcessInitializeOnLoadMethodAttributes (8ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.9 MB.
+System memory in use after: 115.1 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2888.
+Total: 3.552400 ms (FindLiveObjects: 0.230300 ms CreateObjectMapping: 0.053700 ms MarkObjects: 3.181600 ms  DeleteObjects: 0.086000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006009 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.960 seconds
+Domain Reload Profiling:
+	ReloadAssembly (961ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (802ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (251ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (358ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.9 MB.
+System memory in use after: 115.1 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2890.
+Total: 3.801000 ms (FindLiveObjects: 0.333500 ms CreateObjectMapping: 0.136900 ms MarkObjects: 3.250200 ms  DeleteObjects: 0.079400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004101 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.946 seconds
+Domain Reload Profiling:
+	ReloadAssembly (946ms)
+		BeginReloadAssembly (114ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (783ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (352ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (271ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Shader 'WFX/Transparent Specular': fallback shader 'Particles/Alpha Blended' not found
+Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 114.8 MB.
+System memory in use after: 115.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2892.
+Total: 3.640300 ms (FindLiveObjects: 0.252400 ms CreateObjectMapping: 0.063300 ms MarkObjects: 3.239600 ms  DeleteObjects: 0.083900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004399 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.927 seconds
+Domain Reload Profiling:
+	ReloadAssembly (928ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (770ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (233ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (348ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (268ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -791,11 +1173,11 @@ Shader 'WFX/Transparent Diffuse': fallback shader 'Particles/Alpha Blended' not 
 Refreshing native plugins compatible for Editor in 0.68 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2345 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.1 MB.
-System memory in use after: 115.2 MB.
+System memory in use before: 115.0 MB.
+System memory in use after: 115.1 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2910.
-Total: 3.575100 ms (FindLiveObjects: 0.223000 ms CreateObjectMapping: 0.063800 ms MarkObjects: 3.199700 ms  DeleteObjects: 0.087800 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2894.
+Total: 3.557300 ms (FindLiveObjects: 0.236400 ms CreateObjectMapping: 0.063800 ms MarkObjects: 3.170400 ms  DeleteObjects: 0.085900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

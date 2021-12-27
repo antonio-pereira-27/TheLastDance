@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 194421959352317374}
   - component: {fileID: 194421959352317373}
   - component: {fileID: 194421959352317345}
-  - component: {fileID: 2205765487233477366}
+  - component: {fileID: 1557021579848831375}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -898,7 +898,7 @@ MonoBehaviour:
   ak: {fileID: 194421958380426681}
   pausePanel: {fileID: 5017353362367364556}
   interfaceGO: {fileID: 7898555784343787588}
---- !u!114 &2205765487233477366
+--- !u!114 &1557021579848831375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2205765487233477366}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: QuitButton
         m_Mode: 1
@@ -1624,7 +1624,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2205765487233477366}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ChangeSensivity
         m_Mode: 1
@@ -1793,7 +1793,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2205765487233477366}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: BackButton
         m_Mode: 1
@@ -2698,7 +2698,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ChangeVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6866984198086131760
 GameObject:
   m_ObjectHideFlags: 0

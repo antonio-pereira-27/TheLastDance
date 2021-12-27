@@ -73,5 +73,41 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     loop: 0
-    clip: {fileID: 8300000, guid: ed76381dfb20fd44191a023ab147a80e, type: 3}
+    clip: {fileID: 8300000, guid: 6d016474489ef944d9f62d1239e835d0, type: 3}
+    audioSource: {fileID: 0}
+  - name: weaponPick
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 5e41771df6a498643ac7d5d54111eaad, type: 3}
+    audioSource: {fileID: 0}
+  - name: hearthBeating
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 9dafe020d5f7f584faee4c09753fcd8e, type: 3}
+    audioSource: {fileID: 0}
+  - name: heal
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 89a06dc0df891e543aef6293e081a6e2, type: 3}
+    audioSource: {fileID: 0}
+  - name: dead
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 730f62ea4feeaea418fff9eae826ace8, type: 3}
+    audioSource: {fileID: 0}
+  - name: ammo
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 8d821a429f4d4bd46b62967962f6258d, type: 3}
+    audioSource: {fileID: 0}
+  - name: hit
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 0c2a6f6b51dea9243a03ef74987c11b2, type: 3}
     audioSource: {fileID: 0}

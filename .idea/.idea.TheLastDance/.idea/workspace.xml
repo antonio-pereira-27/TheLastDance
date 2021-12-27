@@ -18,17 +18,11 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/Boss.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/PickableItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/BillBoard.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/PickUpGun.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/DTNode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/Sound.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TheLastDance/Scripts/SpawnSystem.cs" root0="FORCE_HIGHLIGHTING" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectId" id="20V1cEq4EN8OmWCD4R4d2poHQKM" />
   <component name="ProjectViewState">
@@ -136,7 +130,11 @@
       <workItem from="1640173730614" duration="1084000" />
       <workItem from="1640185572043" duration="1043000" />
       <workItem from="1640346860921" duration="409000" />
-      <workItem from="1640348614357" duration="478000" />
+      <workItem from="1640348614357" duration="630000" />
+      <workItem from="1640451251228" duration="2055000" />
+      <workItem from="1640536431570" duration="2810000" />
+      <workItem from="1640539327314" duration="989000" />
+      <workItem from="1640559926122" duration="2550000" />
     </task>
     <servers />
   </component>

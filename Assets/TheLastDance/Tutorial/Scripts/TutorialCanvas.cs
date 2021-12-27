@@ -54,6 +54,8 @@ public class TutorialCanvas : MonoBehaviour
     private void Exit()
     {
         SceneManager.LoadScene("StartMenu");
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
 
 
