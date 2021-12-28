@@ -21,7 +21,11 @@ public class PlayerMovement : MonoBehaviour
     
     private float _health = 100f;
     private float _currentHealth;
-    
+
+    private bool isCrouching;
+    private Vector3 originalCenter;
+    private float originalHeight;
+
     [HideInInspector] public bool idle;
     
     //REFERENCES
@@ -32,6 +36,13 @@ public class PlayerMovement : MonoBehaviour
     public Gun weapon2;
     public Animator _animator;
     private AudioManager _audioManager;
+
+    [SerializeField] private Transform rightHand;
+    [SerializeField] private Transform leftHand;
+    
+    [SerializeField] private Transform rightHandPistol;
+    [SerializeField] private Transform rightHandRifle;
+    [SerializeField] private Transform leftHandRifle;
   
 
     // Start is called before the first frame update
@@ -42,7 +53,9 @@ public class PlayerMovement : MonoBehaviour
         _currentHealth = _health;
         healthBar.SetMaxHealth(_health);
 
-
+        
+        originalHeight = _controller.height;
+        
         if(weapon2 == null)
             return;
         
@@ -51,9 +64,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-       // _animator.SetBool("Crouch", _isCrounching);
         // move
         Move();
         
@@ -66,7 +76,6 @@ public class PlayerMovement : MonoBehaviour
         if (_currentHealth <= 20f)
             _audioManager.Play("hearthBeating");
         
-        
     }
 
     private void Shoot()
@@ -74,6 +83,9 @@ public class PlayerMovement : MonoBehaviour
         // primary weapon
         if (weapon1.isActiveAndEnabled)
         {
+            rightHand.parent = rightHandPistol;
+            rightHand.localPosition = Vector3.zero;
+            
             if (weapon1.maxBullets <= 0)
                 return;
             else
@@ -105,6 +117,9 @@ public class PlayerMovement : MonoBehaviour
             // secundary weapon
             if (weapon2.isActiveAndEnabled)
             {
+                rightHand.position = rightHandRifle.position;
+                leftHand.position = leftHandRifle.position;
+                
                 if (weapon2.maxBullets <= 0)
                     return;
                 else
@@ -149,6 +164,9 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         
+        _animator.SetFloat("X", x);
+        _animator.SetFloat("Z", z);
+        
         // calculate the moveDirection with the Inputs
         _moveDirection = transform.right * x + transform.forward * z;
         
@@ -157,13 +175,13 @@ public class PlayerMovement : MonoBehaviour
             //crouch 
             if (Input.GetKey(KeyCode.C))
             {
-                _animator.SetBool("Crouch", true);
                 Crouch();
             }
-            else
+            else 
             {
-                //set the controller height to normal
-                _controller.height = 3.33f;
+                _controller.height = originalHeight;
+                isCrouching = false;
+
 
                 // check if we are moving and if the keys are being pressed to update the velocity and the movement of character
                 if (_moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift)) // run
@@ -194,47 +212,36 @@ public class PlayerMovement : MonoBehaviour
         //apply gravity
         _velocity.y += gravity * Time.deltaTime;
         _controller.Move(_velocity * Time.deltaTime);
-
+        _animator.SetBool("Crouch", isCrouching);
     }
 
     // crouch movement
     private void Crouch()
     {
-        idle = false;
+        isCrouching = true;
+        //_controller.height = 1.8f;
         speed = slowSpeed;
     }
 
     // Idle position
     private void Idle()
     {
-        idle = true;
         speed = 0;
-        _animator.SetInteger("SpeedInt", 0);
-        _animator.SetBool("Crouch", false);
     }
 
     // walk movement
     private void Walk()
     {
-        idle = false;
         speed = slowSpeed;
        _audioManager.Play("FootSteps");
-       _animator.SetFloat("Speed", 0f);
-       _animator.SetInteger("SpeedInt", 1);
-       _animator.SetBool("Crouch", false);
-        
     }
 
     // RUn movement
     private void Run()
     {
-        idle = false;
         speed = walkSpeed;
         _audioManager.Play("FootSteps");
-        _animator.SetFloat("Speed", 1f);
-        _animator.SetInteger("SpeedInt", 1);
-        _animator.SetBool("Crouch", false);
-        
+
     }
 
     private void Jump()

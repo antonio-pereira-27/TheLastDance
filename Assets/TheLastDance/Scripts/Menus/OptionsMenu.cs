@@ -10,7 +10,7 @@ public class OptionsMenu : MonoBehaviour
 {
     // VARIABLES
     private float sensivity;
-    private static float volume;
+    private float musicVolume = 0.2f;
     
     // REFERENCES
     private Resolution[] _resolutions;
@@ -18,7 +18,6 @@ public class OptionsMenu : MonoBehaviour
     public TMP_InputField sensivityInputField;
 
     private AudioManager _audioManager;
-    public Slider volumeSlider;
 
     private int currentResolutionIndex = 0;
     private void Start()
@@ -31,7 +30,7 @@ public class OptionsMenu : MonoBehaviour
 
         _audioManager = FindObjectOfType<AudioManager>();
         
-
+        
         _resolutions = Screen.resolutions;
         _dropdown.ClearOptions();
         List<string> options = new List<string>();
@@ -51,26 +50,23 @@ public class OptionsMenu : MonoBehaviour
         _dropdown.RefreshShownValue();
     }
 
-
-    public void SetVolume()
+    private void Update()
     {
-        try
+        _audioManager.volume = musicVolume;
+        
+        foreach (Sound s in _audioManager.sounds)
         {
-            volumeSlider.value = _audioManager.volume;
-            volume = volumeSlider.value;
-            foreach (Sound s in _audioManager.sounds)
+            if (s.name == "Background")
             {
-                if (s.name == "Background")
-                {
-                    s.audioSource.volume = volume;
-                }
+                s.audioSource.volume = _audioManager.volume;
             }
         }
-        catch (Exception e)
-        {
-            Debug.Log("Error: " + e);
-        }
-        
+    }
+
+
+    public void SetVolume(float value)
+    {
+        musicVolume = value;
     }
 
     public void SetQuality(int qualityIndex)

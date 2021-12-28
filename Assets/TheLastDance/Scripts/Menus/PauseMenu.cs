@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     private float sensivity;
     public static bool paused = false;
 
+    private float music;
+
 
     // REFERENCES
     public TMP_InputField sensivityInput;
@@ -31,11 +33,13 @@ public class PauseMenu : MonoBehaviour
         // audio
         _audioManager = FindObjectOfType<AudioManager>();
 
+        music = _audioManager.volume;
         
     }
 
     private void Update()
     {
+        _audioManager.volume = music;
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
             if (paused)
@@ -43,6 +47,15 @@ public class PauseMenu : MonoBehaviour
             else
                 Pause();
         }
+
+        foreach (Sound s in _audioManager.sounds)
+        {
+            if (s.name == "Background")
+            {
+                s.audioSource.volume = _audioManager.volume;
+            }
+        }
+        
     }
 
     private void Pause()
@@ -77,6 +90,11 @@ public class PauseMenu : MonoBehaviour
     {
         sensivity = Single.Parse(sensivityInput.text);
         MouseLook.mouseSensivity = sensivity;
+    }
+
+    public void ChangeVolume(float volume)
+    {
+        music = volume;
     }
     
 
