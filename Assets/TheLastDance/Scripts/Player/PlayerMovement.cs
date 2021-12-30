@@ -22,8 +22,9 @@ public class PlayerMovement : MonoBehaviour
     private float _health = 100f;
     private float _currentHealth;
 
+    private int weapon;
+    private bool isJumping;
     private bool isCrouching;
-    private Vector3 originalCenter;
     private float originalHeight;
 
     [HideInInspector] public bool idle;
@@ -37,13 +38,6 @@ public class PlayerMovement : MonoBehaviour
     public Animator _animator;
     private AudioManager _audioManager;
 
-    [SerializeField] private Transform rightHand;
-    [SerializeField] private Transform leftHand;
-    
-    [SerializeField] private Transform rightHandPistol;
-    [SerializeField] private Transform rightHandRifle;
-    [SerializeField] private Transform leftHandRifle;
-  
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
         
         originalHeight = _controller.height;
+        weapon = 0;
         
         if(weapon2 == null)
             return;
@@ -64,6 +59,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (weapon1.isActiveAndEnabled && weapon != 0)
+            weapon = 0;
+        if (weapon2.isActiveAndEnabled && weapon != 1)
+            weapon = 1;
+        
+        _animator.SetInteger("Weapon", weapon);
         // move
         Move();
         
@@ -83,9 +84,6 @@ public class PlayerMovement : MonoBehaviour
         // primary weapon
         if (weapon1.isActiveAndEnabled)
         {
-            rightHand.parent = rightHandPistol;
-            rightHand.localPosition = Vector3.zero;
-            
             if (weapon1.maxBullets <= 0)
                 return;
             else
@@ -117,9 +115,6 @@ public class PlayerMovement : MonoBehaviour
             // secundary weapon
             if (weapon2.isActiveAndEnabled)
             {
-                rightHand.position = rightHandRifle.position;
-                leftHand.position = leftHandRifle.position;
-                
                 if (weapon2.maxBullets <= 0)
                     return;
                 else
@@ -167,6 +162,7 @@ public class PlayerMovement : MonoBehaviour
         _animator.SetFloat("X", x);
         _animator.SetFloat("Z", z);
         
+        
         // calculate the moveDirection with the Inputs
         _moveDirection = transform.right * x + transform.forward * z;
         
@@ -181,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 _controller.height = originalHeight;
                 isCrouching = false;
-
+                
 
                 // check if we are moving and if the keys are being pressed to update the velocity and the movement of character
                 if (_moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift)) // run
@@ -202,6 +198,8 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Jump();
                 }
+
+               
             }
         }
         
@@ -219,6 +217,7 @@ public class PlayerMovement : MonoBehaviour
     private void Crouch()
     {
         isCrouching = true;
+        isJumping = false;
         //_controller.height = 1.8f;
         speed = slowSpeed;
     }
@@ -227,11 +226,13 @@ public class PlayerMovement : MonoBehaviour
     private void Idle()
     {
         speed = 0;
+        isJumping = false;
     }
 
     // walk movement
     private void Walk()
     {
+        isJumping = false;
         speed = slowSpeed;
        _audioManager.Play("FootSteps");
     }
@@ -239,6 +240,7 @@ public class PlayerMovement : MonoBehaviour
     // RUn movement
     private void Run()
     {
+        isJumping = false;
         speed = walkSpeed;
         _audioManager.Play("FootSteps");
 
@@ -247,7 +249,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        
+        isJumping = true;
     }
 
     
