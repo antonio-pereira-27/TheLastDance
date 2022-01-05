@@ -25,16 +25,42 @@ public class Gun : MonoBehaviour
     
     //references
     private MouseLook mouseLook;
+    public Transform firePoint;
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
     public Animator animator;
+    
 
     private void Start()
     {
         bulletsPerLoader = Mathf.Clamp(bulletsPerLoader, 0f, 30f);
         bulletsNumber = bulletsPerLoader;
         mouseLook = fpsCamera.GetComponent<MouseLook>();
+    }
+
+    private void Update()
+    {
+        if (isReloading)
+        {
+            if (bulletsNumber == 0)
+                maxBullets -= bulletsPerLoader;
+            else
+                maxBullets -= bulletsPerLoader - bulletsNumber;
+        
+            if (maxBullets < bulletsPerLoader)
+                bulletsNumber = maxBullets;
+            else
+                bulletsNumber = bulletsPerLoader;
+
+            if (maxBullets <= 0)
+            {
+                maxBullets = 0f;
+                bulletsNumber = bulletsPerLoader;
+            }
+        }
+        
+        
     }
 
     private void OnEnable()
@@ -48,11 +74,6 @@ public class Gun : MonoBehaviour
     {
         isReloading = true;
 
-        if (bulletsNumber == 0)
-            maxBullets -= bulletsPerLoader;
-        else
-            maxBullets -= (bulletsPerLoader - bulletsNumber);
-        
         animator.SetBool("Reloading", true);
         
         yield return new WaitForSeconds(reloadTime - .25f);
@@ -61,10 +82,6 @@ public class Gun : MonoBehaviour
         
         yield return new WaitForSeconds(.25f);
         
-        if (maxBullets < bulletsPerLoader)
-            bulletsNumber = maxBullets;
-        else
-            bulletsNumber = bulletsPerLoader;
        
         isReloading = false;
     }
@@ -77,7 +94,7 @@ public class Gun : MonoBehaviour
         
         RaycastHit hit;
         //Debug.DrawRay(fpsCamera.transform.position, fpsCamera.transform.forward * range, Color.green, 1f);
-        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
+        if (Physics.Raycast(firePoint.position, fpsCamera.transform.forward, out hit, range))
         {
             Target target = hit.transform.GetComponent<Target>();
             Boss boss = hit.transform.GetComponent<Boss>();

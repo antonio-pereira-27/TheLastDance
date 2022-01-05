@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         // primary weapon
         if (weapon1.isActiveAndEnabled)
         {
-            if (weapon1.maxBullets <= 0)
+            if (weapon1.bulletsNumber <= 0 && weapon1.maxBullets <= 0)
                 return;
             else
             {
@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             // secundary weapon
             if (weapon2.isActiveAndEnabled)
             {
-                if (weapon2.maxBullets <= 0)
+                if (weapon2.bulletsNumber <= 0 && weapon2.maxBullets <= 0)
                     return;
                 else
                 {
@@ -262,10 +262,10 @@ public class PlayerMovement : MonoBehaviour
             Destroy(suply.gameObject);
             
             if(weapon1.isActiveAndEnabled)
-                weapon1.maxBullets += weapon1.bulletsPerLoader;
+                weapon1.maxBullets += 20f;
             
             if (weapon2 != null && weapon2.isActiveAndEnabled)
-                weapon2.maxBullets += weapon2.bulletsPerLoader;
+                weapon2.maxBullets += 30f;
         }
         
         // if first aid kit

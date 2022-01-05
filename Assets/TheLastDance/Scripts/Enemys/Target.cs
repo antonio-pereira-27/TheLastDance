@@ -15,6 +15,8 @@ public class Target : MonoBehaviour
    private float _timer = 50f;
    private float _timerToAttack = 0f;
    private bool _idle;
+   private float deadTimer = 0f;
+   private bool dead;
 
    private DTNode _tree;
 
@@ -88,8 +90,24 @@ public class Target : MonoBehaviour
    // função update que atualiza a cada frame
    void Update()
    {
-      _tree.Run();
-      animator.SetBool("Idle", _idle);
+      if (!dead)
+      {
+         dead = false;
+         _tree.Run();
+         animator.SetBool("Idle", _idle);
+      }
+
+      if (dead)
+      {
+         animator.SetBool("Dead", true);
+         if (deadTimer > 5f)
+         {
+            Destroy(gameObject);
+            deadTimer = 0f;
+         }
+         else
+            deadTimer++;
+      }
    }
 
    // função para perder vida quando o jogador dispara sobre este
@@ -106,7 +124,7 @@ public class Target : MonoBehaviour
    // função para destruir o gameObject
    void Die()
    {
-      Destroy(gameObject);
+      dead = true;
       spawnSystem.EnemyEliminated();
    }
    
