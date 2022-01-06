@@ -5,14 +5,14 @@ using UnityEngine.Serialization;
 public class PlayerMovement : MonoBehaviour
 {
     // VARIABLES
-    [SerializeField] private float speed;
+    [HideInInspector] public float speed;
     [SerializeField] private float walkSpeed = 10f;
     [SerializeField] private float slowSpeed = 5f;
 
     private Vector3 _moveDirection;
     private Vector3 _velocity;
     
-    [SerializeField] private bool isGrounded;
+    [HideInInspector] public bool isGrounded;
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private LayerMask groundMask;
@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isJumping;
     private bool isCrouching;
     private float originalHeight;
+    [SerializeField] public bool dead = false;
 
     [HideInInspector] public bool idle;
     
@@ -234,7 +235,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isJumping = false;
         speed = slowSpeed;
-       _audioManager.Play("FootSteps");
+       //_audioManager.Play("FootSteps");
     }
 
     // RUn movement
@@ -242,7 +243,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isJumping = false;
         speed = walkSpeed;
-        _audioManager.Play("FootSteps");
+        //_audioManager.Play("FootSteps");
 
     }
 
@@ -295,17 +296,7 @@ public class PlayerMovement : MonoBehaviour
         _currentHealth -= amount;
         healthBar.SetHealth(_currentHealth);
         if (_currentHealth <= 0f)
-        {
-            _audioManager.Play("dead");
-            foreach (var sound in _audioManager.sounds)
-            {
-                if (sound.name == "Background")
-                {
-                    sound.volume = 0;
-                }
-            }
-            Debug.Log("You die");
-            Time.timeScale = 0;
-        }
+            dead = true;
+        
     }
 }

@@ -107,11 +107,7 @@ public class Gun : MonoBehaviour
                 boss.TakeDamage(damage);
 
             if (normal !=null)
-            {
-                FindObjectOfType<AudioManager>().Play("dead");
-                Debug.Log("You Loose");
-                Time.timeScale = 0;
-            }
+                FindObjectOfType<PlayerMovement>().dead = true;
 
             if (hit.rigidbody != null)
                 hit.rigidbody.AddForce(-hit.normal * impactForce);

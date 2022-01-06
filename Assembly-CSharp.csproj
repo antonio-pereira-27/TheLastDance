@@ -53,6 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+     <Compile Include="Assets\TheLastDance\Scripts\Menus\DeadInterface.cs" />
      <Compile Include="Assets\TheLastDance\Sounds\Audio\AudioManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+     <Compile Include="Assets\Footsteps.cs" />
      <Compile Include="Assets\TheLastDance\Sounds\Audio\Sound.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Pick Ups\Rotate.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\HealthBar.cs" />

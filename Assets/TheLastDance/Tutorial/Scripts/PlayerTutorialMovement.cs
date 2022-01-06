@@ -48,6 +48,9 @@ namespace TheLastDance.Tutorial
 
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
+            
+            animator.SetFloat("X", x);
+            animator.SetFloat("Z", z);
 
             direction = transform.right * x + transform.forward * z;
 
@@ -79,7 +82,7 @@ namespace TheLastDance.Tutorial
             controller.Move(direction * Time.deltaTime);
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
-
+            
         }
 
         private void Jump()
@@ -91,24 +94,19 @@ namespace TheLastDance.Tutorial
         private void Idle()
         {
             speed = 0;
-            animator.SetInteger("SpeedInt", 0);
-            animator.SetBool("Crouch", false);
+           
         }
 
         private void Walk()
         {
             speed = walkSpeed;
-            animator.SetInteger("SpeedInt", 1);
-            animator.SetFloat("Speed", 0f);
-            animator.SetBool("Crouch", false);
+           
         }
 
         private void Run()
         {
             speed = runSpeed;
-            animator.SetInteger("SpeedInt", 1);
-            animator.SetFloat("Speed", 1f);
-            animator.SetBool("Crouch", false);
+            
         }
     }
 }
