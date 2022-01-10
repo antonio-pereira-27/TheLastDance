@@ -73,7 +73,7 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     loop: 0
-    clip: {fileID: 8300000, guid: 6d016474489ef944d9f62d1239e835d0, type: 3}
+    clip: {fileID: 8300000, guid: 461eba175f20be14883b5147ca58353b, type: 3}
     audioSource: {fileID: 0}
   - name: weaponPick
     volume: 0.2

@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
         if (spawnSystem.deadBoss)
             winLevel = true;
 
+        if (player.dead)
+            Time.timeScale = 0;
+
         // win condition
         if (winLevel)
         {

@@ -5,7 +5,7 @@ public class SwitchGuns : MonoBehaviour
     // References
     public GameObject pistol;
     public GameObject rifle;
-    
+
     // Start is called before the first frame update
     void Start()
     {
