@@ -15,11 +15,11 @@ D:/ProjetoAplicado1/TheLastDance
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55175
+55989
 Successfully changed project path to: D:/ProjetoAplicado1/TheLastDance
 D:/ProjetoAplicado1/TheLastDance
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 64.45 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 59.36 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.23f1 (c5d91304a876)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.23f1/Editor/Data/Resources/UnitySubsystems
@@ -35,31 +35,31 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.23f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.23f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56236
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56560
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.23f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001074 seconds.
+Registered in 0.001048 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 60.37 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 59.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.510 seconds
+- Completed reload, in  0.499 seconds
 Domain Reload Profiling:
-	ReloadAssembly (510ms)
-		BeginReloadAssembly (56ms)
+	ReloadAssembly (499ms)
+		BeginReloadAssembly (54ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (395ms)
-			LoadAssemblies (56ms)
+		EndReloadAssembly (387ms)
+			LoadAssemblies (54ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (126ms)
+			SetupTypeCache (121ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (25ms)
-			SetupLoadedEditorAssemblies (166ms)
+			SetupLoadedEditorAssemblies (165ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
@@ -73,35 +73,35 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004623 seconds.
+Registered in 0.003932 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.408 seconds
+- Completed reload, in  1.381 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1409ms)
-		BeginReloadAssembly (133ms)
+	ReloadAssembly (1382ms)
+		BeginReloadAssembly (139ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (1227ms)
-			LoadAssemblies (91ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (1194ms)
+			LoadAssemblies (89ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (252ms)
+			SetupTypeCache (247ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (777ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (754ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (79ms)
-				ProcessInitializeOnLoadAttributes (683ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (664ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -110,14 +110,14 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2388 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 115.0 MB.
-System memory in use after: 115.1 MB.
+System memory in use after: 115.2 MB.
 
 Unloading 95 unused Assets to reduce memory usage. Loaded Objects now: 2831.
-Total: 3.725300 ms (FindLiveObjects: 0.243000 ms CreateObjectMapping: 0.062300 ms MarkObjects: 3.233600 ms  DeleteObjects: 0.184700 ms)
+Total: 3.808600 ms (FindLiveObjects: 0.238900 ms CreateObjectMapping: 0.064500 ms MarkObjects: 3.318400 ms  DeleteObjects: 0.185300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,23 +131,167 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/TheLastDance/WFXMR_BImpact Concrete.prefab
-  artifactKey: Guid(556d09d7fda29fd4185eed4067d5777b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/WFXMR_BImpact Concrete.prefab using Guid(556d09d7fda29fd4185eed4067d5777b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79af3f69b1005f98fc636b9b15b6d925') in 0.102242 seconds 
-  Import took 0.105915 seconds .
+  path: Assets/TheLastDance/Audio/AudioManager 1.prefab
+  artifactKey: Guid(7e1857afcb3374648a9dfc88e3cf9ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Audio/AudioManager 1.prefab using Guid(7e1857afcb3374648a9dfc88e3cf9ed0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb6ceaaa382ab02891bc8c609f8f643') in 0.035613 seconds 
+  Import took 0.039465 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 90.848527 seconds.
-  path: Assets/TheLastDance/Scripts/Player/PlayerMovement.cs
-  artifactKey: Guid(50d238d8612f6584f997162fce39c35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TheLastDance/Scripts/Player/PlayerMovement.cs using Guid(50d238d8612f6584f997162fce39c35f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b8e00321e65bdfb0862497ef87254ad') in 0.008908 seconds 
-  Import took 0.012591 seconds .
+  Time since last request: 107.162018 seconds.
+  path: Assets/TheLastDance/Sounds/hit 1.mp3
+  artifactKey: Guid(4d646011691b73b4a8837523e2ed702d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/hit 1.mp3 using Guid(4d646011691b73b4a8837523e2ed702d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb76f25d51b51d428669fc179ccb9706') in 0.056999 seconds 
+  Import took 0.061000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.696317 seconds.
+  path: Assets/TheLastDance/Sounds/dead 1.mp3
+  artifactKey: Guid(37cda63b292db8044a2cd70f45b954c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/dead 1.mp3 using Guid(37cda63b292db8044a2cd70f45b954c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d2ded0c416b24e62972ab2bf0a36f13') in 0.012934 seconds 
+  Import took 0.016985 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.384644 seconds.
+  path: Assets/TheLastDance/Sounds/heal 1.mp3
+  artifactKey: Guid(2b87cc3fd3fb3a74bbff08ef2c160fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/heal 1.mp3 using Guid(2b87cc3fd3fb3a74bbff08ef2c160fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd78649ac2ba7b34cffc3b665a07c8391') in 0.011992 seconds 
+  Import took 0.016668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.871013 seconds.
+  path: Assets/TheLastDance/Sounds/weaponPick 1.mp3
+  artifactKey: Guid(0c346d8018f62774c910e82979be3d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/weaponPick 1.mp3 using Guid(0c346d8018f62774c910e82979be3d9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2db243b6dc59304f7168c74085e0801b') in 0.013220 seconds 
+  Import took 0.017551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.380668 seconds.
+  path: Assets/TheLastDance/Sounds/ammo 1.mp3
+  artifactKey: Guid(22c1ca35ba32ddb43a7f485dfcc227df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Sounds/ammo 1.mp3 using Guid(22c1ca35ba32ddb43a7f485dfcc227df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '084629cde1de556afa0e0b8d780120e0') in 0.011026 seconds 
+  Import took 0.015640 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.893354 seconds.
+  path: Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Idle.fbx
+  artifactKey: Guid(b64d8768622ad844794a855d38925d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Idle.fbx using Guid(b64d8768622ad844794a855d38925d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0142f1a02f48dc1f9d30cd25aee6b865') in 0.374625 seconds 
+  Import took 0.380489 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Kneeling Idle.fbx
+  artifactKey: Guid(3dd948739307b124f86496a587bd807f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Kneeling Idle.fbx using Guid(3dd948739307b124f86496a587bd807f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '824defd7c96d0d544ef76f393a9c69da') in 0.294042 seconds 
+  Import took 0.298837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Run.fbx
+  artifactKey: Guid(9db139612728f3f47a0de6ca71f741d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Run.fbx using Guid(9db139612728f3f47a0de6ca71f741d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20a5bef09222a84a07699ff4b9105755') in 0.297311 seconds 
+  Import took 0.302186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Strafe.fbx
+  artifactKey: Guid(84d5557f80efa1249929788d763ff14c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Strafe.fbx using Guid(84d5557f80efa1249929788d763ff14c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4168a47643d6e6c1ae1c6190ba7044e') in 0.306038 seconds 
+  Import took 0.311670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Walk.fbx
+  artifactKey: Guid(22e055c2ad8bc7145a3d73127e2502b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/kadev6Rig@Pistol Walk.fbx using Guid(22e055c2ad8bc7145a3d73127e2502b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62bb4ff36f618d95fe3a8406613cdd53') in 0.307032 seconds 
+  Import took 0.311939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.876665 seconds.
+  path: Assets/TheLastDance/Animation/Player/Pistol
+  artifactKey: Guid(742df85c73eca954d8a35143de2579be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Pistol using Guid(742df85c73eca954d8a35143de2579be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8210a8d1b56b26d4361e9e50276a94b7') in 0.005284 seconds 
+  Import took 0.008929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.856388 seconds.
+  path: Assets/TheLastDance/Animation/Player/CadeController.controller
+  artifactKey: Guid(4a6af41aa2f516e44b8df14864ddc030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/CadeController.controller using Guid(4a6af41aa2f516e44b8df14864ddc030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3463fc0499aedb669883cacae020bba') in 0.010322 seconds 
+  Import took 0.015967 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 172.814910 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1
+  artifactKey: Guid(8aa5f8b07c84fd84f9dd89e79d5001a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1 using Guid(8aa5f8b07c84fd84f9dd89e79d5001a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b31b1c2001510e12510cf11133da8df5') in 0.005216 seconds 
+  Import took 0.009576 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.719849 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Idle Crouching.fbx
+  artifactKey: Guid(30950666d485b7447ae2aea807960b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Idle Crouching.fbx using Guid(30950666d485b7447ae2aea807960b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cd80bc8b2d9679d194146c816346c00') in 0.292314 seconds 
+  Import took 0.297149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Crouching Forward.fbx
+  artifactKey: Guid(1303ca56fa0a06c4181d87005d68933d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Crouching Forward.fbx using Guid(1303ca56fa0a06c4181d87005d68933d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5d5f4a1d98bb37c90a03a0e3a94abe') in 0.305488 seconds 
+  Import took 0.310519 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Forward.fbx
+  artifactKey: Guid(905bfbeddf9732e4d9bcf4bd883229e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Forward.fbx using Guid(905bfbeddf9732e4d9bcf4bd883229e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b7b78ec7d18441ee4b5b8915335ed59') in 0.290798 seconds 
+  Import took 0.295791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Crouching Right.fbx
+  artifactKey: Guid(62419756836ddc646aaac69c74e5f14f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Crouching Right.fbx using Guid(62419756836ddc646aaac69c74e5f14f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55ae7ad9b7a05648830ba13e7e634f70') in 0.297256 seconds 
+  Import took 0.302213 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Rifle Aiming Idle.fbx
+  artifactKey: Guid(2be1852f7ee204248a66408f623257b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Rifle Aiming Idle.fbx using Guid(2be1852f7ee204248a66408f623257b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d0ac527b6292d2c4d3dde441cc5ac2') in 0.295708 seconds 
+  Import took 0.301840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Right.fbx
+  artifactKey: Guid(ba6fd64b91ebf954bbadf231e6db1cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Right.fbx using Guid(ba6fd64b91ebf954bbadf231e6db1cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6be5253097c5dcd9804cd76ee0addf50') in 0.288905 seconds 
+  Import took 0.294442 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003969 seconds.
+Registered in 0.004083 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.71 ms, found 2 plugins.
@@ -162,42 +306,365 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 [Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
 
 Mono: successfully reloaded assembly
-- Completed reload, in  0.987 seconds
+- Completed reload, in  0.953 seconds
 Domain Reload Profiling:
-	ReloadAssembly (988ms)
-		BeginReloadAssembly (113ms)
+	ReloadAssembly (953ms)
+		BeginReloadAssembly (106ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (30ms)
-		EndReloadAssembly (824ms)
-			LoadAssemblies (91ms)
+		EndReloadAssembly (798ms)
+			LoadAssemblies (88ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (254ms)
+			SetupTypeCache (241ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (36ms)
-			SetupLoadedEditorAssemblies (375ms)
+			SetupLoadedEditorAssemblies (367ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (68ms)
-				ProcessInitializeOnLoadAttributes (292ms)
+				BeforeProcessingInitializeOnLoad (71ms)
+				ProcessInitializeOnLoadAttributes (282ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2340 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 129.4 MB.
+System memory in use after: 129.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2879.
+Total: 3.390000 ms (FindLiveObjects: 0.255200 ms CreateObjectMapping: 0.056000 ms MarkObjects: 3.003000 ms  DeleteObjects: 0.074900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 179.676379 seconds.
+  path: Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Idle.fbx
+  artifactKey: Guid(b64d8768622ad844794a855d38925d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Idle.fbx using Guid(b64d8768622ad844794a855d38925d49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac42bcda858595faec66b2971dc402f7') in 0.401474 seconds 
+  Import took 0.407050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 72.540005 seconds.
+  path: Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Kneeling Idle.fbx
+  artifactKey: Guid(3dd948739307b124f86496a587bd807f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Kneeling Idle.fbx using Guid(3dd948739307b124f86496a587bd807f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35e52fe2be090d18b01dbf2c34f1eef0') in 0.325908 seconds 
+  Import took 0.331641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.048582 seconds.
+  path: Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Run.fbx
+  artifactKey: Guid(9db139612728f3f47a0de6ca71f741d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Run.fbx using Guid(9db139612728f3f47a0de6ca71f741d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a6855c8d98dd54e3d7505b3b01ab663') in 0.314858 seconds 
+  Import took 0.320261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.926569 seconds.
+  path: Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Strafe.fbx
+  artifactKey: Guid(84d5557f80efa1249929788d763ff14c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Strafe.fbx using Guid(84d5557f80efa1249929788d763ff14c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67be557d32fe55018cca960a8ecb900c') in 0.319584 seconds 
+  Import took 0.324526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.797686 seconds.
+  path: Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Walk.fbx
+  artifactKey: Guid(22e055c2ad8bc7145a3d73127e2502b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Pistol/kadev6Rig@Pistol Walk.fbx using Guid(22e055c2ad8bc7145a3d73127e2502b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f45fecdab86c0c2a48b0b8fb4f75a8b') in 0.312621 seconds 
+  Import took 0.317613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.019994 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Idle Crouching.fbx
+  artifactKey: Guid(30950666d485b7447ae2aea807960b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Idle Crouching.fbx using Guid(30950666d485b7447ae2aea807960b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f779dd86fbc5572fa80b795e73da67b2') in 0.321930 seconds 
+  Import took 0.327097 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.212590 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Rifle Aiming Idle.fbx
+  artifactKey: Guid(2be1852f7ee204248a66408f623257b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Rifle Aiming Idle.fbx using Guid(2be1852f7ee204248a66408f623257b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5a42651ce725137edbab1cdf5c7b1d') in 0.325440 seconds 
+  Import took 0.331105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.577670 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Crouching Forward.fbx
+  artifactKey: Guid(1303ca56fa0a06c4181d87005d68933d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Crouching Forward.fbx using Guid(1303ca56fa0a06c4181d87005d68933d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a0630fbd256aedf864a2f576b97a489') in 0.315553 seconds 
+  Import took 0.320535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.560370 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Crouching Right.fbx
+  artifactKey: Guid(62419756836ddc646aaac69c74e5f14f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Crouching Right.fbx using Guid(62419756836ddc646aaac69c74e5f14f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22968196f0dade812bfcb49c75f9452b') in 0.328699 seconds 
+  Import took 0.334204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.565487 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Forward.fbx
+  artifactKey: Guid(905bfbeddf9732e4d9bcf4bd883229e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Forward.fbx using Guid(905bfbeddf9732e4d9bcf4bd883229e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ae196e6590cffbad5159d40e6ba366d') in 0.345889 seconds 
+  Import took 0.351413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.447131 seconds.
+  path: Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Right.fbx
+  artifactKey: Guid(ba6fd64b91ebf954bbadf231e6db1cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Animation/Player/Rifle 1/kadev6Rig@Walk Right.fbx using Guid(ba6fd64b91ebf954bbadf231e6db1cf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06d5dd222d46b91742d363d7dd3023a1') in 0.309172 seconds 
+  Import took 0.314771 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 230.137684 seconds.
+  path: Assets/AssetsStore/Garage_props/Assets/Materials/flame.mat
+  artifactKey: Guid(61b9c634306fe754097baf1caefa2d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/AssetsStore/Garage_props/Assets/Materials/flame.mat using Guid(61b9c634306fe754097baf1caefa2d4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b5a9026336807e4112667776d399df3') in 0.022848 seconds 
+  Import took 0.027499 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004471 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.033 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1034ms)
+		BeginReloadAssembly (116ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (866ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (263ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (394ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (305ms)
 				ProcessInitializeOnLoadMethodAttributes (8ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.70 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.79 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2340 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 113.9 MB.
-System memory in use after: 114.1 MB.
+System memory in use before: 130.4 MB.
+System memory in use after: 130.6 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2841.
-Total: 3.563000 ms (FindLiveObjects: 0.234400 ms CreateObjectMapping: 0.054000 ms MarkObjects: 3.186600 ms  DeleteObjects: 0.087000 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2882.
+Total: 4.118000 ms (FindLiveObjects: 0.251900 ms CreateObjectMapping: 0.057500 ms MarkObjects: 3.715600 ms  DeleteObjects: 0.091900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004040 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.955 seconds
+Domain Reload Profiling:
+	ReloadAssembly (956ms)
+		BeginReloadAssembly (112ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (32ms)
+		EndReloadAssembly (796ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (249ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (355ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (275ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.72 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2340 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.4 MB.
+System memory in use after: 130.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2884.
+Total: 3.481800 ms (FindLiveObjects: 0.255000 ms CreateObjectMapping: 0.064400 ms MarkObjects: 3.082600 ms  DeleteObjects: 0.078700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 237.411168 seconds.
+  path: Assets/TheLastDance/Prefabs/FirstPersonPlayer 1 1.prefab
+  artifactKey: Guid(f578bc3f8881b754c8a2ccc370fa0eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Prefabs/FirstPersonPlayer 1 1.prefab using Guid(f578bc3f8881b754c8a2ccc370fa0eda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9898974ed48527c47059fb72148ae3e8') in 0.057487 seconds 
+  Import took 0.061996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.122484 seconds.
+  path: Assets/TheLastDance/Prefabs/Sarah
+  artifactKey: Guid(d2712af167a9bb74d8dcb62cd0956d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Prefabs/Sarah using Guid(d2712af167a9bb74d8dcb62cd0956d64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4be846cd6b157787b9556ed4d7db578d') in 0.006224 seconds 
+  Import took 0.010364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.474109 seconds.
+  path: Assets/TheLastDance/Prefabs/Suplys
+  artifactKey: Guid(f7afbfd90fe6e6d4a9ced72b4a2ebc85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Prefabs/Suplys using Guid(f7afbfd90fe6e6d4a9ced72b4a2ebc85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e24818172c4a640431ad1aeb18b5fca5') in 0.005288 seconds 
+  Import took 0.009310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.841166 seconds.
+  path: Assets/TheLastDance/Prefabs/Normal Persons
+  artifactKey: Guid(26706942f685e544b88e72e820ae8f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TheLastDance/Prefabs/Normal Persons using Guid(26706942f685e544b88e72e820ae8f8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a8afcf2d1fd0e33e2bee910687ff83e') in 0.005294 seconds 
+  Import took 0.009798 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005320 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.096 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1096ms)
+		BeginReloadAssembly (128ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (907ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (269ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (413ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (317ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2340 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 130.5 MB.
+System memory in use after: 130.7 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 2888.
+Total: 4.135500 ms (FindLiveObjects: 0.279800 ms CreateObjectMapping: 0.057000 ms MarkObjects: 3.693800 ms  DeleteObjects: 0.103100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
