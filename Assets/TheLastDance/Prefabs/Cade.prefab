@@ -302,6 +302,7 @@ MonoBehaviour:
   fpsCamera: {fileID: 8753692530350674535}
   muzzleFlash: {fileID: 4271677827788558100}
   impactEffect: {fileID: 100002, guid: 556d09d7fda29fd4185eed4067d5777b, type: 3}
+  blood: {fileID: 7468285438101167573, guid: b4d9c23bbce2bb04fa391ab80f85674f, type: 3}
   animator: {fileID: 8753692531095897377}
 --- !u!1 &3104139177530673619
 GameObject:
@@ -10507,6 +10508,7 @@ MonoBehaviour:
   fpsCamera: {fileID: 8753692530350674535}
   muzzleFlash: {fileID: 6258066164408794237}
   impactEffect: {fileID: 100002, guid: 556d09d7fda29fd4185eed4067d5777b, type: 3}
+  blood: {fileID: 7468285438101167573, guid: b4d9c23bbce2bb04fa391ab80f85674f, type: 3}
   animator: {fileID: 8753692531095897377}
 --- !u!1 &8753692530246910923
 GameObject:

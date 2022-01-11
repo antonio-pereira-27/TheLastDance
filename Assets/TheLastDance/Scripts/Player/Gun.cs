@@ -29,6 +29,7 @@ public class Gun : MonoBehaviour
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
     public GameObject impactEffect;
+    public GameObject blood;
     public Animator animator;
     
 
@@ -100,6 +101,7 @@ public class Gun : MonoBehaviour
             Boss boss = hit.transform.GetComponent<Boss>();
             Normal normal = hit.transform.GetComponent<Normal>();
 
+            
             if (target != null)
                 target.TakeDamage(damage);
 
@@ -112,9 +114,19 @@ public class Gun : MonoBehaviour
             if (hit.rigidbody != null)
                 hit.rigidbody.AddForce(-hit.normal * impactForce);
             
+            if (target != null || boss != null || normal != null)
+            {
+                GameObject impactGO = Instantiate(blood, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGO, 0.5f);
+            }
+            else
+            {
+                GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impactGO, 2f);
+            }
+            
 
-            GameObject impactGO = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(impactGO, 2f);
+            
         }
 
         
