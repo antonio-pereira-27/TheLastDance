@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         
         // if reloading cant shoot
-        if (weapon1.isReloading || weapon1.maxBullets == 0 || weapon2.isReloading || weapon2.maxBullets == 0)
+        if (weapon1.isReloading || weapon2.isReloading )
             return;
         else
             Shoot();

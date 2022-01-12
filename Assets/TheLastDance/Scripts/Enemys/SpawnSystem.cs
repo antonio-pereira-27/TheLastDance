@@ -48,7 +48,6 @@ public class SpawnSystem : MonoBehaviour
     {
         // count the dead enemies
         _enemiesEliminated++;
-        
     }
 
     public void BossEliminated(bool dead)

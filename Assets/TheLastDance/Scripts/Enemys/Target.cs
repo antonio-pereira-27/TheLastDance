@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -98,16 +99,8 @@ public class Target : MonoBehaviour
       }
 
       if (dead)
-      {
-         animator.SetBool("Dead", true);
-         if (deadTimer > 5f)
-         {
-            Destroy(gameObject);
-            deadTimer = 0f;
-         }
-         else
-            deadTimer++;
-      }
+         StartCoroutine(DieAnimation());
+      
    }
 
    // função para perder vida quando o jogador dispara sobre este
@@ -121,11 +114,18 @@ public class Target : MonoBehaviour
       }
    }
 
+   IEnumerator DieAnimation()
+   {
+      animator.SetBool("Dead", true);
+      yield return new WaitForSeconds(1.5f);
+      spawnSystem.EnemyEliminated();
+      Destroy(gameObject);
+   }
+
    // função para destruir o gameObject
    void Die()
    {
       dead = true;
-      spawnSystem.EnemyEliminated();
    }
    
    // CONDITIONS
