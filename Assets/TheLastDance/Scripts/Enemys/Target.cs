@@ -16,7 +16,6 @@ public class Target : MonoBehaviour
    private float _timer = 50f;
    private float _timerToAttack = 0f;
    private bool _idle;
-   private float deadTimer = 0f;
    private bool dead;
 
    private DTNode _tree;
@@ -33,10 +32,13 @@ public class Target : MonoBehaviour
    // REFERENCES
    [HideInInspector] public SpawnSystem spawnSystem;
    [HideInInspector] public Transform enemyTransform;
-   
+
    public ParticleSystem muzzleFlash;
    public Animator animator;
    public HealthBar healthBar;
+   public Transform head;
+   public Transform mask;
+   public GameObject pistol;
    
    private NavMeshAgent _agent;
    private Rigidbody _rigidbody;
@@ -65,12 +67,12 @@ public class Target : MonoBehaviour
       // initialize actions
        _rangeAttack = RangeAttack;
        _closeAttack = CloseAttack;
-       _distance = Distance;
+       _work = Working;
        _follow = Follow;
        
        // initialize conditions
        _playerClose = PlayerClose;
-       _work = Working;
+       _distance = Distance;
        _caught = SawEnemy;
 
        // create action nodes
@@ -91,6 +93,7 @@ public class Target : MonoBehaviour
    // função update que atualiza a cada frame
    void Update()
    {
+      mask.position = head.position;
       if (!dead)
       {
          dead = false;
@@ -116,6 +119,7 @@ public class Target : MonoBehaviour
 
    IEnumerator DieAnimation()
    {
+      Destroy(pistol);
       animator.SetBool("Dead", true);
       yield return new WaitForSeconds(1.5f);
       spawnSystem.EnemyEliminated();
@@ -270,7 +274,7 @@ public class Target : MonoBehaviour
    void RangeAttack()
    {
       lookAtPlayer();
-      transform.LookAt(enemyTransform.transform.position);
+      //transform.LookAt(enemyTransform.transform.position);
       // contador para atacar o jogador
       if (_timerToAttack > 3.0f)
       {

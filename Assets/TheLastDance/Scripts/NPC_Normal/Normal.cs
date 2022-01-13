@@ -9,23 +9,23 @@ using Random = UnityEngine.Random;
 public class Normal : MonoBehaviour
 {
     //variables
-    private float speed = 7f;
-    private float stop = 10f;
-    private float timer = 50f;
-    private bool idle = false;
+    private float _speed = 7f;
+    private float _stop = 10f;
+    private float _timer = 50f;
+    private bool _idle = false;
 
-    private DTNode tree;
+    private DTNode _tree;
 
-    private Action work;
-    private Action exitAction;
+    private Action _work;
+    private Action _exitAction;
 
-    private Func<bool> closePlayer;
+    private Func<bool> _closePlayer;
 
     // references
-    private NavMeshAgent agent;
-    private Rigidbody rigidbody;
+    private NavMeshAgent _agent;
+    private Rigidbody _rigidbody;
     
-    private PlayerMovement player;
+    private PlayerMovement _player;
 
     public Animator animator;
 
@@ -34,34 +34,34 @@ public class Normal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.speed = speed;
-        agent.stoppingDistance = stop;
+        _agent = GetComponent<NavMeshAgent>();
+        _agent.speed = _speed;
+        _agent.stoppingDistance = _stop;
 
-        rigidbody = GetComponent<Rigidbody>();
-        rigidbody.useGravity = false;
+        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody.useGravity = false;
 
-        player = FindObjectOfType<PlayerMovement>();
+        _player = FindObjectOfType<PlayerMovement>();
         
         
         // ACTIONS
-        work = Working;
-        exitAction = Run;
+        _work = Working;
+        _exitAction = Run;
         
-        DTNode workNode = new DTAction("Work", work);
-        DTNode exitNode = new DTAction("RUN", exitAction);
+        DTNode workNode = new DTAction("Work", _work);
+        DTNode exitNode = new DTAction("RUN", _exitAction);
         
         // CONDITIONS
-        closePlayer = PlayerClose;
+        _closePlayer = PlayerClose;
 
-        tree = new DTCondition("Player Close", closePlayer, exitNode, workNode);
+        _tree = new DTCondition("Player Close", _closePlayer, exitNode, workNode);
     }
 
     // Update is called once per frame
     void Update()
     {
-        tree.Run();
-        animator.SetBool("idle", idle);
+        _tree.Run();
+        animator.SetBool("idle", _idle);
     }
     
     // func Random Direction
@@ -82,7 +82,7 @@ public class Normal : MonoBehaviour
             // a sua posição final
             finalPosition = navMeshHit.position;
             //GameObject.CreatePrimitive(PrimitiveType.Sphere).transform.position = finalPosition;
-            agent.SetDestination(finalPosition); // destino do npc
+            _agent.SetDestination(finalPosition); // destino do npc
         }
       
     }
@@ -91,7 +91,7 @@ public class Normal : MonoBehaviour
     private bool PlayerClose()
     {
         float warning = 20f;
-        Vector3 distance = player.transform.position - transform.position;
+        Vector3 distance = _player.transform.position - transform.position;
         float currentDistance = distance.magnitude;
 
         return currentDistance < warning;
@@ -101,23 +101,23 @@ public class Normal : MonoBehaviour
     
     void Working()
     {
-        if (timer > 7f)
+        if (_timer > 7f)
         {
-            idle = false;
+            _idle = false;
             RandomDirection(10f);
-            timer = 0f;
+            _timer = 0f;
         }
         else
         {
-            idle = true;
-            timer += Time.deltaTime; 
+            _idle = true;
+            _timer += Time.deltaTime; 
         }
     }
 
     void Run()
     {
-        idle = false;
-        agent.SetDestination(exit.position);
+        _idle = false;
+        _agent.SetDestination(exit.position);
 
         Vector3 distance = exit.transform.position - transform.position;
         float currentDistance = distance.magnitude;

@@ -149,12 +149,12 @@ public class Generator : MonoBehaviour
                 if (path.Count == 0) 
                     break;
                 else
-                    currentCell = path.Pop();
+                    currentCell = path.Pop(); //return the first cell of the stack
             }
             else
             {
                 //add the current cell to the path
-                path.Push(currentCell);
+                path.Push(currentCell); // add the current cell to the stack
 
                 int newCell = neighbors[Random.Range(0, neighbors.Count)];
 
@@ -199,16 +199,25 @@ public class Generator : MonoBehaviour
     {
         List<int> neighbors = new List<int>();
         
-        //check up
+        //check up && not visited
         if (cell - size.x >= 0 && !board[Mathf.FloorToInt(cell - size.x)].visited)
             neighbors.Add(Mathf.FloorToInt(cell - size.x));
-        //check down
+        //check down && not visited
         if (cell + size.x < board.Count && !board[Mathf.FloorToInt(cell + size.x)].visited)
             neighbors.Add(Mathf.FloorToInt(cell + size.x));
-        //check right
+        //check right && not visited
+        /*
+         * it cant be on the utmost right column
+         * if we were checking with the cell % size.x it will be zero
+         * With (cell + 1) should be different then 0 because even if its the most right column it should be size.x - 1
+         * if (cell + 1) % size.x == 0 its the leftmost cell of our board
+         */
         if ((cell + 1) % size.x != 0 && !board[Mathf.FloorToInt(cell + 1)].visited)
             neighbors.Add(Mathf.FloorToInt(cell + 1));
-        //check left
+        //check left && not visited
+        /*
+         * with cell % size.x we are checking if it isnt the leftmost cell of our board
+         */
         if (cell % size.x != 0 && !board[Mathf.FloorToInt(cell - 1)].visited)
             neighbors.Add(Mathf.FloorToInt(cell - 1));
         return neighbors;

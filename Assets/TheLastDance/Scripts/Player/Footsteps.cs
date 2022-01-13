@@ -20,7 +20,7 @@ public class Footsteps : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_player.isGrounded && _player.speed > 0.1f && _audioManager.sounds[4].audioSource.isPlaying == false)
+        if (_player.isGrounded && _player._moveDirection != Vector3.zero && _audioManager.sounds[4].audioSource.isPlaying == false)
         {
             _audioManager.sounds[4].audioSource.volume = Random.Range(0.2f, 0.5f);
             _audioManager.sounds[4].audioSource.pitch = Random.Range(0.8f, 1.1f);

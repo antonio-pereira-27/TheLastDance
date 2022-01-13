@@ -7,22 +7,22 @@ using UnityEngine.AI;
 public class Boss : MonoBehaviour
 {
     // VARIABLES
-    private float speed = 7f;
-    private float health = 100f;
-    private float currentHealth;
-    private float damage = 20f;
-    private float timerToAttack = 0f;
-    private float attackDistance = 50f;
-    private bool idle;
+    private float _speed = 7f;
+    private float _health = 100f;
+    private float _currentHealth;
+    private float _damage = 20f;
+    private float _timerToAttack = 0f;
+    private float _attackDistance = 50f;
+    private bool _idle;
 
-    private DTNode tree;
+    private DTNode _tree;
 
-    private Action rangeAttack;
-    private Action closeAttack;
-    private Action follow;
+    private Action _rangeAttack;
+    private Action _closeAttack;
+    private Action _follow;
 
-    private Func<bool> enemyDistance;
-    private Func<bool> attackType;
+    private Func<bool> _enemyDistance;
+    private Func<bool> _attackType;
 
     // REFERENCES
     [HideInInspector] public SpawnSystem spawnSystem;
@@ -31,54 +31,54 @@ public class Boss : MonoBehaviour
     [SerializeField] private ParticleSystem muzzleFlash;
     [SerializeField] private HealthBar healthBar;
 
-    private NavMeshAgent navMeshAgent;
-    private Rigidbody rigidbody;
-    private Animator animator;
+    private NavMeshAgent _navMeshAgent;
+    private Rigidbody _rigidbody;
+    private Animator _animator;
     
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
         
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.speed = speed;
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent.speed = _speed;
 
-        rigidbody = GetComponent<Rigidbody>();
-        rigidbody.useGravity = false;
+        _rigidbody = GetComponent<Rigidbody>();
+        _rigidbody.useGravity = false;
 
-        currentHealth = health;
-        healthBar.SetMaxHealth(health);
+        _currentHealth = _health;
+        healthBar.SetMaxHealth(_health);
 
 
-        rangeAttack = RangeAttack;
-        closeAttack = CloseAttack;
-        follow = Follow;
+        _rangeAttack = RangeAttack;
+        _closeAttack = CloseAttack;
+        _follow = Follow;
 
-        enemyDistance = EnemyDistance;
-        attackType = AttackType;
+        _enemyDistance = EnemyDistance;
+        _attackType = AttackType;
 
-        DTNode dtRangeAttack = new DTAction("Range Attack", rangeAttack);
-        DTNode dtCloseAttack = new DTAction("Close Attack", closeAttack);
-        DTNode dtFollow = new DTAction("Follow Player", follow);
+        DTNode dtRangeAttack = new DTAction("Range Attack", _rangeAttack);
+        DTNode dtCloseAttack = new DTAction("Close Attack", _closeAttack);
+        DTNode dtFollow = new DTAction("Follow Player", _follow);
 
-        DTNode dtEnemyDistance = new DTCondition("Enemy Close", attackType, dtCloseAttack, dtRangeAttack);
+        DTNode dtEnemyDistance = new DTCondition("Enemy Close", _attackType, dtCloseAttack, dtRangeAttack);
 
-        tree = new DTCondition("Decisions...", enemyDistance, dtEnemyDistance, dtFollow);
+        _tree = new DTCondition("Decisions...", _enemyDistance, dtEnemyDistance, dtFollow);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        tree.Run();
-        animator.SetBool("Idle", idle);
+        _tree.Run();
+        _animator.SetBool("Idle", _idle);
     }
 
     public void TakeDamage(float amount)
     {
-        currentHealth -= amount;
-        healthBar.SetHealth(currentHealth);
-        if (currentHealth <= 0f)
+        _currentHealth -= amount;
+        healthBar.SetHealth(_currentHealth);
+        if (_currentHealth <= 0f)
         {
             Die();
         }
@@ -90,10 +90,10 @@ public class Boss : MonoBehaviour
         spawnSystem.BossEliminated(true);
     }
 
-    void lookAtPlayer()
+    void LookAtPlayer()
     {
         transform.LookAt(enemyTransform.transform.position);
-        idle = true;
+        _idle = true;
     }
 
     
@@ -121,57 +121,57 @@ public class Boss : MonoBehaviour
 
     private void Follow()
     {
-        navMeshAgent.destination = enemyTransform.position;
+        _navMeshAgent.destination = enemyTransform.position;
         transform.LookAt(enemyTransform.transform.position);
-        navMeshAgent.stoppingDistance = 10f;
-        idle = false;
+        _navMeshAgent.stoppingDistance = 10f;
+        _idle = false;
     }
 
     void CloseAttack()
     {
-        lookAtPlayer();
-        if (timerToAttack > 1.0f)
+        LookAtPlayer();
+        if (_timerToAttack > 1.0f)
         {
-            timerToAttack = 0f;
+            _timerToAttack = 0f;
 
             RaycastHit raycastHit;
 
             if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z),
-                transform.forward, out raycastHit, attackDistance))
+                transform.forward, out raycastHit, _attackDistance))
             {
                 if (raycastHit.transform.CompareTag("Player"))
                 {
                     PlayerMovement player = raycastHit.transform.GetComponent<PlayerMovement>();
-                    player.TakeDamage(damage);
+                    player.TakeDamage(_damage);
                     muzzleFlash.Play();
                 }
             }
         }
         else
-            timerToAttack += Time.deltaTime;
+            _timerToAttack += Time.deltaTime;
     }
     
     void RangeAttack()
     {
-        lookAtPlayer();
-        if (timerToAttack > 2.0f)
+        LookAtPlayer();
+        if (_timerToAttack > 2.0f)
         {
-            timerToAttack = 0f;
+            _timerToAttack = 0f;
 
             RaycastHit raycastHit;
 
             if (Physics.Raycast(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z),
-                transform.forward, out raycastHit, attackDistance))
+                transform.forward, out raycastHit, _attackDistance))
             {
                 if (raycastHit.transform.CompareTag("Player"))
                 {
                     PlayerMovement player = raycastHit.transform.GetComponent<PlayerMovement>();
-                    player.TakeDamage(damage);
+                    player.TakeDamage(_damage);
                     muzzleFlash.Play();
                 }
             }
         }
         else
-            timerToAttack += Time.deltaTime;
+            _timerToAttack += Time.deltaTime;
     }
 }

@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float walkSpeed = 10f;
     [SerializeField] private float slowSpeed = 5f;
 
-    private Vector3 _moveDirection;
+    [HideInInspector] public Vector3 _moveDirection;
     private Vector3 _velocity;
     
     [HideInInspector] public bool isGrounded;
@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     private float _currentHealth;
 
     private int weapon;
-    private bool isJumping;
     private bool isCrouching;
     private float originalHeight;
     [SerializeField] public bool dead = false;
@@ -218,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
     private void Crouch()
     {
         isCrouching = true;
-        isJumping = false;
+        
         //_controller.height = 1.8f;
         speed = slowSpeed;
     }
@@ -227,13 +226,13 @@ public class PlayerMovement : MonoBehaviour
     private void Idle()
     {
         speed = 0;
-        isJumping = false;
+        
     }
 
     // walk movement
     private void Walk()
     {
-        isJumping = false;
+        
         speed = slowSpeed;
        //_audioManager.Play("FootSteps");
     }
@@ -241,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
     // RUn movement
     private void Run()
     {
-        isJumping = false;
+        
         speed = walkSpeed;
         //_audioManager.Play("FootSteps");
 
@@ -250,7 +249,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         _velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        isJumping = true;
+        
     }
 
     

@@ -8,6 +8,7 @@ public class MouseLook : MonoBehaviour
     //variables
     public static float mouseSensivity = 100f;
     float xRotation = 0f;
+    float yRotation = 0f;
 
     float mouseX, mouseY;
     private float upRecoil;
@@ -19,6 +20,7 @@ public class MouseLook : MonoBehaviour
     // references
     public Transform playerBody;
     public Transform head;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class MouseLook : MonoBehaviour
         transform.position = head.position;
         transform.rotation = head.rotation;
 
+        
         mouseY = Mathf.Clamp(mouseSensivity, -0.03f, 0.03f);
         mouseX = sideRecoil + Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime;
         mouseY = upRecoil + Input.GetAxis("Mouse Y") * mouseSensivity * Time.deltaTime;
@@ -49,11 +52,14 @@ public class MouseLook : MonoBehaviour
         
         
         xRotation += -mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        // yRotation no quaternion
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        playerBody.Rotate(Vector3.up * mouseX);
+        xRotation = Mathf.Clamp(xRotation, -20f, 20f);
 
+        yRotation += mouseX;
+        yRotation = Mathf.Clamp(yRotation, -45f, 45f);
+        
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+
+        playerBody.Rotate(Vector3.up * mouseX);
         
         if (Input.GetKey(KeyCode.C))
         {
