@@ -12,14 +12,26 @@ EditorBuildSettings:
     path: Assets/TheLastDance/Scenes/Level_1.unity
     guid: e59eda779874f4845b652b78b34a0d94
   - enabled: 1
+    path: Assets/TheLastDance/Scenes/CutScenes/1-2.unity
+    guid: 10b3cbdf508867a4aa6b8a55e32dca11
+  - enabled: 1
     path: Assets/TheLastDance/Scenes/Level_2.unity
     guid: 1b99406b50e28bd4494612a190691e9f
+  - enabled: 1
+    path: Assets/TheLastDance/Scenes/CutScenes/2-3.unity
+    guid: cb04462575467c34e8bf5c9baa083065
   - enabled: 1
     path: Assets/TheLastDance/Scenes/Level_3.unity
     guid: 6b09779d9467e8e4f9158c811a211107
   - enabled: 1
+    path: Assets/TheLastDance/Scenes/CutScenes/3-4.unity
+    guid: d765fb32448194b4eb96e66c20d91777
+  - enabled: 1
     path: Assets/TheLastDance/Scenes/Level_4.unity
     guid: 82985cc95abacb342a6f95954dfcdffb
+  - enabled: 1
+    path: Assets/TheLastDance/Scenes/CutScenes/4.unity
+    guid: 7f1175992e35cc744bbfd9e0247974cd
   - enabled: 1
     path: Assets/TheLastDance/Scenes/Options_Menu.unity
     guid: f91dd6d05bffae3498520bd7c274b862

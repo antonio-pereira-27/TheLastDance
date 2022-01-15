@@ -233,7 +233,6 @@ public class Target : MonoBehaviour
    void lookAtPlayer()
    {
       transform.LookAt(enemyTransform.transform.position);
-      _idle = true;
    }
    
    /*

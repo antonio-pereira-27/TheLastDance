@@ -111,3 +111,9 @@ MonoBehaviour:
     loop: 0
     clip: {fileID: 8300000, guid: 4d646011691b73b4a8837523e2ed702d, type: 3}
     audioSource: {fileID: 0}
+  - name: suspense
+    volume: 0.069
+    pitch: 1
+    loop: 0
+    clip: {fileID: 8300000, guid: 5705dd936b5bc474797a29e2ae6f8160, type: 3}
+    audioSource: {fileID: 0}
