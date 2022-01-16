@@ -63,6 +63,7 @@ namespace TheLastDance.Tutorial
                 }
                 else
                 {
+                    animator.SetBool("Crouch", false);
                     //move
                     if (direction != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
                         Run();

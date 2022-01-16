@@ -43,6 +43,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Build1-ProjetoFinal\TheLastDance.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Build1-ProjetoFinal" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -159,6 +167,11 @@
       <workItem from="1642171490225" duration="7511000" />
       <workItem from="1642184222304" duration="3811000" />
       <workItem from="1642201440331" duration="9697000" />
+      <workItem from="1642260867845" duration="3162000" />
+      <workItem from="1642268008459" duration="155000" />
+      <workItem from="1642271629727" duration="183000" />
+      <workItem from="1642287959651" duration="1675000" />
+      <workItem from="1642358422213" duration="1000" />
     </task>
     <servers />
   </component>

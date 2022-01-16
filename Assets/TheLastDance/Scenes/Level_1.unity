@@ -5159,7 +5159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.3038406
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalScale.z
@@ -5167,11 +5167,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.717552
+      value: 7.48
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.161095
+      value: 66.51
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6060,6 +6060,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1911894578}
+    - target: {fileID: 8753692530350674530, guid: f30dfad41739fff43b31ac6f182c34a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8753692530350674534, guid: f30dfad41739fff43b31ac6f182c34a0, type: 3}
       propertyPath: playerBody
       value: 
@@ -6811,19 +6815,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011105972888, guid: 1ccb1d3d3e429bb4bab387f3e489bfbe, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.259775
       objectReference: {fileID: 0}
     - target: {fileID: 4000011105972888, guid: 1ccb1d3d3e429bb4bab387f3e489bfbe, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5000001
+      value: 1.4241462
       objectReference: {fileID: 0}
     - target: {fileID: 4000011105972888, guid: 1ccb1d3d3e429bb4bab387f3e489bfbe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.28244781
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4000011105972888, guid: 1ccb1d3d3e429bb4bab387f3e489bfbe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.12109
+      value: 66.57
       objectReference: {fileID: 0}
     - target: {fileID: 4000011105972888, guid: 1ccb1d3d3e429bb4bab387f3e489bfbe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10727,7 +10731,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.3038406
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalScale.z
@@ -10735,11 +10739,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.967552
+      value: 14.73
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 67.161095
+      value: 66.51
       objectReference: {fileID: 0}
     - target: {fileID: 4000013136969476, guid: 5d15be1af1c2b8141b28e3083762c935, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11664,6 +11668,10 @@ PrefabInstance:
     - target: {fileID: 194421959352317372, guid: 6fa319e2ca1563f4398cf1d85b0d24e6, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 194421959352317372, guid: 6fa319e2ca1563f4398cf1d85b0d24e6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2303362215808138181, guid: 6fa319e2ca1563f4398cf1d85b0d24e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

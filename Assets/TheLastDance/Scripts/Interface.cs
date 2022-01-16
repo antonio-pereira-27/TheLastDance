@@ -84,14 +84,7 @@ public class Interface : MonoBehaviour
             timerText.text = string.Format("Time Left : {0:f}s", _gameManager.timer);
         }
         
-
-        // Pause
-        if (Input.GetKeyDown(KeyCode.CapsLock))
-        {
-            Time.timeScale = 0;
-            pausePanel.SetActive(true);
-            interfaceGO.SetActive(false);
-        }
+        
         
         
 

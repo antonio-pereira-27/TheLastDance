@@ -26,7 +26,7 @@ public class DeadInterface : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FindObjectOfType<PlayerMovement>().dead)
+        if (FindObjectOfType<PlayerMovement>().dead || FindObjectOfType<GameManager>().timer <= 0f)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
@@ -47,6 +47,8 @@ public class DeadInterface : MonoBehaviour
             }
             
         }
+
+      
     }
 
     public void TryAgain()

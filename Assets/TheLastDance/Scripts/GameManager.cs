@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Level_3" && timer <= 0f)
         {
             Time.timeScale = 0;
-            Debug.Log("You loose");
         }
         else
             timer -= Time.deltaTime;

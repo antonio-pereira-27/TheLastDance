@@ -65,7 +65,7 @@ public class TutorialCanvas : MonoBehaviour
         enemyTMP.SetActive(true);
         Time.timeScale = 0;
 
-        if (Input.GetKey(KeyCode.Backspace))
+        if (Input.GetKey(KeyCode.Escape))
         {
             enemy.trigger = false;
             enemyTMP.SetActive(false);
@@ -80,7 +80,7 @@ public class TutorialCanvas : MonoBehaviour
         bossTMP.SetActive(true);
         Time.timeScale = 0;
 
-        if (Input.GetKey(KeyCode.Backspace))
+        if (Input.GetKey(KeyCode.Escape))
         {
             boss.trigger = false;
             bossTMP.SetActive(false);
@@ -95,7 +95,7 @@ public class TutorialCanvas : MonoBehaviour
         weaponsTMP.SetActive(true);
         Time.timeScale = 0;
 
-        if (Input.GetKey(KeyCode.Backspace))
+        if (Input.GetKey(KeyCode.Escape))
         {
             weapons[0].trigger = false;
             weapons[1].trigger = false;
@@ -111,7 +111,7 @@ public class TutorialCanvas : MonoBehaviour
         supplysTMP.SetActive(true);
         Time.timeScale = 0;
 
-        if (Input.GetKey(KeyCode.Backspace))
+        if (Input.GetKey(KeyCode.Escape))
         {
             supplys[0].trigger = false;
             supplys[1].trigger = false;

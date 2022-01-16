@@ -92,8 +92,8 @@ public class Boss : MonoBehaviour
 
     void LookAtPlayer()
     {
-        transform.LookAt(enemyTransform.transform.position);
         _idle = true;
+        transform.LookAt(enemyTransform.transform.position);
     }
 
     
@@ -121,10 +121,11 @@ public class Boss : MonoBehaviour
 
     private void Follow()
     {
+        _idle = false;
         _navMeshAgent.destination = enemyTransform.position;
         transform.LookAt(enemyTransform.transform.position);
         _navMeshAgent.stoppingDistance = 10f;
-        _idle = false;
+        
     }
 
     void CloseAttack()

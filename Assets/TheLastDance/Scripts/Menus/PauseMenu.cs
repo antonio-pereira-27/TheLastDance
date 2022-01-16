@@ -40,7 +40,7 @@ public class PauseMenu : MonoBehaviour
     private void Update()
     {
         _audioManager.volume = music;
-        if (Input.GetKeyDown(KeyCode.Backspace))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (paused)
                 Resume();

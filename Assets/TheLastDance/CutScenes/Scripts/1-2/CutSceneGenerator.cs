@@ -38,12 +38,12 @@ public class CutSceneGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         if (timer >= 0f)
         {
             _camera1.transform.LookAt(_boss.transform);
             _player.GetComponent<Animator>().SetInteger("state", 0);
             playerAgent.destination = positions[0].position;
-            timer += Time.deltaTime;
         }
 
         if (timer >=7f)
@@ -56,7 +56,6 @@ public class CutSceneGenerator : MonoBehaviour
         {
             _camera1.SetActive(false);
             _camera2.SetActive(true);
-            timer += Time.deltaTime;
             speech = "Adam: You will never get her back!";
         }
         if (timer > 17f)
@@ -64,43 +63,44 @@ public class CutSceneGenerator : MonoBehaviour
             _camera1.SetActive(true);
             _camera2.SetActive(false);
             _camera1.transform.LookAt(_boss.transform);
-            timer += Time.deltaTime;
             speech = "Cade: Tell me or I'll make sure you suffer before you die!";
         }
         if (timer > 27f)
         {
-            timer += Time.deltaTime;
             speech = "Adam: Screw it, you'll never get there in time... They're holding her in a warehouse in the southern part of London.";
         }
 
         if (timer > 37f)
         {
-            timer += Time.deltaTime;
             speech = "Cade: That wasn't so hard was it?";
         }
 
-        if (timer > 47f)
+        if (timer > 41f)
         {
             _camera1.SetActive(false);
             _camera2.SetActive(true);
         }
 
-        if (timer > 57f)
+        if (timer > 43f)
         {
             _camera2.transform.LookAt(positions[1]);
             _audioManager.Play("dead");
             speech = "*Adam Dies*";
         }
+
+        if (timer >= 47f) 
+        {
+            _player.GetComponent<Animator>().SetInteger("state", 2);
+        }
         
-        if (timer > 67f)
+        if (timer > 52f)
         {
             _player.GetComponent<Animator>().SetInteger("state", 0);
             playerAgent.destination = positions[1].position;
-            
             speech = "";
         }
 
-        if (timer > 75f)
+        if (timer > 55f)
         {
             _audioManager.sounds[11].audioSource.Stop();
             _audioManager.sounds[1].audioSource.Play();

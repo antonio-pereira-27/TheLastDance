@@ -10,6 +10,7 @@ public class CutScene4 : MonoBehaviour
     private float timer;
 
     [HideInInspector]public string speech;
+    [HideInInspector]public bool _win;
     
     // REFERENCES
     [SerializeField]private NavMeshAgent playerAgent;
@@ -28,6 +29,7 @@ public class CutScene4 : MonoBehaviour
     void Start()
     {
         timer = 0f;
+        _win = false;
         _camera1.SetActive(true);
         _camera2.SetActive(false);
 
@@ -100,6 +102,7 @@ public class CutScene4 : MonoBehaviour
 
         if (timer > 34f)
         {
+            speech = "";
             _camera1.SetActive(true);
             _camera2.SetActive(false);
             
@@ -114,6 +117,11 @@ public class CutScene4 : MonoBehaviour
         }
 
         if (timer > 42f)
+        {
+            _win = true;
+        }
+
+        if (timer > 50f)
         {
             _audioManager.sounds[11].audioSource.Stop();
             _audioManager.sounds[1].audioSource.Play();

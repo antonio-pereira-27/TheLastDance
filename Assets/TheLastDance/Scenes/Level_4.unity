@@ -45350,6 +45350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dead
       objectReference: {fileID: 0}
+    - target: {fileID: 4138856985107748471, guid: 39caadccf6f029744a3b6da3abff3449, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39caadccf6f029744a3b6da3abff3449, type: 3}
 --- !u!1 &1368066099 stripped
@@ -61208,63 +61212,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4971474634852902, guid: eab9a1e97bf14904698f6ed18fd7e3e2, type: 3}
   m_PrefabInstance: {fileID: 1857529304}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1857599364
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_RootOrder
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155081, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 639924535730155083, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
-      propertyPath: m_Name
-      value: AudioManager 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7e1857afcb3374648a9dfc88e3cf9ed0, type: 3}
 --- !u!1001 &1857678087
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64689,7 +64636,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0

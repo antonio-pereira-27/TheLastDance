@@ -116,7 +116,7 @@ public class CutScene2 : MonoBehaviour
             speech = "Eve: NOTHING!!";
         }
 
-        if (timer > 75f)
+        if (timer > 35f)
         {
             _audioManager.sounds[11].audioSource.Stop();
             _audioManager.sounds[1].audioSource.Play();

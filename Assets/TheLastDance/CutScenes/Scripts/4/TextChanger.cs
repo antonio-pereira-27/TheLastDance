@@ -8,6 +8,7 @@ public class TextChanger : MonoBehaviour
     private CutScene4 generator;
 
     public TMP_Text Text;
+    public GameObject win;
 
     public GameObject panel;
     // Start is called before the first frame update
@@ -27,6 +28,15 @@ public class TextChanger : MonoBehaviour
         else
         {
             panel.SetActive(false);
+        }
+
+        if (generator._win)
+        {
+            win.SetActive(true);
+        }
+        else
+        {
+            win.SetActive(false);
         }
     }
 }

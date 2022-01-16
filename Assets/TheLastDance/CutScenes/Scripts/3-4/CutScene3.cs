@@ -79,6 +79,12 @@ public class CutScene3 : MonoBehaviour
             speech = "Will: Alright alright! The base of operations right now is in the Manchester Building.";
         }
 
+        if (timer > 30f)
+        {
+            _camera1.SetActive(false);
+            _camera2.SetActive(true);
+            _camera2.transform.LookAt(_player.transform.position);
+        }
         if (timer > 33f)
             _player.GetComponent<Animator>().SetInteger("state", 2);
         

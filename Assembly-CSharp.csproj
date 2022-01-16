@@ -73,6 +73,7 @@
      <Compile Include="Assets\Pegasus\Scripts\PegasusTrack.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Pick Ups\PickableItem.cs" />
      <Compile Include="Assets\TheLastDance\Tutorial\Scripts\RoomBehaviour.cs" />
+     <Compile Include="Assets\TheLastDance\CutScenes\Scripts\3-4\CutScene3.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Pick Ups\Sarah.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -101,6 +102,7 @@
      <Compile Include="Assets\TheLastDance\Tutorial\Scripts\Supply.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Enemys\DTNode.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+     <Compile Include="Assets\TheLastDance\CutScenes\Scripts\4\TextChanger.cs" />
      <Compile Include="Assets\TheLastDance\Tutorial\Scripts\Weapon.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Player\PlayerMovement.cs" />
@@ -111,6 +113,7 @@
      <Compile Include="Assets\TheLastDance\Tutorial\Scripts\TutorialCanvas.cs" />
      <Compile Include="Assets\TheLastDance\CutScenes\Scripts\1-2\CutSceneGenerator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+     <Compile Include="Assets\TheLastDance\CutScenes\Scripts\4\CutScene4.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Enemys\SpawnSystem.cs" />
@@ -131,6 +134,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TheLastDance\Scripts\Player\SwitchGuns.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+     <Compile Include="Assets\TheLastDance\CutScenes\Scripts\3-4\TextChanging3.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
      <Compile Include="Assets\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
@@ -149,10 +153,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TheLastDance\Tutorial\Scripts\Generator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-     <Compile Include="Assets\TheLastDance\CutScenes\Scripts\3-4\CutScene3.cs" />
-     <Compile Include="Assets\TheLastDance\CutScenes\Scripts\3-4\TextChanging3.cs" />
-     <Compile Include="Assets\TheLastDance\CutScenes\Scripts\4\CutScene4.cs" />
-     <Compile Include="Assets\TheLastDance\CutScenes\Scripts\4\TextChanger.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
