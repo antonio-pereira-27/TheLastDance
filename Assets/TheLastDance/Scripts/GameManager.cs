@@ -49,14 +49,16 @@ public class GameManager : MonoBehaviour
         else 
             player.GetComponent<PickUpSarah>().enabled = false;
         
+        
 
-        // level 3 timer
-        if (SceneManager.GetActiveScene().name == "Level_3" && timer <= 0f)
+        if (SceneManager.GetActiveScene().name == "Level_3")
         {
-            Time.timeScale = 0;
+            print(timer);
+            if (timer <= 0f)
+                Time.timeScale = 0;
+            else 
+                timer -= Time.deltaTime;
         }
-        else
-            timer -= Time.deltaTime;
 
     }
 }

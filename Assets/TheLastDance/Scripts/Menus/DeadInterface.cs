@@ -28,6 +28,7 @@ public class DeadInterface : MonoBehaviour
     {
         if (FindObjectOfType<PlayerMovement>().dead || FindObjectOfType<GameManager>().timer <= 0f)
         {
+            Time.timeScale = 0;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
             

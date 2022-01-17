@@ -62,10 +62,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -2408,4 +2406,4 @@ ScriptsOnlyBuild:
   - Assets/TheLastDance/Scenes/CutScenes/4.unity
   - Assets/TheLastDance/Scenes/Options_Menu.unity
   - Assets/TheLastDance/Tutorial/Tutorial_Level.unity
-  playerPath: D:/TheLastDance-Build/TheLastDance.exe
+  playerPath: D:/The Last Dance - Build/TheLastDance.exe
